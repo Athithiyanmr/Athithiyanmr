@@ -45,9 +45,10 @@ Visualization, Mapping & Decision Support
 	•	Policy- and planning-oriented geospatial visualization
 
 Tools & Platforms
-	•	Jupyter, VS Code, Git, GitHub
-	•	Google Earth Engine (if applicable)
-	•	Linux / macOS geospatial workflows
+	•	Jupyter notebook, VS Code, GitHub
+	•	Google Earth Engine
+	•	Hetzner server
+	
 
 ⸻
 
