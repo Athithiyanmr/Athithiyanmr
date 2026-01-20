@@ -84,7 +84,6 @@ https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-
 	•	⚡ Modelling Time of Use Tariff – Tamil Nadu
 https://www.aurovilleconsulting.com/modelling-time-of-use-electricity-tariffs-for-tamil-nadu/
 	•	🌍 Tamil Nadu Blue-Green Infrastructure Mapping
-(Add your report PDF or project link here)
 
 ⸻
 
@@ -94,7 +93,6 @@ https://www.aurovilleconsulting.com/modelling-time-of-use-electricity-tariffs-fo
 	•	GeoAI-based environmental models
 	•	Climate and sustainability analytics tools
 
-(Pin your best repositories here on your profile)
 
 ⸻
 
