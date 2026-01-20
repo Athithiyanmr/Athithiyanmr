@@ -1,16 +1,20 @@
-## Hi there 👋
+# Athithiyan 👋
 
-<!--
-**Athithiyanmr/Athithiyanmr** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Data Analyst | Geospatial & Remote Sensing Specialist
 
-Here are some ideas to get you started:
+I am a Data Analyst specializing in satellite image processing, geospatial analytics, 
+and visualization with a focus on climate change, sustainability, and ecological projects.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🔧 Skills
+- Python, SQL, JavaScript
+- GeoPandas, Rasterio, GDAL
+- QGIS, ArcGIS
+- Machine Learning, Spatial Analysis
+
+### 🌍 Interests
+- Satellite Image Processing
+- Climate Change & Sustainability
+- Ecological & Land-use Planning
+
+### 📫 Connect with me
+- LinkedIn: https://www.linkedin.com/in/athithiyan-m-r-/
