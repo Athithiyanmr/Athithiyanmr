@@ -63,7 +63,6 @@ blue-green infrastructure, and climate-resilient development.
   https://www.aurovilleconsulting.com/modelling-time-of-use-electricity-tariffs-for-tamil-nadu/
 
 - 🌏 Blue-Green Infrastructure Mapping – Tamil Nadu  
-  (Add your report PDF or project page link here)
 
 ---
 
@@ -73,7 +72,6 @@ blue-green infrastructure, and climate-resilient development.
 - Built-up & Vegetation Mapping  
 - Geospatial ML Models  
 
-(You can add repo links here as you organize them)
 
 ---
 
