@@ -81,8 +81,7 @@ Geospatial and data analytics support for renewable energy planning, climate pol
 
 📄 Reports & Publications
 	•	🌱 Land Suitability Assessment – Villupuram District
-	
-https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/
+[![Villupuram Land Suitability](media/villupuram.png)](https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/)
 	•	⚡ Modelling Time of Use Tariff – Tamil Nadu
 https://www.aurovilleconsulting.com/modelling-time-of-use-electricity-tariffs-for-tamil-nadu/
 	•	🌍 Tamil Nadu Blue-Green Infrastructure Mapping
