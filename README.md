@@ -2,11 +2,11 @@
 
 Data Analyst | Geospatial & Remote Sensing Specialist | GeoAI & Climate Analytics
 
-🛰️ Satellite Image Processing • 🌱 Climate & Sustainability Analytics • 📊 Spatial Data Science
-
-I am a Data Analyst and Geospatial Specialist with over 3.5 years of experience working on satellite image processing, spatial analytics, and environmental data science. My work focuses on applying Earth observation, GIS, and GeoAI techniques to climate change, sustainability, and ecological planning projects.
-
-I have contributed to large-scale government and consulting projects involving blue-green infrastructure mapping, land suitability assessment, renewable energy planning, and climate-resilient development. I am passionate about building scalable geospatial pipelines and transforming satellite and environmental data into actionable decision-support systems.
+	🛰️ Satellite Image Processing • 🌱 Climate & Sustainability Analytics • 📊 Spatial Data Science
+	
+	I am a Data Analyst and Geospatial Specialist with over 3.5 years of experience working on satellite image processing, spatial analytics, and environmental data science. My work focuses on applying Earth observation, GIS, and GeoAI techniques to climate change, sustainability, and ecological planning projects.
+	
+	I have contributed to large-scale government and consulting projects involving blue-green infrastructure mapping, land suitability assessment, renewable energy planning, and climate-resilient development. I am passionate about building scalable geospatial pipelines and transforming satellite and environmental data into actionable decision-support systems.
 
 ⸻
 
