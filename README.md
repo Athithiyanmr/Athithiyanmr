@@ -12,53 +12,51 @@ I have contributed to large-scale government and consulting projects involving b
 
 🔧 Technical Skills
 
-Programming, Data & Automation
-	•	Python, SQL, JavaScript
-	•	Pandas, NumPy, SciPy, Scikit-learn
-	•	Workflow automation, geospatial ETL, data pipelines
-
-Geospatial, Remote Sensing & Earth Observation
-	•	GeoPandas, Rasterio, GDAL, Shapely, PyProj
-	•	QGIS, ArcGIS
-	•	Sentinel-1 & Sentinel-2, Landsat, MODIS, DEM datasets
-	•	Satellite preprocessing, mosaicking, reprojection, tiling
-	•	LULC mapping, change detection, suitability & hotspot modeling
-
-Machine Learning, Deep Learning & GeoAI
-	•	Supervised & unsupervised learning for spatial data
-	•	Random Forest, XGBoost, SVM, clustering
-	•	Deep learning for satellite imagery (CNNs)
-	•	Semantic segmentation, object detection, feature extraction
-	•	GeoAI pipelines for environmental and climate analytics
-
-Spatial Analytics & Climate Applications
-	•	Multi-criteria decision analysis (MCDA)
-	•	Blue-green infrastructure and ecological network modeling
-	•	Land-use planning & environmental suitability systems
-	•	Climate risk, vegetation, and built-up monitoring
-	•	Ecosystem service and sustainability analytics
-
-Visualization, Mapping & Decision Support
-	•	Matplotlib, Plotly, Power BI
-	•	Advanced thematic cartography
-	•	Interactive dashboards and spatial storytelling
-	•	Policy- and planning-oriented geospatial visualization
-
-Tools & Platforms
-	•	Jupyter notebook, VS Code, GitHub
-	•	Google Earth Engine
-	•	Hetzner server
+	Programming, Data & Automation
+		•	Python, SQL, JavaScript
+		•	Pandas, NumPy, SciPy, Scikit-learn
+		•	Workflow automation, geospatial ETL, data pipelines
 	
-
-⸻
-
-💼 Professional Focus Areas
-	•	Satellite image processing & automation
-	•	GeoAI and spatial machine learning
-	•	Climate change and sustainability analytics
-	•	Ecological & blue-green infrastructure mapping
-	•	Land suitability and environmental planning
-	•	Decision-support systems using Earth observation data
+	Geospatial, Remote Sensing & Earth Observation
+		•	GeoPandas, Rasterio, GDAL, Shapely, PyProj
+		•	QGIS, ArcGIS
+		•	Sentinel-1 & Sentinel-2, Landsat, MODIS, DEM datasets
+		•	Satellite preprocessing, mosaicking, reprojection, tiling
+		•	LULC mapping, change detection, suitability & hotspot modeling
+	
+	Machine Learning, Deep Learning & GeoAI
+		•	Supervised & unsupervised learning for spatial data
+		•	Random Forest, XGBoost, SVM, clustering
+		•	Deep learning for satellite imagery (CNNs)
+		•	Semantic segmentation, object detection, feature extraction
+		•	GeoAI pipelines for environmental and climate analytics
+	
+	Spatial Analytics & Climate Applications
+		•	Multi-criteria decision analysis (MCDA)
+		•	Blue-green infrastructure and ecological network modeling
+		•	Land-use planning & environmental suitability systems
+		•	Climate risk, vegetation, and built-up monitoring
+		•	Ecosystem service and sustainability analytics
+	
+	Visualization, Mapping & Decision Support
+		•	Matplotlib, Plotly, Power BI
+		•	Advanced thematic cartography
+		•	Interactive dashboards and spatial storytelling
+		•	Policy- and planning-oriented geospatial visualization
+	
+	Tools & Platforms
+		•	Jupyter notebook, VS Code, GitHub
+		•	Google Earth Engine
+		•	Hetzner server
+		
+	
+	💼 Professional Focus Areas
+		•	Satellite image processing & automation
+		•	GeoAI and spatial machine learning
+		•	Climate change and sustainability analytics
+		•	Ecological & blue-green infrastructure mapping
+		•	Land suitability and environmental planning
+		•	Decision-support systems using Earth observation data
 
 ⸻
 
