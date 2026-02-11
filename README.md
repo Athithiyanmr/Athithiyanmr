@@ -13,93 +13,98 @@
 
 ---
 
-## 🌍 About Me
-GIS Analyst and Data Scientist with **3.5+ years of professional experience** in geospatial analytics,
-remote sensing, land-use planning, and climate-focused decision support.
+# 👋 Hi, I'm Athithiyan M R
 
-I work at the intersection of **satellite imagery, GIS, and AI**, delivering policy-ready insights for
-state-level planning, sustainability, and energy transition projects in Tamil Nadu.
-
----
-
-## 🧠 Core Expertise
-- Geospatial data analysis & spatial modeling  
-- Land Use / Land Cover (LULC) classification  
-- Blue–Green Infrastructure & ecosystem services mapping  
-- Climate impact & sustainability assessment  
-- GIS-based decision support systems  
+🌍 Geospatial Data Scientist | Climate & Sustainability Analyst  
+📊 Spatial Intelligence for Energy & Environmental Planning  
+📍 India  
 
 ---
 
-## 🛰️ Technical Skills
+## 🚀 About Me
 
-### Remote Sensing & GIS
-- Sentinel-2, Landsat, DEMs  
-- QGIS, ArcGIS, Google Earth Engine  
-- Raster & vector processing, cartography, reporting  
+I am a Geospatial Data Scientist with 3.5+ years of experience delivering 
+large-scale spatial analytics projects for climate adaptation, land-use planning, 
+and sustainable energy transitions.
 
-### Data Science & AI
-- Python: GeoPandas, Rasterio, Xarray, NumPy, Pandas  
-- Machine Learning: Random Forest, SVM, K-Means  
-- Deep Learning: CNNs, U-Net (raster classification)  
+I specialize in:
 
-### Spatial Analytics
-- Spectral indices: NDVI, NDBI, NDWI, BSI  
-- Watershed & runoff modeling  
-- Multi-Criteria Decision Analysis (MCDA)  
+- Blue-Green Infrastructure mapping
+- Land suitability modelling
+- Satellite image classification (Sentinel-2, Landsat)
+- Hydrological & watershed analysis
+- Machine Learning & Deep Learning for remote sensing
+- Multi-criteria spatial decision systems
 
----
-
-## 🚀 Professional Projects
-
-### 🌿 Tamil Nadu Blue-Green Infrastructure Mapping
-**Research / Data Analyst – Auroville Consulting**
-
-- State-wide Blue-Green Network (BGN) framework  
-- 15,000+ Sentinel-2 images & 40+ spatial layers  
-- Micro-watershed delineation using DEM  
-- Identification of forestation & restoration opportunities  
-- Ecosystem service prioritization (18 criteria)  
-
-**Deliverables**
-- State-wide BGN geospatial database  
-- District-wise opportunity & suitability maps  
-- Policy recommendations for climate adaptation  
+I build end-to-end geospatial workflows — from raw satellite imagery 
+to policy-ready decision-support tools.
 
 ---
 
-### ⚡ Sustainable Energy Transformation – Tamil Nadu (SET-TN)
+## 🌱 Highlight Project: Tamil Nadu Blue-Green Infrastructure Framework
 
-- Land suitability assessment for distributed solar energy  
-- Identification of unused & fallow lands (Villupuram district)  
-- Policy research on Time-of-Use electricity tariffs  
-- Support for Tamil Nadu’s net-zero energy transition  
+🔹 Processed 15,000+ Sentinel-2 scenes  
+🔹 Integrated 40+ geospatial layers  
+🔹 Developed ecosystem-service prioritization framework  
+🔹 Designed district-level intervention maps  
+🔹 Built scalable classification from nano to mega scale  
 
----
-
-### 🌾 Land Suitability Assessment – Kallakurichi District
-
-- LULC detection & change analysis  
-- Suitability mapping for forestation, agriculture, water harvesting, housing, industry & solar  
-- Interactive GIS maps & stakeholder dissemination  
+Impact:
+- Supports climate adaptation
+- Enhances ecological restoration
+- Enables evidence-based land-use planning
 
 ---
 
-## 🎓 Education
-- **M.Tech – Petroleum Refining & Petrochemicals**  
-  Anna University (2019–2021)  
+## ☀ Sustainable Energy Transformation – Tamil Nadu
 
-- **B.E – Chemical Engineering**  
-  Arunai Engineering College (2015–2019)  
-
----
-
-## 🌏 Regional Experience
-- 3.5+ years of applied geospatial analysis across Indian regions  
-- Strong understanding of land-use patterns, administrative boundaries & field validation  
+- Land suitability modelling for distributed solar
+- Multi-criteria decision framework
+- Time-of-Use tariff modeling
+- Policy advisory analytics
 
 ---
 
+## 🛰 Technical Stack
+
+### GIS & Remote Sensing
+- QGIS | ArcGIS | Google Earth Engine
+- Sentinel-2 | Landsat | DEM Analysis
+- Watershed delineation
+- Spectral indices (NDVI, NDBI, NDWI, BSI)
+
+### Data Science & ML
+- Random Forest | SVM | K-Means
+- CNN-based raster classification
+- Feature engineering for satellite imagery
+- Accuracy assessment & validation
+
+### Programming
+- Python (GeoPandas, Rasterio, GDAL)
+- Pandas, NumPy, Scikit-Learn
+- SQL
+- Java (Spring Boot foundations)
+
+---
+
+## 📊 What I Deliver
+
+✔ Geospatial databases  
+✔ Interactive web maps  
+✔ Suitability & opportunity mapping  
+✔ Policy-ready technical reports  
+✔ End-to-end ML/DL pipelines  
+
+---
+
+## 📫 Connect With Me
+
+LinkedIn: https://www.linkedin.com/in/athithiyan-m-r-/  
+GitHub: https://github.com/Athithiyanmr  
+
+---
+
+⭐ Open to collaborations in climate analytics, geospatial AI, and sustainability research.
 ## 📫 Connect With Me
 - 💼 LinkedIn: https://www.linkedin.com/in/athithiyan-m-r-/  
 - 💻 GitHub: https://github.com/Athithiyanmr
