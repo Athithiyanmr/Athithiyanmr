@@ -13,14 +13,6 @@
 
 ---
 
-# 👋 Hi, I'm Athithiyan M R
-
-🌍 Geospatial Data Scientist | Climate & Sustainability Analyst  
-📊 Spatial Intelligence for Energy & Environmental Planning  
-📍 India  
-
----
-
 ## 🚀 About Me
 
 I am a Geospatial Data Scientist with 3.5+ years of experience delivering 
