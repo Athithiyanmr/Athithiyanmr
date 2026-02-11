@@ -1,44 +1,117 @@
-
+/* GLOBAL STYLES */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
-  background: #f7f9fc;
-  color: #222;
-  line-height: 1.6;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.7;
+  scroll-behavior: smooth;
 }
 
+/* HEADER */
 header {
-  background: #0f172a;
-  color: #fff;
-  padding: 2rem;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* SECTION */
 section {
-  padding: 2rem;
-  max-width: 900px;
+  padding: 4rem 2rem;
+  max-width: 1000px;
   margin: auto;
 }
 
 h2 {
-  color: #0f172a;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
 }
 
+h2::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: #2563eb;
+  margin-top: 6px;
+}
+
+/* LIST */
 ul {
-  padding-left: 1.2rem;
+  padding-left: 1.3rem;
 }
 
+ul li {
+  margin-bottom: 0.6rem;
+}
+
+/* CARD DESIGN */
 .card {
-  background: white;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  border-left: 5px solid #2563eb;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background: #ffffff;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  border-left: 6px solid #2563eb;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* BUTTON STYLE */
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #e5e7eb;
+  padding: 1.5rem;
+  background: #e2e8f0;
   font-size: 0.9rem;
+  color: #475569;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    padding: 3rem 1rem;
+  }
+
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
 }
