@@ -1,179 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Athithiyan M R | GIS & Data Science Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Athithiyan M R | Geospatial Data Scientist</title>
 
-  <meta name="description" content="GIS Analyst and Data Scientist specializing in remote sensing, land-use planning, and climate-focused geospatial analytics." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #38bdf8;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    max-width: 1100px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #94a3b8;
+}
+
+.btn-group {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.btn-primary:hover {
+    background: #0ea5e9;
+}
+
+.btn-outline {
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+}
+
+.btn-outline:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* SECTION TITLES */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* ABOUT */
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    color: #94a3b8;
+}
+
+/* IMPACT */
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 15px;
+    padding: 20px;
+    background: #1e293b;
+    border-radius: 10px;
+}
+
+.stat-box h2 {
+    font-size: 2rem;
+    color: #38bdf8;
+}
+
+/* PROJECTS */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.project-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* SKILLS */
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-column {
+    flex: 1;
+    margin: 15px;
+}
+
+.skill-column ul {
+    list-style: none;
+}
+
+.skill-column li {
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #1e293b;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <h1>Athithiyan M R</h1>
-    <p class="subtitle">
-      GIS Analyst • Data Scientist • Remote Sensing • Climate & Sustainability
-    </p>
-    <p class="tagline">
-      Geospatial analytics and AI-driven decision support for land-use planning,
-      climate adaptation, and sustainable energy systems.
-    </p>
-  </header>
-
-  <!-- ABOUT -->
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am a <strong>GIS Analyst and Data Scientist</strong> with over
-      <strong>3.5 years of professional experience</strong> working at the
-      intersection of geospatial analytics, satellite remote sensing, and
-      climate-focused planning.
-    </p>
-
-    <p>
-      My work focuses on transforming large volumes of
-      <strong>satellite imagery and spatial datasets</strong> into
-      <strong>policy-ready insights</strong> using GIS, machine learning, and
-      deep learning techniques. I have contributed to
-      <strong>state-level planning and research initiatives in Tamil Nadu</strong>,
-      supporting sustainable energy transition, climate adaptation, and
-      ecological restoration.
-    </p>
-
-    <p>
-      My key interests include <strong>Blue–Green Infrastructure planning</strong>,
-      <strong>land-use change analysis</strong>, and
-      <strong>AI-driven spatial decision support systems</strong>.
-    </p>
-  </section>
-
-  <!-- CORE EXPERTISE -->
-  <section>
-    <h2>Core Expertise</h2>
-    <ul>
-      <li>Land Use / Land Cover (LULC) mapping and change detection</li>
-      <li>Blue–Green Infrastructure and ecosystem services analysis</li>
-      <li>Remote sensing using Sentinel-2 and Landsat imagery</li>
-      <li>Machine learning and deep learning for raster classification</li>
-      <li>GIS-based decision support for climate and sustainability planning</li>
-    </ul>
-  </section>
-
-  <!-- TECHNICAL SKILLS -->
-  <section>
-    <h2>Technical Skills</h2>
-
-    <h3>Remote Sensing & GIS</h3>
-    <ul>
-      <li>Sentinel-2, Landsat, Digital Elevation Models (DEM)</li>
-      <li>QGIS, ArcGIS, Google Earth Engine</li>
-      <li>Raster & vector processing, cartography, spatial reporting</li>
-    </ul>
-
-    <h3>Data Science & AI</h3>
-    <ul>
-      <li>Python: GeoPandas, Rasterio, Xarray, NumPy, Pandas</li>
-      <li>Machine Learning: Random Forest, SVM, K-Means</li>
-      <li>Deep Learning: CNNs, U-Net for image classification</li>
-    </ul>
-
-    <h3>Spatial Analysis</h3>
-    <ul>
-      <li>Spectral indices: NDVI, NDBI, NDWI, BSI</li>
-      <li>Watershed delineation and runoff analysis</li>
-      <li>Multi-Criteria Decision Analysis (MCDA)</li>
-    </ul>
-  </section>
-
-  <!-- PROJECTS -->
-  <section>
-    <h2>Featured Projects</h2>
-
-    <div class="card">
-      <h3>🌿 Tamil Nadu Blue–Green Infrastructure Mapping</h3>
-      <p><strong>Research / Data Analyst – Auroville Consulting</strong></p>
-      <p>
-        Developed a state-wide, science-based framework to identify, map, and
-        prioritize <strong>Blue–Green Networks (BGNs)</strong> across Tamil Nadu.
-      </p>
-      <ul>
-        <li>Analysis of 15,000+ Sentinel-2 images and 40+ geospatial layers</li>
-        <li>Micro-watershed delineation using DEMs</li>
-        <li>Identification of forestation and restoration opportunities</li>
-        <li>Evaluation using 18 ecosystem service criteria</li>
-      </ul>
-      <p>
-        <strong>Outputs:</strong> State-wide BGN database, district-level
-        opportunity maps, and policy recommendations for climate adaptation.
-      </p>
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>Athithiyan M R</h1>
+        <p>Geospatial Data Scientist | Climate & Energy Analytics</p>
+        <div class="btn-group">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="CV.pdf" class="btn btn-outline">Download CV</a>
+        </div>
     </div>
+</section>
 
-    <div class="card">
-      <h3>⚡ Sustainable Energy Transformation – Tamil Nadu (SET-TN)</h3>
-      <p>
-        Contributed to analytical and policy-oriented studies supporting
-        Tamil Nadu’s transition towards a <strong>net-zero energy future</strong>.
-      </p>
-      <ul>
-        <li>Land suitability assessment for distributed solar energy</li>
-        <li>Mapping of unused and fallow lands (Villupuram district)</li>
-        <li>Policy research on Time-of-Use electricity tariffs</li>
-      </ul>
+<!-- ABOUT -->
+<section class="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I specialize in large-scale geospatial modeling, climate adaptation frameworks,
+            and satellite-driven land-use analytics. My work integrates remote sensing,
+            hydrological analysis, and machine learning to design data-driven
+            decision-support systems for sustainable planning.
+        </p>
     </div>
+</section>
 
-    <div class="card">
-      <h3>🌾 Land Suitability Assessment – Kallakurichi District</h3>
-      <p>
-        District-level spatial analysis to assess unused lands for conservation
-        and development pathways.
-      </p>
-      <ul>
-        <li>LULC mapping and change detection</li>
-        <li>Suitability analysis for forestation, agriculture, and water harvesting</li>
-        <li>Identification of land for housing, industry, and solar energy</li>
-        <li>Interactive GIS outputs and stakeholder dissemination</li>
-      </ul>
+<!-- IMPACT -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Impact</h2>
+        <div class="stats">
+            <div class="stat-box">
+                <h2>15,000+</h2>
+                <p>Satellite Scenes Processed</p>
+            </div>
+            <div class="stat-box">
+                <h2>40+</h2>
+                <p>Integrated Geospatial Layers</p>
+            </div>
+            <div class="stat-box">
+                <h2>3.5+</h2>
+                <p>Years Climate Analytics</p>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- EDUCATION -->
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>M.Tech – Petroleum Refining & Petrochemicals</strong><br />
-        Anna University (2019–2021)
-      </li>
-      <li>
-        <strong>B.E – Chemical Engineering</strong><br />
-        Arunai Engineering College (2015–2019)
-      </li>
-    </ul>
-  </section>
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Blue-Green Infrastructure Mapping</h3>
+                <p>Regional ecological prioritization integrating hydrology, LULC,
+                biodiversity indices, and ecosystem service valuation.</p>
+            </div>
 
-  <!-- CONTACT -->
-  <section>
-    <h2>Contact</h2>
-    <p>
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/athithiyan-m-r-/" target="_blank">
-        linkedin.com/in/athithiyan-m-r-
-      </a>
-      <br />
-      GitHub:
-      <a href="https://github.com/Athithiyanmr" target="_blank">
-        github.com/Athithiyanmr
-      </a>
-    </p>
-  </section>
+            <div class="project-card">
+                <h3>Solar Land Suitability Modeling</h3>
+                <p>Multi-criteria analysis for distributed renewable energy
+                planning across Tamil Nadu districts.</p>
+            </div>
 
-  <footer>
-    <p>© 2026 Athithiyan M R</p>
-  </footer>
+            <div class="project-card">
+                <h3>Watershed Hydrological Analysis</h3>
+                <p>Runoff estimation and watershed modeling using DEM,
+                soil, rainfall, and LULC datasets.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills">
+            <div class="skill-column">
+                <h3>Geospatial Systems</h3>
+                <ul>
+                    <li>QGIS / ArcGIS</li>
+                    <li>Google Earth Engine</li>
+                    <li>Sentinel-2 / Landsat</li>
+                    <li>Watershed Delineation</li>
+                </ul>
+            </div>
+
+            <div class="skill-column">
+                <h3>Machine Learning</h3>
+                <ul>
+                    <li>Random Forest / SVM</li>
+                    <li>CNN-based Classification</li>
+                    <li>Feature Engineering</li>
+                    <li>Accuracy Assessment</li>
+                </ul>
+            </div>
+
+            <div class="skill-column">
+                <h3>Programming</h3>
+                <ul>
+                    <li>Python (GeoPandas, Rasterio)</li>
+                    <li>Pandas / NumPy</li>
+                    <li>Scikit-Learn</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+    <div class="container">
+        <h2 class="section-title">Connect</h2>
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: linkedin.com/in/athithiyan-m-r-/</p>
+        <p>GitHub: github.com/Athithiyanmr</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Athithiyan M R | Geospatial Data Scientist
+</footer>
 
 </body>
 </html>
