@@ -1,329 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Athithiyan M R | Geospatial Data Scientist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Athithiyan MR | Geospatial Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    :root {
+      --bg: #0b0f14;
+      --surface: #131920;
+      --card: #1a2330;
+      --accent: #2dd4bf;
+      --accent2: #34d399;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: #1e3a4a;
+    }
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
+    html { scroll-behavior: smooth; }
 
-body {
-    background: #0f172a;
-    color: #e2e8f0;
-    line-height: 1.6;
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-a {
-    text-decoration: none;
-    color: #38bdf8;
-}
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(11,15,20,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 6%;
+    }
+    .logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; color: var(--accent); font-weight: 700; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--accent); }
 
-.container {
-    width: 85%;
-    margin: auto;
-    max-width: 1100px;
-}
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center; flex-direction: column;
+      text-align: center; padding: 6rem 6% 4rem;
+      background: radial-gradient(ellipse at 50% 0%, #0d2a2a 0%, var(--bg) 65%);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(45,212,191,0.1);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.3rem 1rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+    }
+    #hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.15; }
+    #hero h1 span { color: var(--accent); }
+    #hero p { color: var(--muted); max-width: 600px; margin: 1.2rem auto 2rem; font-size: 1.05rem; }
+    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      padding: 0.75rem 1.8rem; border-radius: 8px; font-size: 0.95rem;
+      cursor: pointer; text-decoration: none; font-weight: 600;
+      transition: all 0.25s;
+    }
+    .btn-primary { background: var(--accent); color: var(--bg); }
+    .btn-primary:hover { background: #14b8a6; transform: translateY(-2px); }
+    .btn-outline { border: 1.5px solid var(--accent); color: var(--accent); background: transparent; }
+    .btn-outline:hover { background: rgba(45,212,191,0.1); transform: translateY(-2px); }
 
-section {
-    padding: 80px 0;
-}
+    /* ── SECTIONS ── */
+    section { padding: 5rem 6%; }
+    .section-label {
+      text-align: center; font-size: 0.82rem; letter-spacing: 0.12em;
+      color: var(--accent); text-transform: uppercase; margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      text-align: center; font-size: 2rem; margin-bottom: 3rem;
+    }
 
-/* HERO */
+    /* ── ABOUT ── */
+    #about { background: var(--surface); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 900px; margin: 0 auto; }
+    .about-img-wrap {
+      width: 220px; height: 220px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #3b82f6);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem; margin: 0 auto;
+      box-shadow: 0 0 40px rgba(45,212,191,0.25);
+    }
+    .about-text p { color: var(--muted); margin-bottom: 1rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .tag {
+      background: rgba(45,212,191,0.08); color: var(--accent);
+      border: 1px solid var(--border); padding: 0.25rem 0.75rem;
+      border-radius: 999px; font-size: 0.8rem;
+    }
 
-.hero {
-    text-align: center;
-    padding: 120px 0;
-}
+    /* ── SKILLS ── */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+    .skill-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem; text-align: center;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .skill-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .skill-card i { font-size: 2rem; color: var(--accent); margin-bottom: 0.75rem; }
+    .skill-card h4 { font-size: 0.95rem; margin-bottom: 0.4rem; }
+    .skill-card p { color: var(--muted); font-size: 0.82rem; }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ffffff;
-}
+    /* ── PROJECTS ── */
+    #projects { background: var(--surface); }
+    .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
+    .proj-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.75rem;
+      transition: transform 0.25s, border-color 0.25s;
+      display: flex; flex-direction: column; gap: 0.75rem;
+    }
+    .proj-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .proj-chip {
+      display: inline-block; font-size: 0.75rem; padding: 0.2rem 0.6rem;
+      background: rgba(52,211,153,0.1); color: var(--accent2);
+      border-radius: 4px; margin-bottom: 0.25rem;
+    }
+    .proj-card h3 { font-size: 1rem; }
+    .proj-card p { color: var(--muted); font-size: 0.88rem; flex-grow: 1; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .proj-tag {
+      font-size: 0.75rem; padding: 0.2rem 0.6rem;
+      background: var(--surface); color: var(--muted);
+      border-radius: 4px; border: 1px solid var(--border);
+    }
 
-.hero p {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #94a3b8;
-}
+    /* ── CONTACT ── */
+    .contact-wrap { max-width: 600px; margin: 0 auto; text-align: center; }
+    .contact-wrap p { color: var(--muted); margin-bottom: 2rem; }
+    .social-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    .social-btn {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.65rem 1.4rem; border-radius: 8px;
+      border: 1px solid var(--border); color: var(--text);
+      text-decoration: none; font-size: 0.9rem;
+      background: var(--card); transition: all 0.25s;
+    }
+    .social-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
-.btn-group {
-    margin-top: 30px;
-}
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface); text-align: center;
+      padding: 2rem; color: var(--muted); font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+    footer span { color: var(--accent); }
 
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 10px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.btn-primary {
-    background: #38bdf8;
-    color: #0f172a;
-}
-
-.btn-primary:hover {
-    background: #0ea5e9;
-}
-
-.btn-outline {
-    border: 2px solid #38bdf8;
-    color: #38bdf8;
-}
-
-.btn-outline:hover {
-    background: #38bdf8;
-    color: #0f172a;
-}
-
-/* SECTION TITLES */
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-/* ABOUT */
-
-.about p {
-    max-width: 750px;
-    margin: auto;
-    text-align: center;
-    color: #94a3b8;
-}
-
-/* IMPACT */
-
-.stats {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.stat-box {
-    flex: 1;
-    margin: 15px;
-    padding: 20px;
-    background: #1e293b;
-    border-radius: 10px;
-}
-
-.stat-box h2 {
-    font-size: 2rem;
-    color: #38bdf8;
-}
-
-/* PROJECTS */
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card h3 {
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.project-card p {
-    color: #94a3b8;
-    font-size: 0.95rem;
-}
-
-/* SKILLS */
-
-.skills {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.skill-column {
-    flex: 1;
-    margin: 15px;
-}
-
-.skill-column ul {
-    list-style: none;
-}
-
-.skill-column li {
-    margin-bottom: 10px;
-    color: #94a3b8;
-}
-
-/* CONTACT */
-
-.contact {
-    text-align: center;
-}
-
-.contact p {
-    margin: 10px 0;
-}
-
-/* FOOTER */
-
-footer {
-    text-align: center;
-    padding: 30px 0;
-    background: #1e293b;
-    font-size: 0.9rem;
-    color: #94a3b8;
-}
-</style>
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .about-grid { grid-template-columns: 1fr; text-align: center; }
+      .tag-list { justify-content: center; }
+      .nav-links { gap: 1rem; }
+    }
+  </style>
 </head>
-
 <body>
 
+<!-- NAV -->
+<nav>
+  <div class="logo">Athithiyan.MR</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
 <!-- HERO -->
-<section class="hero">
-    <div class="container">
-        <h1>Athithiyan M R</h1>
-        <p>Geospatial Data Scientist | Climate & Energy Analytics</p>
-        <div class="btn-group">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="CV.pdf" class="btn btn-outline">Download CV</a>
-        </div>
-    </div>
+<section id="hero">
+  <div class="hero-badge">🌍 Open to Remote Opportunities</div>
+  <h1>Hi, I'm <span>Athithiyan MR</span><br/>Geospatial Data Analyst</h1>
+  <p>Turning satellite imagery and Earth observation data into actionable insights for climate change and urban sustainability.</p>
+  <div class="btn-group">
+    <a href="#projects" class="btn btn-primary">View My Work</a>
+    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p>
-            I specialize in large-scale geospatial modeling, climate adaptation frameworks,
-            and satellite-driven land-use analytics. My work integrates remote sensing,
-            hydrological analysis, and machine learning to design data-driven
-            decision-support systems for sustainable planning.
-        </p>
+<section id="about">
+  <p class="section-label">Who I Am</p>
+  <h2>About Me</h2>
+  <div class="about-grid">
+    <div class="about-img-wrap">🌏</div>
+    <div class="about-text">
+      <p>I'm a Geospatial Data Analyst with 3+ years of experience based in <strong>Puducherry, India</strong>. I specialise in Earth observation, land-use/land-cover mapping, and applying machine learning to environmental datasets.</p>
+      <p>My work sits at the intersection of <strong>remote sensing</strong>, <strong>climate adaptation</strong>, and <strong>urban analytics</strong>. I'm passionate about leveraging open-source tools to understand and communicate environmental change.</p>
+      <div class="tag-list">
+        <span class="tag">🛰️ Remote Sensing</span>
+        <span class="tag">🌿 Climate Change</span>
+        <span class="tag">🗺️ LULC Mapping</span>
+        <span class="tag">🏙️ Urban Heat Islands</span>
+        <span class="tag">🐍 Python</span>
+        <span class="tag">☁️ Google Earth Engine</span>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- IMPACT -->
-<section>
-    <div class="container">
-        <h2 class="section-title">Impact</h2>
-        <div class="stats">
-            <div class="stat-box">
-                <h2>15,000+</h2>
-                <p>Satellite Scenes Processed</p>
-            </div>
-            <div class="stat-box">
-                <h2>40+</h2>
-                <p>Integrated Geospatial Layers</p>
-            </div>
-            <div class="stat-box">
-                <h2>3.5+</h2>
-                <p>Years Climate Analytics</p>
-            </div>
-        </div>
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">What I Use</p>
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <i class="fas fa-satellite"></i>
+      <h4>Earth Observation</h4>
+      <p>Sentinel-2, Landsat, SAR analysis &amp; preprocessing</p>
     </div>
+    <div class="skill-card">
+      <i class="fab fa-python"></i>
+      <h4>Python &amp; GEE</h4>
+      <p>GeoPandas, Rasterio, Dask, JavaScript (Earth Engine API)</p>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-layer-group"></i>
+      <h4>GIS Platforms</h4>
+      <p>QGIS, ArcGIS, Google Earth Engine, SNAP</p>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-brain"></i>
+      <h4>Machine Learning</h4>
+      <p>RF, SVM, deep learning for LULC classification</p>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-chart-area"></i>
+      <h4>Data Visualisation</h4>
+      <p>Matplotlib, Folium, Kepler.gl, infographic design</p>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-github"></i>
+      <h4>Version Control</h4>
+      <p>Git, GitHub, Jupyter Notebook workflows</p>
+    </div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-    <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Blue-Green Infrastructure Mapping</h3>
-                <p>Regional ecological prioritization integrating hydrology, LULC,
-                biodiversity indices, and ecosystem service valuation.</p>
-            </div>
+  <p class="section-label">What I've Built</p>
+  <h2>Featured Projects</h2>
+  <div class="proj-grid">
 
-            <div class="project-card">
-                <h3>Solar Land Suitability Modeling</h3>
-                <p>Multi-criteria analysis for distributed renewable energy
-                planning across Tamil Nadu districts.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Watershed Hydrological Analysis</h3>
-                <p>Runoff estimation and watershed modeling using DEM,
-                soil, rainfall, and LULC datasets.</p>
-            </div>
-        </div>
+    <div class="proj-card">
+      <span class="proj-chip">🏙️ Urban Analytics</span>
+      <h3>Built-up Area Classification (Sentinel-2)</h3>
+      <p>Classified urban and built-up infrastructure using Sentinel-2 multispectral imagery with machine learning, enabling temporal change analysis of urban sprawl.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span><span class="proj-tag">Sentinel-2</span><span class="proj-tag">GEE</span><span class="proj-tag">Random Forest</span>
+      </div>
     </div>
-</section>
 
-<!-- SKILLS -->
-<section>
-    <div class="container">
-        <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills">
-            <div class="skill-column">
-                <h3>Geospatial Systems</h3>
-                <ul>
-                    <li>QGIS / ArcGIS</li>
-                    <li>Google Earth Engine</li>
-                    <li>Sentinel-2 / Landsat</li>
-                    <li>Watershed Delineation</li>
-                </ul>
-            </div>
-
-            <div class="skill-column">
-                <h3>Machine Learning</h3>
-                <ul>
-                    <li>Random Forest / SVM</li>
-                    <li>CNN-based Classification</li>
-                    <li>Feature Engineering</li>
-                    <li>Accuracy Assessment</li>
-                </ul>
-            </div>
-
-            <div class="skill-column">
-                <h3>Programming</h3>
-                <ul>
-                    <li>Python (GeoPandas, Rasterio)</li>
-                    <li>Pandas / NumPy</li>
-                    <li>Scikit-Learn</li>
-                    <li>SQL</li>
-                </ul>
-            </div>
-        </div>
+    <div class="proj-card">
+      <span class="proj-chip">🗺️ LULC</span>
+      <h3>Land-Use / Land-Cover Mapping</h3>
+      <p>Produced high-accuracy LULC maps integrating multi-source satellite data and deep learning classifiers, validated against ground-truth field samples.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">QGIS</span><span class="proj-tag">GEE</span><span class="proj-tag">Deep Learning</span><span class="proj-tag">Accuracy Assessment</span>
+      </div>
     </div>
+
+    <div class="proj-card">
+      <span class="proj-chip">🌡️ Climate</span>
+      <h3>Land Surface Temperature &amp; UHI Analysis</h3>
+      <p>Mapped urban heat island intensity across city extents using Landsat LST data, correlating temperature anomalies with impervious surface density.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">Landsat</span><span class="proj-tag">Python</span><span class="proj-tag">LST</span><span class="proj-tag">Urban Heat Island</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-chip">💧 Nature-Based Solutions</span>
+      <h3>Blue-Green Network Identification</h3>
+      <p>Identified and visualised blue-green corridors (water bodies + vegetation) as nature-based solutions for urban climate adaptation and heat mitigation.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">NDVI</span><span class="proj-tag">NDWI</span><span class="proj-tag">GEE</span><span class="proj-tag">Geospatial Viz</span>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
-    <div class="container">
-        <h2 class="section-title">Connect</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: linkedin.com/in/athithiyan-m-r-/</p>
-        <p>GitHub: github.com/Athithiyanmr</p>
+<section id="contact">
+  <p class="section-label">Say Hello</p>
+  <h2>Get In Touch</h2>
+  <div class="contact-wrap">
+    <p>I'm actively looking for remote roles in climate change, Earth observation, and environmental analytics. Feel free to reach out for collaborations or opportunities!</p>
+    <div class="social-links">
+      <a href="https://github.com/Athithiyanmr" class="social-btn" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://linkedin.com/in/athithiyanmr" class="social-btn" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="mailto:your@email.com" class="social-btn">
+        <i class="fas fa-envelope"></i> Email Me
+      </a>
     </div>
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    © 2026 Athithiyan M R | Geospatial Data Scientist
+  <p>Designed &amp; built by <span>Athithiyan MR</span> · Puducherry, India · 2026</p>
 </footer>
 
 </body>
