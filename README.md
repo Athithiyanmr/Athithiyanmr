@@ -1,102 +1,146 @@
-<h1 align="center">Athithiyan M R</h1>
+<div align="center">
 
-<p align="center">
-<b>GIS Analyst | Data Scientist | Remote Sensing | Climate & Sustainability</b>
-</p>
+<!-- Header with animated typing -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=2E9E6B&center=true&vCenter=true&width=700&lines=Athithiyan+M+R;Geospatial+Data+Scientist;Climate+%26+Sustainability+Analyst;Remote+Sensing+%7C+ML+%7C+GIS" alt="Typing SVG" />
 
-<p align="center">
-<img src="https://img.shields.io/badge/GIS-QGIS-green?style=for-the-badge">
-<img src="https://img.shields.io/badge/Remote%20Sensing-Sentinel--2-blue?style=for-the-badge">
-<img src="https://img.shields.io/badge/Machine%20Learning-Python-yellow?style=for-the-badge">
-<img src="https://img.shields.io/badge/Deep%20Learning-CNNs-red?style=for-the-badge">
-</p>
+<br/>
 
----
+<!-- Tagline -->
+**Turning satellite data into climate-action decisions — 3.5+ years across Tamil Nadu's landscapes**
 
-## 🚀 About Me
+<br/>
 
-I am a Geospatial Data Scientist with 3.5+ years of experience delivering 
-large-scale spatial analytics projects for climate adaptation, land-use planning, 
-and sustainable energy transitions.
+<!-- Badges Row 1 -->
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/athithiyan-m-r-/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Athithiyanmr)
+[![Email](https://img.shields.io/badge/Open%20to%20Work-Geospatial%20%7C%20Climate-2E9E6B?style=for-the-badge&logo=gmail&logoColor=white)](#)
 
-I specialize in:
-
-- Blue-Green Infrastructure mapping
-- Land suitability modelling
-- Satellite image classification (Sentinel-2, Landsat)
-- Hydrological & watershed analysis
-- Machine Learning & Deep Learning for remote sensing
-- Multi-criteria spatial decision systems
-
-I build end-to-end geospatial workflows — from raw satellite imagery 
-to policy-ready decision-support tools.
+</div>
 
 ---
 
-## 🌱 Highlight Project: Tamil Nadu Blue-Green Infrastructure Framework
+## 🌍 Who I Am
 
-🔹 Processed 15,000+ Sentinel-2 scenes  
-🔹 Integrated 40+ geospatial layers  
-🔹 Developed ecosystem-service prioritization framework  
-🔹 Designed district-level intervention maps  
-🔹 Built scalable classification from nano to mega scale  
+I'm a **Geospatial Data Scientist** with deep expertise in satellite image analysis, land-use modelling, and AI-driven environmental analytics. My work sits at the intersection of **remote sensing, machine learning, and climate policy** — translating raw earth observation data into tools that governments and planners actually use.
 
-Impact:
-- Supports climate adaptation
-- Enhances ecological restoration
-- Enables evidence-based land-use planning
+Based in **India**, I've spent 3.5+ years building end-to-end spatial workflows for some of Tamil Nadu's most ambitious climate and land-use initiatives.
 
 ---
 
-## ☀ Sustainable Energy Transformation – Tamil Nadu
+## 🚀 Featured Projects
 
-- Land suitability modelling for distributed solar
-- Multi-criteria decision framework
-- Time-of-Use tariff modeling
-- Policy advisory analytics
+### 🌿 Tamil Nadu Blue-Green Infrastructure Framework
+> *Auroville Consulting × Tamil Nadu State Planning Commission · 2024–ongoing*
+
+A regional-scale geospatial framework to identify, map, and prioritize Blue-Green Networks (forests, wetlands, rivers, farmlands) across Tamil Nadu for flood regulation, carbon storage, and biodiversity.
+
+- 📡 Processed **15,000+ Sentinel-2 satellite scenes**
+- 🗂️ Integrated **40+ geospatial layers** (hydrology, topography, climate vulnerability, biodiversity)
+- 🧮 Built **18-criteria ecosystem services prioritization model**
+- 🗺️ Delivered district-level intervention maps from nano → mega scale
+- 📋 Policy recommendations embedded into Tamil Nadu's spatial planning framework
 
 ---
 
-## 🛰 Technical Stack
+### ☀️ Sustainable Energy Transformation – Tamil Nadu (SET-TN)
+> *Auroville Consulting · Aug 2022 – Oct 2023*
 
-### GIS & Remote Sensing
-- QGIS | ArcGIS | Google Earth Engine
-- Sentinel-2 | Landsat | DEM Analysis
-- Watershed delineation
-- Spectral indices (NDVI, NDBI, NDWI, BSI)
+Research and analytics supporting Tamil Nadu's transition to a net-zero energy future.
 
-### Data Science & ML
-- Random Forest | SVM | K-Means
-- CNN-based raster classification
-- Feature engineering for satellite imagery
-- Accuracy assessment & validation
+- 🌾 Land suitability assessment for distributed solar across Villupuram district
+- ⚡ Time-of-Use tariff modelling for clean energy incentives
+- 📊 Policy advisory analytics for grid-connected solar in agriculture
+- 🔗 [Published Report →](https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/)
 
-### Programming
-- Python (GeoPandas, Rasterio, GDAL)
-- Pandas, NumPy, Scikit-Learn
-- SQL
-- Java (Spring Boot foundations)
+---
+
+### 🏡 Land Suitability Assessment – Kallakurichi District
+> *Tamil Nadu State Planning Commission · Feb – Dec 2023*
+
+Multi-use suitability mapping of unused lands for forestation, agriculture, water harvesting, housing, industry, and solar.
+
+- 🛰️ LULC classification and change detection (2019–2023)
+- 🧭 Ground truthing and field data validation
+- 🗺️ Interactive online map for state and local departments
+- 🤝 Awareness sessions with district-level government stakeholders
+
+---
+
+## 🛠️ Technical Stack
+
+<div align="center">
+
+### 🛰️ GIS & Remote Sensing
+![QGIS](https://img.shields.io/badge/QGIS-589632?style=flat-square&logo=qgis&logoColor=white)
+![Google Earth Engine](https://img.shields.io/badge/Google%20Earth%20Engine-4285F4?style=flat-square&logo=google&logoColor=white)
+![Sentinel-2](https://img.shields.io/badge/Sentinel--2-003DA5?style=flat-square&logoColor=white)
+![Landsat](https://img.shields.io/badge/Landsat-1E90FF?style=flat-square&logoColor=white)
+
+### 🤖 Machine Learning & Deep Learning
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![Random Forest](https://img.shields.io/badge/Random%20Forest-228B22?style=flat-square)
+![CNN](https://img.shields.io/badge/CNN%20Deep%20Learning-FF4500?style=flat-square)
+
+### 📦 Data & Geospatial Libraries
+![GeoPandas](https://img.shields.io/badge/GeoPandas-139C5A?style=flat-square)
+![Rasterio](https://img.shields.io/badge/Rasterio-8B4513?style=flat-square)
+![GDAL](https://img.shields.io/badge/GDAL-5CAD3A?style=flat-square)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+
+</div>
 
 ---
 
 ## 📊 What I Deliver
 
-✔ Geospatial databases  
-✔ Interactive web maps  
-✔ Suitability & opportunity mapping  
-✔ Policy-ready technical reports  
-✔ End-to-end ML/DL pipelines  
+| Deliverable | Description |
+|---|---|
+| 🗺️ **Interactive Maps** | Web-ready geospatial databases and suitability maps |
+| 📄 **Technical Reports** | Policy-ready documentation for government and NGO stakeholders |
+| 🤖 **ML/DL Pipelines** | End-to-end workflows from raw imagery to classified outputs |
+| 📡 **LULC Classification** | Multispectral image classification using Sentinel-2 & Landsat |
+| 🌊 **Hydrological Analysis** | Watershed delineation, runoff estimation, climate impact modelling |
+| 📐 **Suitability Modelling** | Multi-criteria decision frameworks for land and energy planning |
 
 ---
 
-## 📫 Connect With Me
+## 📈 Spectral Indices I Work With
 
-LinkedIn: https://www.linkedin.com/in/athithiyan-m-r-/  
-GitHub: https://github.com/Athithiyanmr  
+```
+NDVI  →  Vegetation health & density
+NDWI  →  Water body detection
+NDBI  →  Built-up area mapping
+BSI   →  Bare soil identification
++ Custom band stacking for classification
+```
 
 ---
 
-⭐ Open to collaborations in climate analytics, geospatial AI, and sustainability research.
-## 📫 Connect With Me
-- 💼 LinkedIn: https://www.linkedin.com/in/athithiyan-m-r-/  
-- 💻 GitHub: https://github.com/Athithiyanmr
+## 🎓 Education
+
+| Degree | Institution | Year |
+|---|---|---|
+| M.E. Petroleum Refining & Petrochemicals | Anna University | 2019–2021 |
+| B.E. Chemical Engineering | Arunai Engineering College | 2015–2019 |
+
+---
+
+## 📫 Let's Connect
+
+I'm open to collaborations in **climate analytics, geospatial AI, and sustainability research**.
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Athithiyan%20M%20R-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/athithiyan-m-r-/)
+[![GitHub](https://img.shields.io/badge/GitHub-Athithiyanmr-181717?style=for-the-badge&logo=github)](https://github.com/Athithiyanmr)
+
+</div>
+
+---
+
+<div align="center">
+<sub>🌱 Building geospatial tools for a more climate-resilient world · Based in India</sub>
+</div>
