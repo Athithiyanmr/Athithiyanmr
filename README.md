@@ -130,42 +130,6 @@ NDBI  →  Built-up area mapping
 BSI   →  Bare soil identification
 + Custom band stacking for classification
 ```
-
----
-
-## 🎓 Education
-
-| Degree | Institution | Year |
-|---|---|---|
-| M.E. Petroleum Refining & Petrochemicals | Anna University | 2019–2021 |
-| B.E. Chemical Engineering | Arunai Engineering College | 2015–2019 |
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-<!-- Stats Card + Streak side by side -->
-<img src="https://github-readme-stats.vercel.app/api?username=Athithiyanmr&show_icons=true&theme=default&hide_border=true&title_color=2e5c3e&icon_color=4a7c59&text_color=3d2b1f&bg_color=f4f1ec&include_all_commits=true&count_private=true&rank_icon=github" height="165" alt="GitHub Stats"/>
-<img src="https://github-readme-streak-stats.herokuapp.com?user=Athithiyanmr&theme=default&hide_border=true&stroke=4a7c59&ring=2e5c3e&fire=4a7c59&currStreakLabel=2e5c3e&sideLabels=3d2b1f&dates=7aab80&background=f4f1ec" height="165" alt="GitHub Streak"/>
-
-</div>
-
-<div align="center">
-
-<!-- Top Languages -->
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Athithiyanmr&layout=compact&hide_border=true&title_color=2e5c3e&text_color=3d2b1f&bg_color=f4f1ec&langs_count=8&hide=html,css,javascript" height="160" alt="Top Languages"/>
-
-</div>
-
-<div align="center">
-
-<!-- Activity Graph -->
-[![Athithiyan's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Athithiyanmr&bg_color=f4f1ec&color=2e5c3e&line=4a7c59&point=2e5c3e&area=true&area_color=b8d4bc&hide_border=true&radius=4)](https://github.com/Athithiyanmr)
-
-</div>
-
 ---
 
 ## 📫 Let's Connect
