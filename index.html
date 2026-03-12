@@ -1,326 +1,868 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Athithiyan MR | Geospatial Data Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Athithiyan M R — Geospatial Data Scientist</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --forest: #1a3c2e;
+    --moss: #2e5c3e;
+    --fern: #4a7c59;
+    --sage: #7aab80;
+    --mist: #b8d4bc;
+    --dew: #e8f2e9;
+    --earth: #3d2b1f;
+    --clay: #6b4c35;
+    --sand: #c8ad8f;
+    --sky: #d4e8f0;
+    --stone: #f4f1ec;
+    --ink: #1c1c1c;
+    --smoke: #5c5c5c;
+    --paper: #fafaf7;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Syne', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
 
-    :root {
-      --bg: #0b0f14;
-      --surface: #131920;
-      --card: #1a2330;
-      --accent: #2dd4bf;
-      --accent2: #34d399;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --border: #1e3a4a;
-    }
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: rgba(250,250,247,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(74,124,89,0.15);
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--forest);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--smoke);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--fern); }
 
-    html { scroll-behavior: smooth; }
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 6rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(184,212,188,0.25) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 50% at 20% 80%, rgba(74,124,89,0.08) 0%, transparent 60%);
+  }
+  .hero-grid-lines {
+    position: absolute; inset: 0; z-index: 0; opacity: 0.04;
+    background-image: linear-gradient(var(--forest) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--forest) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--dew);
+    border: 1px solid var(--mist);
+    color: var(--moss);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    margin-bottom: 1.8rem;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--fern);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+  h1.hero-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1.05;
+    color: var(--forest);
+    margin-bottom: 0.4rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  h1.hero-name em {
+    font-style: italic;
+    color: var(--fern);
+  }
+  .hero-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--clay);
+    letter-spacing: 0.05em;
+    margin-bottom: 1.8rem;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--smoke);
+    line-height: 1.75;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+  .hero-desc strong { color: var(--forest); font-weight: 600; }
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+  .btn-primary {
+    background: var(--forest);
+    color: #fff;
+    padding: 0.85rem 2rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--moss); transform: translateY(-2px); }
+  .btn-outline {
+    border: 1.5px solid var(--fern);
+    color: var(--fern);
+    padding: 0.85rem 2rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-outline:hover { background: var(--dew); transform: translateY(-2px); }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+  .hero-visual {
+    position: relative; z-index: 1;
+    display: flex; justify-content: center; align-items: center;
+    animation: fadeIn 1s 0.5s ease both;
+  }
+  .satellite-globe {
+    width: 420px; height: 420px;
+    position: relative;
+  }
 
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(11,15,20,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1rem 6%;
-    }
-    .logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; color: var(--accent); font-weight: 700; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
-    .nav-links a:hover { color: var(--accent); }
+  /* STATS STRIP */
+  .stats-strip {
+    background: var(--forest);
+    padding: 2.5rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    color: var(--sage);
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+  }
 
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center; flex-direction: column;
-      text-align: center; padding: 6rem 6% 4rem;
-      background: radial-gradient(ellipse at 50% 0%, #0d2a2a 0%, var(--bg) 65%);
-    }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(45,212,191,0.1);
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 0.3rem 1rem;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
-      margin-bottom: 1.5rem;
-    }
-    #hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.15; }
-    #hero h1 span { color: var(--accent); }
-    #hero p { color: var(--muted); max-width: 600px; margin: 1.2rem auto 2rem; font-size: 1.05rem; }
-    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-    .btn {
-      padding: 0.75rem 1.8rem; border-radius: 8px; font-size: 0.95rem;
-      cursor: pointer; text-decoration: none; font-weight: 600;
-      transition: all 0.25s;
-    }
-    .btn-primary { background: var(--accent); color: var(--bg); }
-    .btn-primary:hover { background: #14b8a6; transform: translateY(-2px); }
-    .btn-outline { border: 1.5px solid var(--accent); color: var(--accent); background: transparent; }
-    .btn-outline:hover { background: rgba(45,212,191,0.1); transform: translateY(-2px); }
+  /* SECTIONS */
+  section { padding: 6rem 4rem; }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--fern);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: var(--forest);
+    margin-bottom: 3rem;
+    line-height: 1.15;
+  }
 
-    /* ── SECTIONS ── */
-    section { padding: 5rem 6%; }
-    .section-label {
-      text-align: center; font-size: 0.82rem; letter-spacing: 0.12em;
-      color: var(--accent); text-transform: uppercase; margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      text-align: center; font-size: 2rem; margin-bottom: 3rem;
-    }
+  /* ABOUT */
+  #about { background: var(--stone); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .about-text p {
+    font-size: 1rem;
+    color: var(--smoke);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+  .about-text p strong { color: var(--forest); }
+  .about-highlights {
+    display: flex; flex-direction: column; gap: 1.2rem;
+  }
+  .highlight-card {
+    background: var(--paper);
+    border: 1px solid rgba(74,124,89,0.15);
+    border-left: 3px solid var(--fern);
+    border-radius: 0.5rem;
+    padding: 1.2rem 1.5rem;
+  }
+  .highlight-card h4 { font-size: 0.9rem; color: var(--forest); margin-bottom: 0.3rem; }
+  .highlight-card p { font-size: 0.82rem; color: var(--smoke); line-height: 1.5; }
 
-    /* ── ABOUT ── */
-    #about { background: var(--surface); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 900px; margin: 0 auto; }
-    .about-img-wrap {
-      width: 220px; height: 220px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), #3b82f6);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 5rem; margin: 0 auto;
-      box-shadow: 0 0 40px rgba(45,212,191,0.25);
-    }
-    .about-text p { color: var(--muted); margin-bottom: 1rem; }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-    .tag {
-      background: rgba(45,212,191,0.08); color: var(--accent);
-      border: 1px solid var(--border); padding: 0.25rem 0.75rem;
-      border-radius: 999px; font-size: 0.8rem;
-    }
+  /* PROJECTS */
+  #projects { background: var(--paper); }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+  }
+  .project-card {
+    background: var(--paper);
+    border: 1px solid rgba(74,124,89,0.15);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(26,60,46,0.12);
+  }
+  .project-card-header {
+    padding: 2rem;
+    background: var(--stone);
+    border-bottom: 1px solid rgba(74,124,89,0.1);
+    position: relative;
+  }
+  .project-icon {
+    width: 48px; height: 48px;
+    background: var(--forest);
+    border-radius: 0.6rem;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .project-icon svg { width: 24px; height: 24px; fill: none; stroke: var(--sage); stroke-width: 1.5; }
+  .project-year {
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--clay);
+    background: var(--sand);
+    padding: 0.25rem 0.6rem;
+    border-radius: 1rem;
+    opacity: 0.7;
+  }
+  .project-card-header h3 {
+    font-size: 1rem;
+    color: var(--forest);
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+  .project-card-header p {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--clay);
+  }
+  .project-card-body { padding: 1.5rem 2rem; flex: 1; }
+  .project-card-body p {
+    font-size: 0.88rem;
+    color: var(--smoke);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+  .project-tags {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-bottom: 1.2rem;
+  }
+  .tag {
+    font-size: 0.72rem;
+    background: var(--dew);
+    color: var(--moss);
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-weight: 600;
+  }
+  .project-card-footer {
+    padding: 1.2rem 2rem;
+    border-top: 1px solid rgba(74,124,89,0.1);
+  }
+  .project-link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--fern);
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: gap 0.2s;
+  }
+  .project-link:hover { gap: 0.7rem; }
 
-    /* ── SKILLS ── */
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
-    .skill-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.5rem; text-align: center;
-      transition: transform 0.25s, border-color 0.25s;
-    }
-    .skill-card:hover { transform: translateY(-4px); border-color: var(--accent); }
-    .skill-card i { font-size: 2rem; color: var(--accent); margin-bottom: 0.75rem; }
-    .skill-card h4 { font-size: 0.95rem; margin-bottom: 0.4rem; }
-    .skill-card p { color: var(--muted); font-size: 0.82rem; }
+  /* SKILLS */
+  #skills { background: var(--stone); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .skill-group {
+    background: var(--paper);
+    border: 1px solid rgba(74,124,89,0.12);
+    border-radius: 0.8rem;
+    padding: 2rem;
+  }
+  .skill-group-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--fern);
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .skill-group-title span {
+    width: 20px; height: 2px; background: var(--fern);
+  }
+  .skill-chips {
+    display: flex; flex-wrap: wrap; gap: 0.6rem;
+  }
+  .chip {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    background: var(--stone);
+    color: var(--earth);
+    border: 1px solid rgba(74,124,89,0.15);
+    padding: 0.4rem 0.9rem;
+    border-radius: 0.3rem;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .chip:hover { background: var(--dew); border-color: var(--sage); }
 
-    /* ── PROJECTS ── */
-    #projects { background: var(--surface); }
-    .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
-    .proj-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.75rem;
-      transition: transform 0.25s, border-color 0.25s;
-      display: flex; flex-direction: column; gap: 0.75rem;
-    }
-    .proj-card:hover { transform: translateY(-4px); border-color: var(--accent); }
-    .proj-chip {
-      display: inline-block; font-size: 0.75rem; padding: 0.2rem 0.6rem;
-      background: rgba(52,211,153,0.1); color: var(--accent2);
-      border-radius: 4px; margin-bottom: 0.25rem;
-    }
-    .proj-card h3 { font-size: 1rem; }
-    .proj-card p { color: var(--muted); font-size: 0.88rem; flex-grow: 1; }
-    .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .proj-tag {
-      font-size: 0.75rem; padding: 0.2rem 0.6rem;
-      background: var(--surface); color: var(--muted);
-      border-radius: 4px; border: 1px solid var(--border);
-    }
+  /* CONTACT */
+  #contact {
+    background: var(--forest);
+    text-align: center;
+    padding: 6rem 4rem;
+  }
+  #contact .section-label { color: var(--sage); }
+  #contact .section-title { color: #fff; margin-bottom: 1.2rem; }
+  #contact .section-title em { font-style: italic; color: var(--sage); }
+  #contact p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 480px;
+    margin: 0 auto 3rem;
+    line-height: 1.75;
+  }
+  .contact-links {
+    display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+  .contact-btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.9rem 2rem;
+    border-radius: 0.4rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .contact-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+  .contact-btn.linkedin { background: #0A66C2; color: #fff; }
+  .contact-btn.github { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+  .contact-btn.demo { background: var(--sage); color: var(--forest); }
 
-    /* ── CONTACT ── */
-    .contact-wrap { max-width: 600px; margin: 0 auto; text-align: center; }
-    .contact-wrap p { color: var(--muted); margin-bottom: 2rem; }
-    .social-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-    .social-btn {
-      display: flex; align-items: center; gap: 0.5rem;
-      padding: 0.65rem 1.4rem; border-radius: 8px;
-      border: 1px solid var(--border); color: var(--text);
-      text-decoration: none; font-size: 0.9rem;
-      background: var(--card); transition: all 0.25s;
-    }
-    .social-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+  /* FOOTER */
+  footer {
+    background: var(--earth);
+    padding: 1.8rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer p {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+  }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--surface); text-align: center;
-      padding: 2rem; color: var(--muted); font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-    }
-    footer span { color: var(--accent); }
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 700px) {
-      .about-grid { grid-template-columns: 1fr; text-align: center; }
-      .tag-list { justify-content: center; }
-      .nav-links { gap: 1rem; }
-    }
-  </style>
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.5rem; }
+    #hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; }
+    .hero-visual { display: none; }
+    .stats-strip { grid-template-columns: repeat(2, 1fr); padding: 2rem 1.5rem; }
+    section { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.5rem; padding: 1.5rem; text-align: center; }
+  }
+</style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="logo">Athithiyan.MR</div>
+  <a href="#hero" class="nav-logo">Athithiyan M R</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-badge">🌍 Open to Remote Opportunities</div>
-  <h1>Hi, I'm <span>Athithiyan MR</span><br/>Geospatial Data Analyst</h1>
-  <p>Turning satellite imagery and Earth observation data into actionable insights for climate change and urban sustainability.</p>
-  <div class="btn-group">
-    <a href="#projects" class="btn btn-primary">View My Work</a>
-    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Available for collaboration</div>
+    <h1 class="hero-name">Athithiyan<br/><em>M R</em></h1>
+    <p class="hero-title">Geospatial Data Scientist · Remote Sensing · Climate Analytics</p>
+    <p class="hero-desc">
+      Turning <strong>satellite imagery</strong> into climate-action decisions.
+      3.5+ years building end-to-end spatial AI pipelines for Tamil Nadu's
+      most ambitious <strong>land-use and sustainability</strong> initiatives.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+
+  <!-- SVG Globe Illustration -->
+  <div class="hero-visual">
+    <svg class="satellite-globe" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer glow ring -->
+      <circle cx="210" cy="210" r="190" fill="none" stroke="#b8d4bc" stroke-width="0.5" stroke-dasharray="4 8" opacity="0.5"/>
+      <circle cx="210" cy="210" r="165" fill="none" stroke="#7aab80" stroke-width="0.5" opacity="0.3"/>
+
+      <!-- Globe base -->
+      <circle cx="210" cy="210" r="140" fill="#e8f2e9" stroke="#4a7c59" stroke-width="1"/>
+
+      <!-- Land masses (stylized) -->
+      <ellipse cx="175" cy="185" rx="45" ry="55" fill="#4a7c59" opacity="0.6"/>
+      <ellipse cx="230" cy="170" rx="30" ry="40" fill="#2e5c3e" opacity="0.5"/>
+      <ellipse cx="255" cy="230" rx="35" ry="28" fill="#4a7c59" opacity="0.55"/>
+      <ellipse cx="165" cy="255" rx="22" ry="18" fill="#2e5c3e" opacity="0.45"/>
+      <ellipse cx="210" cy="280" rx="40" ry="20" fill="#4a7c59" opacity="0.4"/>
+      <circle cx="290" cy="190" r="18" fill="#2e5c3e" opacity="0.5"/>
+
+      <!-- Grid lines on globe -->
+      <ellipse cx="210" cy="210" r="140" ry="50" fill="none" stroke="#1a3c2e" stroke-width="0.4" opacity="0.15"/>
+      <ellipse cx="210" cy="210" r="140" ry="100" fill="none" stroke="#1a3c2e" stroke-width="0.4" opacity="0.1"/>
+      <line x1="210" y1="70" x2="210" y2="350" stroke="#1a3c2e" stroke-width="0.4" opacity="0.12"/>
+      <line x1="70" y1="210" x2="350" y2="210" stroke="#1a3c2e" stroke-width="0.4" opacity="0.12"/>
+
+      <!-- Globe border -->
+      <circle cx="210" cy="210" r="140" fill="none" stroke="#2e5c3e" stroke-width="1.5"/>
+
+      <!-- Orbit ring -->
+      <ellipse cx="210" cy="210" rx="185" ry="60" fill="none" stroke="#7aab80" stroke-width="1" opacity="0.4" transform="rotate(-20 210 210)"/>
+
+      <!-- Satellite body -->
+      <g transform="rotate(-20 210 210) translate(0, 0)">
+        <rect x="362" y="203" width="22" height="14" rx="2" fill="#1a3c2e"/>
+        <!-- Solar panels -->
+        <rect x="337" y="199" width="24" height="22" rx="1" fill="#2e5c3e" stroke="#7aab80" stroke-width="0.5"/>
+        <rect x="385" y="199" width="24" height="22" rx="1" fill="#2e5c3e" stroke="#7aab80" stroke-width="0.5"/>
+        <!-- Panel lines -->
+        <line x1="345" y1="199" x2="345" y2="221" stroke="#7aab80" stroke-width="0.5" opacity="0.7"/>
+        <line x1="353" y1="199" x2="353" y2="221" stroke="#7aab80" stroke-width="0.5" opacity="0.7"/>
+        <line x1="393" y1="199" x2="393" y2="221" stroke="#7aab80" stroke-width="0.5" opacity="0.7"/>
+        <line x1="401" y1="199" x2="401" y2="221" stroke="#7aab80" stroke-width="0.5" opacity="0.7"/>
+        <!-- Antenna -->
+        <line x1="373" y1="203" x2="373" y2="192" stroke="#4a7c59" stroke-width="1"/>
+        <circle cx="373" cy="190" r="2" fill="#7aab80"/>
+      </g>
+
+      <!-- Data beam from satellite to earth -->
+      <line x1="370" y1="196" x2="258" y2="218" stroke="#7aab80" stroke-width="0.8" stroke-dasharray="3 4" opacity="0.5" transform="rotate(-20 210 210)"/>
+
+      <!-- Data points on globe -->
+      <circle cx="185" cy="195" r="4" fill="#7aab80" opacity="0.8"/>
+      <circle cx="240" cy="175" r="3" fill="#b8d4bc" opacity="0.9"/>
+      <circle cx="260" cy="235" r="3.5" fill="#7aab80" opacity="0.75"/>
+      <circle cx="175" cy="260" r="3" fill="#4a7c59" opacity="0.8"/>
+
+      <!-- Scan lines -->
+      <rect x="160" y="185" width="80" height="8" rx="1" fill="none" stroke="#7aab80" stroke-width="0.5" opacity="0.4"/>
+      <rect x="155" y="195" width="90" height="8" rx="1" fill="none" stroke="#7aab80" stroke-width="0.5" opacity="0.3"/>
+      <rect x="162" y="205" width="76" height="8" rx="1" fill="none" stroke="#7aab80" stroke-width="0.5" opacity="0.2"/>
+
+      <!-- Corner decorations -->
+      <text x="30" y="55" font-family="DM Mono, monospace" font-size="9" fill="#4a7c59" opacity="0.5">SENTINEL-2</text>
+      <text x="30" y="68" font-family="DM Mono, monospace" font-size="9" fill="#4a7c59" opacity="0.4">10m RESOLUTION</text>
+      <text x="30" y="380" font-family="DM Mono, monospace" font-size="9" fill="#4a7c59" opacity="0.4">TAMIL NADU, INDIA</text>
+    </svg>
   </div>
 </section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <span class="stat-num">3.5+</span>
+    <span class="stat-label">Years of Experience</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">15K+</span>
+    <span class="stat-label">Sentinel-2 Scenes Processed</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">40+</span>
+    <span class="stat-label">Geospatial Layers Integrated</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">18</span>
+    <span class="stat-label">Ecosystem Service Criteria</span>
+  </div>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
-  <p class="section-label">Who I Am</p>
-  <h2>About Me</h2>
+  <div class="section-label">About Me</div>
   <div class="about-grid">
-    <div class="about-img-wrap">🌏</div>
-    <div class="about-text">
-      <p>I'm a Geospatial Data Analyst with 3+ years of experience based in <strong>Puducherry, India</strong>. I specialise in Earth observation, land-use/land-cover mapping, and applying machine learning to environmental datasets.</p>
-      <p>My work sits at the intersection of <strong>remote sensing</strong>, <strong>climate adaptation</strong>, and <strong>urban analytics</strong>. I'm passionate about leveraging open-source tools to understand and communicate environmental change.</p>
-      <div class="tag-list">
-        <span class="tag">🛰️ Remote Sensing</span>
-        <span class="tag">🌿 Climate Change</span>
-        <span class="tag">🗺️ LULC Mapping</span>
-        <span class="tag">🏙️ Urban Heat Islands</span>
-        <span class="tag">🐍 Python</span>
-        <span class="tag">☁️ Google Earth Engine</span>
+    <div class="about-text reveal">
+      <div class="section-title">Where satellite data<br/>meets climate action</div>
+      <p>
+        I'm a <strong>Geospatial Data Scientist</strong> based in India, specialising in turning raw earth observation data into tools that governments and planners actually use. My work sits at the intersection of remote sensing, machine learning, and climate policy.
+      </p>
+      <p>
+        With a background in <strong>Chemical Engineering and Petroleum Refining</strong>, I bring a systems-thinking mindset to every spatial problem — from modelling watershed hydrology to classifying land cover at regional scale using Sentinel-2 imagery.
+      </p>
+      <p>
+        Over 3.5 years at <strong>Auroville Consulting</strong>, I've delivered end-to-end geospatial workflows for Tamil Nadu State Planning Commission, building frameworks that directly inform land-use policy and climate adaptation strategy.
+      </p>
+    </div>
+    <div class="about-highlights reveal">
+      <div class="highlight-card">
+        <h4>M.E. Petroleum Refining & Petrochemicals</h4>
+        <p>Anna University · 2019–2021</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <p class="section-label">What I Use</p>
-  <h2>Technical Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <i class="fas fa-satellite"></i>
-      <h4>Earth Observation</h4>
-      <p>Sentinel-2, Landsat, SAR analysis &amp; preprocessing</p>
-    </div>
-    <div class="skill-card">
-      <i class="fab fa-python"></i>
-      <h4>Python &amp; GEE</h4>
-      <p>GeoPandas, Rasterio, Dask, JavaScript (Earth Engine API)</p>
-    </div>
-    <div class="skill-card">
-      <i class="fas fa-layer-group"></i>
-      <h4>GIS Platforms</h4>
-      <p>QGIS, ArcGIS, Google Earth Engine, SNAP</p>
-    </div>
-    <div class="skill-card">
-      <i class="fas fa-brain"></i>
-      <h4>Machine Learning</h4>
-      <p>RF, SVM, deep learning for LULC classification</p>
-    </div>
-    <div class="skill-card">
-      <i class="fas fa-chart-area"></i>
-      <h4>Data Visualisation</h4>
-      <p>Matplotlib, Folium, Kepler.gl, infographic design</p>
-    </div>
-    <div class="skill-card">
-      <i class="fab fa-github"></i>
-      <h4>Version Control</h4>
-      <p>Git, GitHub, Jupyter Notebook workflows</p>
+      <div class="highlight-card">
+        <h4>B.E. Chemical Engineering</h4>
+        <p>Arunai Engineering College · 2015–2019</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Specialisation in Geospatial AI</h4>
+        <p>LULC classification · Watershed modelling · Supervised & unsupervised ML · CNN-based raster segmentation</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Client: Tamil Nadu State Planning Commission</h4>
+        <p>Policy-ready maps and reports embedded into Tamil Nadu's spatial planning framework</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <p class="section-label">What I've Built</p>
-  <h2>Featured Projects</h2>
-  <div class="proj-grid">
+  <div class="section-label">Featured Work</div>
+  <div class="section-title reveal">Projects that shaped<br/>Tamil Nadu's landscape</div>
+  <div class="projects-grid">
 
-    <div class="proj-card">
-      <span class="proj-chip">🏙️ Urban Analytics</span>
-      <h3>Built-up Area Classification (Sentinel-2)</h3>
-      <p>Classified urban and built-up infrastructure using Sentinel-2 multispectral imagery with machine learning, enabling temporal change analysis of urban sprawl.</p>
-      <div class="proj-tags">
-        <span class="proj-tag">Python</span><span class="proj-tag">Sentinel-2</span><span class="proj-tag">GEE</span><span class="proj-tag">Random Forest</span>
+    <!-- Project 1 -->
+    <div class="project-card reveal">
+      <div class="project-card-header">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke-linecap="round"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-linecap="round"/></svg>
+        </div>
+        <span class="project-year">2024 – ongoing</span>
+        <h3>Tamil Nadu Blue-Green Infrastructure Framework</h3>
+        <p>Auroville Consulting × TN State Planning Commission</p>
+      </div>
+      <div class="project-card-body">
+        <p>Regional-scale geospatial framework mapping Blue-Green Networks across Tamil Nadu — forests, wetlands, rivers — for flood regulation, carbon storage, and biodiversity.</p>
+        <div class="project-tags">
+          <span class="tag">Sentinel-2</span>
+          <span class="tag">LULC</span>
+          <span class="tag">Multi-criteria analysis</span>
+          <span class="tag">Ecosystem services</span>
+          <span class="tag">Policy mapping</span>
+        </div>
+      </div>
+      <div class="project-card-footer">
+        <span style="font-size:0.82rem; color: var(--smoke);">15,000+ scenes · 40+ layers · 18 ecosystem criteria</span>
       </div>
     </div>
 
-    <div class="proj-card">
-      <span class="proj-chip">🗺️ LULC</span>
-      <h3>Land-Use / Land-Cover Mapping</h3>
-      <p>Produced high-accuracy LULC maps integrating multi-source satellite data and deep learning classifiers, validated against ground-truth field samples.</p>
-      <div class="proj-tags">
-        <span class="proj-tag">QGIS</span><span class="proj-tag">GEE</span><span class="proj-tag">Deep Learning</span><span class="proj-tag">Accuracy Assessment</span>
+    <!-- Project 2 -->
+    <div class="project-card reveal">
+      <div class="project-card-header">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </div>
+        <span class="project-year">2022–2023</span>
+        <h3>Sustainable Energy Transformation Tamil Nadu (SET-TN)</h3>
+        <p>Auroville Consulting</p>
+      </div>
+      <div class="project-card-body">
+        <p>Land suitability assessment for distributed solar energy across Villupuram district. Policy advisory analytics supporting Tamil Nadu's transition to a net-zero energy future.</p>
+        <div class="project-tags">
+          <span class="tag">Solar suitability</span>
+          <span class="tag">Land-use modelling</span>
+          <span class="tag">Time-of-use tariff</span>
+          <span class="tag">Policy advisory</span>
+        </div>
+      </div>
+      <div class="project-card-footer">
+        <a href="https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/" target="_blank" class="project-link">Read report →</a>
       </div>
     </div>
 
-    <div class="proj-card">
-      <span class="proj-chip">🌡️ Climate</span>
-      <h3>Land Surface Temperature &amp; UHI Analysis</h3>
-      <p>Mapped urban heat island intensity across city extents using Landsat LST data, correlating temperature anomalies with impervious surface density.</p>
-      <div class="proj-tags">
-        <span class="proj-tag">Landsat</span><span class="proj-tag">Python</span><span class="proj-tag">LST</span><span class="proj-tag">Urban Heat Island</span>
+    <!-- Project 3 -->
+    <div class="project-card reveal">
+      <div class="project-card-header">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        </div>
+        <span class="project-year">2023</span>
+        <h3>Land Suitability Assessment — Kallakurichi District</h3>
+        <p>TN State Planning Commission</p>
+      </div>
+      <div class="project-card-body">
+        <p>Multi-use suitability mapping of unused lands for forestation, agriculture, water harvesting, housing, industry, and ground-mounted solar across Kallakurichi district.</p>
+        <div class="project-tags">
+          <span class="tag">LULC change detection</span>
+          <span class="tag">Ground truthing</span>
+          <span class="tag">Interactive maps</span>
+          <span class="tag">Multi-use planning</span>
+        </div>
+      </div>
+      <div class="project-card-footer">
+        <span style="font-size:0.82rem; color: var(--smoke);">Delivered to state & local government departments</span>
       </div>
     </div>
 
-    <div class="proj-card">
-      <span class="proj-chip">💧 Nature-Based Solutions</span>
-      <h3>Blue-Green Network Identification</h3>
-      <p>Identified and visualised blue-green corridors (water bodies + vegetation) as nature-based solutions for urban climate adaptation and heat mitigation.</p>
-      <div class="proj-tags">
-        <span class="proj-tag">NDVI</span><span class="proj-tag">NDWI</span><span class="proj-tag">GEE</span><span class="proj-tag">Geospatial Viz</span>
+    <!-- Project 4 -->
+    <div class="project-card reveal">
+      <div class="project-card-header">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <span class="project-year">2025–2026</span>
+        <h3>Lila CRS Converter</h3>
+        <p>Personal · Open Source</p>
+      </div>
+      <div class="project-card-body">
+        <p>Production-ready geospatial web platform for CRS detection and reprojection of raster and vector datasets. Built with FastAPI + Streamlit, containerised with Docker, deployed with HTTPS.</p>
+        <div class="project-tags">
+          <span class="tag">FastAPI</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Docker</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">VPS deployment</span>
+        </div>
+      </div>
+      <div class="project-card-footer">
+        <a href="https://crs.thelila.org" target="_blank" class="project-link">Live demo →</a>
       </div>
     </div>
 
+    <!-- Project 5 -->
+    <div class="project-card reveal">
+      <div class="project-card-header">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <span class="project-year">2025</span>
+        <h3>Sentinel-2 Built-Up Detection Pipeline</h3>
+        <p>Personal · Open Source</p>
+      </div>
+      <div class="project-card-body">
+        <p>Automated ML pipeline for mapping built-up areas from Sentinel-2 imagery using spectral indices, Random Forest classification, and Microsoft Planetary Computer STAC API.</p>
+        <div class="project-tags">
+          <span class="tag">Random Forest</span>
+          <span class="tag">NDBI · BSI</span>
+          <span class="tag">Planetary Computer</span>
+          <span class="tag">Jupyter</span>
+        </div>
+      </div>
+      <div class="project-card-footer">
+        <a href="https://github.com/Athithiyanmr/sentinel2_builtup_pipeline" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="project-card reveal">
+      <div class="project-card-header">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <span class="project-year">2025</span>
+        <h3>Chennai Urban Climate — UNet Segmentation</h3>
+        <p>Personal · Open Source</p>
+      </div>
+      <div class="project-card-body">
+        <p>Deep learning pipeline for built-up area extraction using UNet semantic segmentation on multi-spectral Sentinel-2 imagery. Applied to Chennai for urban heat island analysis.</p>
+        <div class="project-tags">
+          <span class="tag">UNet</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Semantic segmentation</span>
+          <span class="tag">IoU ~0.60+</span>
+        </div>
+      </div>
+      <div class="project-card-footer">
+        <a href="https://github.com/Athithiyanmr/chennai_urban_climate" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">Technical Stack</div>
+  <div class="section-title reveal">Tools of the trade</div>
+  <div class="skills-grid">
+    <div class="skill-group reveal">
+      <div class="skill-group-title"><span></span>GIS & Remote Sensing</div>
+      <div class="skill-chips">
+        <span class="chip">QGIS</span>
+        <span class="chip">ArcGIS</span>
+        <span class="chip">Google Earth Engine</span>
+        <span class="chip">Sentinel-2</span>
+        <span class="chip">Landsat</span>
+        <span class="chip">DEM Analysis</span>
+        <span class="chip">Watershed delineation</span>
+        <span class="chip">NDVI · NDBI · NDWI · BSI</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-title"><span></span>Machine Learning & Deep Learning</div>
+      <div class="skill-chips">
+        <span class="chip">Random Forest</span>
+        <span class="chip">SVM</span>
+        <span class="chip">K-Means</span>
+        <span class="chip">UNet / CNN</span>
+        <span class="chip">Scikit-Learn</span>
+        <span class="chip">TensorFlow</span>
+        <span class="chip">Patch generation</span>
+        <span class="chip">Accuracy assessment</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-title"><span></span>Data & Geospatial Libraries</div>
+      <div class="skill-chips">
+        <span class="chip">Python</span>
+        <span class="chip">GeoPandas</span>
+        <span class="chip">Rasterio</span>
+        <span class="chip">GDAL</span>
+        <span class="chip">Pandas</span>
+        <span class="chip">NumPy</span>
+        <span class="chip">PostgreSQL</span>
+        <span class="chip">PostGIS</span>
+        <span class="chip">Jupyter</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-title"><span></span>Backend, DevOps & Deployment</div>
+      <div class="skill-chips">
+        <span class="chip">FastAPI</span>
+        <span class="chip">Streamlit</span>
+        <span class="chip">REST APIs</span>
+        <span class="chip">Docker</span>
+        <span class="chip">docker-compose</span>
+        <span class="chip">GitHub Actions</span>
+        <span class="chip">Linux / Bash</span>
+        <span class="chip">Self-hosted VPS</span>
+        <span class="chip">HTTPS / Nginx</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <p class="section-label">Say Hello</p>
-  <h2>Get In Touch</h2>
-  <div class="contact-wrap">
-    <p>I'm actively looking for remote roles in climate change, Earth observation, and environmental analytics. Feel free to reach out for collaborations or opportunities!</p>
-    <div class="social-links">
-      <a href="https://github.com/Athithiyanmr" class="social-btn" target="_blank">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="https://linkedin.com/in/athithiyanmr" class="social-btn" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="mailto:your@email.com" class="social-btn">
-        <i class="fas fa-envelope"></i> Email Me
-      </a>
-    </div>
+  <div class="section-label">Get in Touch</div>
+  <div class="section-title">Open to <em>collaboration</em><br/>and new opportunities</div>
+  <p>Available for geospatial AI projects, climate analytics research, and sustainability-focused data science work. Based in India, open to remote collaboration worldwide.</p>
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/athithiyan-m-r-/" target="_blank" class="contact-btn linkedin">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://github.com/Athithiyanmr" target="_blank" class="contact-btn github">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      GitHub
+    </a>
+    <a href="https://crs.thelila.org" target="_blank" class="contact-btn demo">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      Live Demo
+    </a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>Designed &amp; built by <span>Athithiyan MR</span> · Puducherry, India · 2026</p>
+  <p>© 2026 Athithiyan M R · Geospatial Data Scientist · India</p>
+  <p>Built with HTML · CSS · Satellite imagery not included</p>
 </footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
