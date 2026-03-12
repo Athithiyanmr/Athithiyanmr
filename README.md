@@ -82,6 +82,7 @@ Multi-use suitability mapping of unused lands for forestation, agriculture, wate
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 ![Random Forest](https://img.shields.io/badge/Random%20Forest-228B22?style=flat-square)
 ![CNN](https://img.shields.io/badge/CNN%20Deep%20Learning-FF4500?style=flat-square)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
 
 ### 📦 Data & Geospatial Libraries
 ![GeoPandas](https://img.shields.io/badge/GeoPandas-139C5A?style=flat-square)
@@ -89,6 +90,19 @@ Multi-use suitability mapping of unused lands for forestation, agriculture, wate
 ![GDAL](https://img.shields.io/badge/GDAL-5CAD3A?style=flat-square)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![PostGIS](https://img.shields.io/badge/PostGIS-336791?style=flat-square&logo=postgresql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+
+### 🚀 Backend & Web Apps
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![REST API](https://img.shields.io/badge/REST%20APIs-FF6B35?style=flat-square&logoColor=white)
+
+### ⚙️ DevOps & Deployment
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux%20%2F%20Bash-FCC624?style=flat-square&logo=linux&logoColor=black)
+![VPS](https://img.shields.io/badge/Self--hosted%20VPS-555555?style=flat-square&logo=serverfault&logoColor=white)
 
 </div>
 
@@ -125,6 +139,32 @@ BSI   →  Bare soil identification
 |---|---|---|
 | M.E. Petroleum Refining & Petrochemicals | Anna University | 2019–2021 |
 | B.E. Chemical Engineering | Arunai Engineering College | 2015–2019 |
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+<!-- Stats Card + Streak side by side -->
+<img src="https://github-readme-stats.vercel.app/api?username=Athithiyanmr&show_icons=true&theme=default&hide_border=true&title_color=2e5c3e&icon_color=4a7c59&text_color=3d2b1f&bg_color=f4f1ec&include_all_commits=true&count_private=true&rank_icon=github" height="165" alt="GitHub Stats"/>
+<img src="https://github-readme-streak-stats.herokuapp.com?user=Athithiyanmr&theme=default&hide_border=true&stroke=4a7c59&ring=2e5c3e&fire=4a7c59&currStreakLabel=2e5c3e&sideLabels=3d2b1f&dates=7aab80&background=f4f1ec" height="165" alt="GitHub Streak"/>
+
+</div>
+
+<div align="center">
+
+<!-- Top Languages -->
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Athithiyanmr&layout=compact&hide_border=true&title_color=2e5c3e&text_color=3d2b1f&bg_color=f4f1ec&langs_count=8&hide=html,css,javascript" height="160" alt="Top Languages"/>
+
+</div>
+
+<div align="center">
+
+<!-- Activity Graph -->
+[![Athithiyan's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Athithiyanmr&bg_color=f4f1ec&color=2e5c3e&line=4a7c59&point=2e5c3e&area=true&area_color=b8d4bc&hide_border=true&radius=4)](https://github.com/Athithiyanmr)
+
+</div>
 
 ---
 
