@@ -74,31 +74,7 @@ Multi-use suitability mapping of unused land for forestation, agriculture, water
 | **Backend & Web** | FastAPI · Streamlit · REST APIs |
 | **DevOps** | Docker · GitHub Actions · Linux · Bash · Self-hosted VPS |
 
----
 
-## GitHub Stats
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Athithiyanmr&show_icons=true&theme=default&hide_border=true&title_color=2e5c3e&icon_color=4a7c59&text_color=3d2b1f&bg_color=f4f1ec&include_all_commits=true&count_private=true&rank_icon=github" height="165" alt="GitHub Stats"/>
-<img src="https://github-readme-streak-stats.herokuapp.com?user=Athithiyanmr&theme=default&hide_border=true&stroke=4a7c59&ring=2e5c3e&fire=4a7c59&currStreakLabel=2e5c3e&sideLabels=3d2b1f&dates=7aab80&background=f4f1ec" height="165" alt="GitHub Streak"/>
-
-<br/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Athithiyanmr&layout=compact&hide_border=true&title_color=2e5c3e&text_color=3d2b1f&bg_color=f4f1ec&langs_count=8&hide=html,css,javascript" height="160" alt="Top Languages"/>
-
-</div>
-
----
-
-## Education
-
-| Degree | Institution | Year |
-|---|---|---|
-| M.E. Petroleum Refining & Petrochemicals | Anna University | 2019–2021 |
-| B.E. Chemical Engineering | Arunai Engineering College | 2015–2019 |
-
----
 
 ## Contact
 
