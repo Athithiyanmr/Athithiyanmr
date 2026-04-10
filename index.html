@@ -9,11 +9,31 @@
 <meta property="og:description" content="4+ years turning satellite imagery into climate-actionable intelligence. Remote Sensing, ML, Climate GIS."/>
 <meta property="og:type" content="website"/>
 
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Athithiyan M R",
+  "jobTitle": "Geospatial Data Scientist",
+  "worksFor": {"@type": "Organization", "name": "Auroville Consulting"},
+  "url": "https://athithiyanmr.github.io/Athithiyanmr/",
+  "sameAs": [
+    "https://github.com/Athithiyanmr",
+    "https://www.linkedin.com/in/athithiyan-m-r-/"
+  ],
+  "knowsAbout": ["Remote Sensing", "GIS", "Machine Learning", "Climate Analytics", "Land Use Planning"]
+}
+</script>
+
 <!-- Fonts -->
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
 <style>
 /* ── DESIGN TOKENS ── */
@@ -35,6 +55,7 @@
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
+  --space-5: 1.25rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
   --space-10: 2.5rem;
@@ -284,6 +305,10 @@ h1.hero-name span {
   border: 1.5px solid var(--color-border); color: var(--color-text);
 }
 .btn-outline:hover { border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-2px); }
+.btn-accent {
+  background: var(--color-accent); color: #fff;
+}
+.btn-accent:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .btn svg { width: 16px; height: 16px; }
 
 .hero-visual {
@@ -292,6 +317,63 @@ h1.hero-name span {
   opacity: 0; animation: fadeIn 1s 0.6s ease forwards;
 }
 .globe-container { position: relative; width: 100%; max-width: 440px; aspect-ratio: 1; }
+
+/* ── MAP SECTION ── */
+#project-map {
+  background: var(--color-surface-2);
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+  padding: 0;
+  position: relative;
+}
+.map-header {
+  display: flex; align-items: center; gap: var(--space-4);
+  padding: var(--space-5) var(--space-8) var(--space-4);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-divider);
+  max-width: 100%;
+}
+.map-header-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex; align-items: center; gap: var(--space-3);
+}
+.map-header-label::before { content: ''; width: 20px; height: 1.5px; background: var(--color-primary); display: block; }
+.map-header-title {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+}
+.map-header-sub {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  margin-left: auto;
+  font-family: var(--font-mono);
+}
+#tn-map {
+  height: 320px;
+  width: 100%;
+  z-index: 1;
+}
+.leaflet-container {
+  background: #1a2118;
+  font-family: var(--font-body);
+}
+.map-tooltip {
+  background: var(--color-surface) !important;
+  color: var(--color-text) !important;
+  border: 1px solid var(--color-primary) !important;
+  border-radius: var(--radius-md) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  padding: 4px 10px !important;
+  box-shadow: var(--shadow-md) !important;
+  white-space: nowrap !important;
+}
 
 /* ── STATS ── */
 .stats-strip {
@@ -361,6 +443,54 @@ section { padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-8); 
   margin-bottom: var(--space-4);
 }
 .about-text p strong { color: var(--color-text); font-weight: 600; }
+
+/* Currently at badge */
+.current-badge {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: var(--text-xs); font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 2rem;
+  margin-bottom: var(--space-6);
+}
+.current-badge::before {
+  content: ''; width: 6px; height: 6px;
+  background: var(--color-primary); border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* Focus areas */
+.focus-areas {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-divider);
+}
+.focus-areas-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+.focus-list {
+  display: flex; flex-wrap: wrap; gap: var(--space-2);
+  list-style: none;
+}
+.focus-list li {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-divider);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  max-width: none;
+}
+
 .about-highlights { display: flex; flex-direction: column; gap: var(--space-4); }
 .highlight-card {
   background: var(--color-bg);
@@ -379,13 +509,225 @@ section { padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-8); 
   margin-bottom: var(--space-1);
 }
 .highlight-card p { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.5; }
+.highlight-year {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  display: block;
+  margin-top: var(--space-1);
+}
+
+/* ── EXPERIENCE TIMELINE ── */
+#experience { background: var(--color-bg); }
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-divider));
+  border-radius: 1px;
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--space-6);
+  padding-bottom: var(--space-10);
+  position: relative;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  width: 38px; height: 38px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 2;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: background var(--transition);
+}
+.timeline-dot svg { width: 16px; height: 16px; stroke: var(--color-primary); fill: none; stroke-width: 1.75; }
+.timeline-item:hover .timeline-dot { background: var(--color-primary-light); }
+.timeline-body {
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: box-shadow var(--transition);
+}
+.timeline-body:hover { box-shadow: var(--shadow-md); }
+.timeline-meta {
+  display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  background: var(--color-surface-2);
+  padding: 2px 10px;
+  border-radius: 2rem;
+  letter-spacing: 0.04em;
+}
+.timeline-badge {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 2px 10px;
+  border-radius: 2rem;
+}
+.timeline-role {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-1);
+  line-height: 1.2;
+}
+.timeline-company {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+  letter-spacing: 0.03em;
+}
+.timeline-project {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+  font-style: italic;
+}
+.timeline-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.timeline-list li {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  padding-left: var(--space-5);
+  position: relative;
+  max-width: none;
+}
+.timeline-list li::before {
+  content: '→';
+  position: absolute; left: 0;
+  color: var(--color-primary);
+  font-size: var(--text-xs);
+  top: 3px;
+}
+.timeline-deliverables {
+  display: flex; flex-wrap: wrap; gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+.deliverable-tag {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-divider);
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+}
+.timeline-link {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-xs); font-weight: 600;
+  color: var(--color-primary); text-decoration: none;
+  margin-top: var(--space-3);
+  transition: gap 0.2s ease;
+}
+.timeline-link:hover { gap: var(--space-3); }
+.timeline-link svg { width: 12px; height: 12px; }
 
 /* ── PROJECTS ── */
-#projects { background: var(--color-bg); }
+#projects { background: var(--color-surface); }
+
+/* Featured projects — top 3, spanning 2 cols */
+.projects-featured {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+/* First featured card spans full width on first row, second and third share second row */
+.project-card.featured {
+  background: var(--color-bg);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.project-card.featured:first-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.project-card.featured:first-child .project-card-header {
+  border-bottom: none;
+  border-right: 1px solid var(--color-divider);
+}
+.project-card.featured:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.project-card.featured .project-card-header {
+  padding: var(--space-8);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-surface-2) 100%);
+  border-bottom: 1px solid var(--color-divider);
+  position: relative;
+}
+.project-card.featured .project-icon {
+  width: 52px; height: 52px;
+  background: var(--color-primary);
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: var(--space-5);
+}
+.project-card.featured .project-icon svg { width: 26px; height: 26px; fill: none; stroke: rgba(255,255,255,0.9); stroke-width: 1.5; }
+.project-card.featured .project-card-header h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.25;
+  margin-bottom: var(--space-2);
+}
+.project-card.featured .project-card-body { padding: var(--space-8); flex: 1; }
+.project-card.featured .project-card-body p {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: var(--space-5);
+}
+
+/* Regular 6 projects — 3-column grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
+}
+.projects-grid-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-divider);
 }
 .project-card {
   background: var(--color-surface);
@@ -452,6 +794,7 @@ section { padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-8); 
   padding: var(--space-4) var(--space-6);
   border-top: 1px solid var(--color-divider);
   margin-top: auto;
+  display: flex; align-items: center; justify-content: space-between;
 }
 .project-link {
   font-size: var(--text-xs); font-weight: 600;
@@ -463,6 +806,81 @@ section { padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-8); 
 .project-metric {
   font-size: var(--text-xs);
   color: var(--color-text-faint);
+}
+
+/* ── PUBLICATIONS ── */
+#publications { background: var(--color-bg); }
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+.pub-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex; flex-direction: column;
+  gap: var(--space-4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.pub-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--color-primary);
+}
+.pub-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.pub-icon {
+  width: 40px; height: 40px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.pub-icon svg { width: 20px; height: 20px; stroke: var(--color-primary); fill: none; stroke-width: 1.75; }
+.pub-status {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  padding: 2px 10px;
+  border-radius: 2rem;
+  align-self: flex-start;
+  margin-bottom: var(--space-1);
+}
+.pub-title {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.4;
+  flex: 1;
+}
+.pub-org {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+}
+.pub-link {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-xs); font-weight: 600;
+  color: var(--color-primary); text-decoration: none;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  align-self: flex-start;
+  transition: all var(--transition);
+}
+.pub-link:hover { background: var(--color-primary); color: #fff; }
+.pub-link svg { width: 12px; height: 12px; }
+.pub-link.disabled {
+  color: var(--color-text-faint);
+  border-color: var(--color-divider);
+  cursor: default;
+  pointer-events: none;
 }
 
 /* ── SKILLS ── */
@@ -530,6 +948,8 @@ section { padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-8); 
 .contact-btn.linkedin:hover { background: #084e96; }
 .contact-btn.github { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3); }
 .contact-btn.github:hover { background: rgba(255,255,255,0.25); }
+.contact-btn.cv-dl { background: var(--color-accent); color: #fff; }
+.contact-btn.cv-dl:hover { opacity: 0.9; box-shadow: var(--shadow-md); }
 .contact-btn svg { width: 16px; height: 16px; }
 
 /* ── FOOTER ── */
@@ -581,6 +1001,9 @@ footer p {
 .mobile-nav a:hover { color: var(--color-primary); }
 
 /* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .publications-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 900px) {
   nav { padding: var(--space-4) var(--space-4); }
   .nav-links { display: none; }
@@ -591,9 +1014,19 @@ footer p {
   .stats-strip { padding: var(--space-6) var(--space-4); }
   section { padding: var(--space-12) var(--space-4); }
   .about-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .projects-featured { grid-template-columns: 1fr; }
+  .project-card.featured:first-child { grid-template-columns: 1fr; }
+  .project-card.featured:first-child .project-card-header { border-right: none; border-bottom: 1px solid var(--color-divider); }
   .projects-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
+  .publications-grid { grid-template-columns: 1fr; }
   footer { flex-direction: column; gap: var(--space-2); text-align: center; padding: var(--space-4); }
+  #tn-map { height: 250px; }
+  .map-header { padding: var(--space-4); flex-wrap: wrap; }
+  .map-header-sub { display: none; }
+  .timeline::before { left: 15px; }
+  .timeline-item { grid-template-columns: 32px 1fr; gap: var(--space-4); }
+  .timeline-dot { width: 32px; height: 32px; }
 }
 @media (max-width: 600px) {
   h1.hero-name { font-size: clamp(2.2rem, 8vw, 3rem); }
@@ -609,7 +1042,9 @@ footer p {
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -625,7 +1060,9 @@ footer p {
 <!-- MOBILE NAV -->
 <div class="mobile-nav" onclick="this.classList.remove('open')">
   <a href="#about">About</a>
+  <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
+  <a href="#publications">Publications</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
 </div>
@@ -643,6 +1080,10 @@ footer p {
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">View Projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="./Athithiyan_CV.pdf" class="btn btn-accent" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
+        Download CV
+      </a>
       <a href="#contact" class="btn btn-outline">Get in Touch</a>
     </div>
   </div>
@@ -710,6 +1151,16 @@ footer p {
   </div>
 </section>
 
+<!-- PROJECT MAP -->
+<div id="project-map">
+  <div class="map-header">
+    <div class="map-header-label">Project Footprint</div>
+    <div class="map-header-title">Field sites across Tamil Nadu</div>
+    <div class="map-header-sub">hover markers for details</div>
+  </div>
+  <div id="tn-map"></div>
+</div>
+
 <!-- STATS -->
 <div class="stats-strip">
   <div class="stats-inner">
@@ -727,6 +1178,9 @@ footer p {
     <div class="about-grid">
       <div class="about-text reveal">
         <div class="section-title">Where satellite data<br/>meets climate action</div>
+
+        <div class="current-badge">Auroville Consulting — Geospatial Data Scientist</div>
+
         <p>
           I'm a <strong>Geospatial Data Scientist</strong> based in India, specialising in turning raw earth observation data into tools that governments and planners actually use. My work sits at the intersection of remote sensing, machine learning, and climate policy.
         </p>
@@ -734,21 +1188,35 @@ footer p {
           With a background in <strong>Chemical Engineering and Petroleum Refining</strong>, I bring a systems-thinking mindset to every spatial problem — from modelling watershed hydrology to classifying land cover at regional scale using Sentinel-2 imagery and deep learning.
         </p>
         <p>
-          Over 4 years at <strong>Auroville Consulting</strong>, I've delivered end-to-end geospatial workflows for the Tamil Nadu State Planning Commission, building frameworks that directly inform land-use policy and climate adaptation strategy.
+          Over 4 years at <strong>Auroville Consulting</strong>, I've delivered end-to-end geospatial workflows for the <strong>Tamil Nadu State Planning Commission</strong>, building frameworks that directly inform land-use policy and climate adaptation strategy. My work spans renewable energy siting, blue-green infrastructure planning, and multi-criteria land suitability assessments — each producing policy-ready maps and reports that are embedded into Tamil Nadu's spatial planning framework.
         </p>
+
+        <div class="focus-areas">
+          <div class="focus-areas-label">Focus Areas</div>
+          <ul class="focus-list">
+            <li>Remote Sensing</li>
+            <li>Land Use Planning</li>
+            <li>Climate Analytics</li>
+            <li>Deep Learning for EO</li>
+            <li>Blue-Green Infrastructure</li>
+          </ul>
+        </div>
       </div>
       <div class="about-highlights reveal">
         <div class="highlight-card">
-          <h4>M.Tech. Petroleum Refining & Petrochemicals</h4>
-          <p>Anna University, Chennai · 2019–2021</p>
+          <h4>M.Tech. Petroleum Refining &amp; Petrochemicals</h4>
+          <p>Anna University, Chennai</p>
+          <span class="highlight-year">2019–2021</span>
         </div>
         <div class="highlight-card">
           <h4>B.Tech. Chemical Engineering</h4>
-          <p>Arunai Engineering College · 2015–2019</p>
+          <p>Arunai Engineering College</p>
+          <span class="highlight-year">2015–2019</span>
         </div>
         <div class="highlight-card">
           <h4>Master in Data Science</h4>
-          <p>GUVI (IIT Madras) · 2021–2022</p>
+          <p>GUVI (IIT Madras)</p>
+          <span class="highlight-year">2021–2022</span>
         </div>
         <div class="highlight-card">
           <h4>Specialisation in Geospatial AI</h4>
@@ -763,186 +1231,379 @@ footer p {
   </div>
 </section>
 
+<!-- EXPERIENCE TIMELINE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label">Professional Experience</div>
+    <div class="section-title reveal">Building Tamil Nadu's<br/>spatial intelligence layer</div>
+
+    <div class="timeline">
+
+      <!-- Role 1 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0M12 8v4l3 3"/></svg>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-meta">
+            <span class="timeline-period">July 2024 — Present</span>
+            <span class="timeline-badge">Current Role</span>
+          </div>
+          <div class="timeline-role">Research / Data Analyst</div>
+          <div class="timeline-company">Auroville Consulting × Tamil Nadu State Planning Commission</div>
+          <div class="timeline-project">Tamil Nadu Blue-Green Infrastructure Potential Mapping and Development Framework</div>
+          <ul class="timeline-list">
+            <li>Developed science-based framework to identify, map, and prioritize Blue-Green Networks (BGNs) across Tamil Nadu</li>
+            <li>Processed 15,000+ Sentinel-2 images and 40+ geospatial layers (LULC, hydrology, DEM, biodiversity, climate)</li>
+            <li>Used DEM-derived micro-watersheds to identify ecological linkages across landscapes</li>
+            <li>Mapped unused/fallow lands 2019–2023, assessing forestation potential via multi-criteria suitability model</li>
+            <li>Evaluated BGNs on 18 ecosystem service criteria; delivered district-wise intervention zones</li>
+          </ul>
+          <div class="timeline-deliverables">
+            <span class="deliverable-tag">Geospatial Database</span>
+            <span class="deliverable-tag">Interactive Map</span>
+            <span class="deliverable-tag">Suitability Maps</span>
+            <span class="deliverable-tag">Multi-criteria Tool</span>
+            <span class="deliverable-tag">Policy Recommendations</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-meta">
+            <span class="timeline-period">Aug 2022 — Oct 2023</span>
+          </div>
+          <div class="timeline-role">Data Analyst</div>
+          <div class="timeline-company">Auroville Consulting</div>
+          <div class="timeline-project">Sustainable Energy Transformation Tamil Nadu (SET-TN)</div>
+          <ul class="timeline-list">
+            <li>Policy advisory to accelerate renewable energy adoption in Tamil Nadu</li>
+            <li>Research and data analytics for sustainable energy transition pathways</li>
+            <li>Capacity building for TN power sector net-zero transition</li>
+            <li>Land-suitability assessment for distributed solar energy in Villupuram district</li>
+            <li>Modelling Time of Use electricity tariffs for Tamil Nadu power sector</li>
+          </ul>
+          <div style="display:flex; flex-wrap:wrap; gap:var(--space-2); margin-top:var(--space-3);">
+            <a href="https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/" class="timeline-link" target="_blank" rel="noopener">
+              Land Suitability Report — Villupuram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://www.aurovilleconsulting.com/modelling-time-of-use-electricity-tariffs-for-tamil-nadu/" class="timeline-link" target="_blank" rel="noopener">
+              Time of Use Tariff Report <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <svg viewBox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-meta">
+            <span class="timeline-period">Feb 2023 — Dec 2023</span>
+          </div>
+          <div class="timeline-role">Research / Data Analyst</div>
+          <div class="timeline-company">Auroville Consulting × Tamil Nadu State Planning Commission</div>
+          <div class="timeline-project">Land Suitability Assessment for Kallakurichi District</div>
+          <ul class="timeline-list">
+            <li>Identified unused lands for forestation, agriculture, water harvesting, housing, industrial development, and solar energy</li>
+            <li>LULC detection and change detection across multi-year Sentinel-2 time series</li>
+            <li>Land suitability assessment and ground truthing field campaigns</li>
+            <li>Delivered project report, interactive online map, and community awareness sessions</li>
+          </ul>
+          <div class="timeline-deliverables">
+            <span class="deliverable-tag">Project Report</span>
+            <span class="deliverable-tag">Interactive Map</span>
+            <span class="deliverable-tag">Ground Truth Campaign</span>
+            <span class="deliverable-tag">Awareness Sessions</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-wide">
     <div class="section-label">Featured Work</div>
     <div class="section-title reveal">Projects that shaped<br/>Tamil Nadu's landscape</div>
+
+    <!-- Featured top 3 projects -->
+    <div class="projects-featured">
+
+      <!-- Featured Project 1: Blue-Green Infrastructure -->
+      <div class="project-card featured reveal">
+        <div class="project-card-header">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/></svg>
+          </div>
+          <span class="project-year">2024 — Present</span>
+          <h3>Blue-Green Infrastructure Potential Mapping — Tamil Nadu</h3>
+          <div class="project-org">Auroville Consulting × Tamil Nadu State Planning Commission</div>
+        </div>
+        <div class="project-card-body">
+          <p>State-scale geospatial framework identifying, mapping, and prioritizing Blue-Green Networks (BGNs) across all 38 districts of Tamil Nadu. Processed 15,000+ Sentinel-2 images alongside 40+ geospatial layers covering LULC, hydrology, DEM, biodiversity, and climate data to deliver district-wise intervention zones evaluated on 18 ecosystem service criteria.</p>
+          <div class="project-tags">
+            <span class="tag">Sentinel-2</span>
+            <span class="tag">DEM Analysis</span>
+            <span class="tag">Multi-criteria</span>
+            <span class="tag">Ecosystem Services</span>
+            <span class="tag">LULC</span>
+            <span class="tag">Hydrology</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Project 2: Coconut Mapping -->
+      <div class="project-card featured reveal">
+        <div class="project-card-header">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z"/><path d="M12 3c0 0-4 4-4 9s4 9 4 9 4-4 4-9-4-9-4-9z"/><path d="M3 12h18"/></svg>
+          </div>
+          <span class="project-year">2023</span>
+          <h3>Coconut Plantation Mapping — Coimbatore District</h3>
+          <div class="project-org">Geospatial AI / Remote Sensing</div>
+        </div>
+        <div class="project-card-body">
+          <p>Deep learning pipeline using U-Net architecture on high-resolution satellite imagery to detect and map coconut plantations across Coimbatore. Achieved high precision in distinguishing coconut from mixed-use and forest land cover classes, enabling scalable crop-type mapping for agricultural planning.</p>
+          <div class="project-tags">
+            <span class="tag">U-Net</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Crop Mapping</span>
+            <span class="tag">High-Resolution RS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Project 3: Chennai Urban Climate -->
+      <div class="project-card featured reveal">
+        <div class="project-card-header">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          </div>
+          <span class="project-year">2022 — 2023</span>
+          <h3>Urban Heat Island &amp; Climate Risk — Chennai</h3>
+          <div class="project-org">Climate Analytics / Geospatial</div>
+        </div>
+        <div class="project-card-body">
+          <p>Thermal remote sensing analysis of urban heat island intensity across Chennai metropolitan area. Combined MODIS LST, Sentinel-2 NDVI, and urban morphology data to identify high-risk heat zones and their correlation with LULC patterns. Deliverables included climate risk maps and evidence-based urban greening recommendations.</p>
+          <div class="project-tags">
+            <span class="tag">MODIS LST</span>
+            <span class="tag">Urban Heat</span>
+            <span class="tag">NDVI</span>
+            <span class="tag">Climate Risk</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Regular 6 projects below -->
+    <div class="projects-grid-label reveal">More Projects</div>
     <div class="projects-grid">
 
-      <!-- Project 1 -->
+      <!-- Project 4: Villupuram Solar -->
       <div class="project-card reveal">
         <div class="project-card-header">
-          <div class="project-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke-linecap="round"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z" stroke-linecap="round"/></svg></div>
-          <span class="project-year">2024–now</span>
-          <h3>Tamil Nadu Blue-Green Infrastructure Framework</h3>
-          <p class="project-org">Auroville Consulting × TN State Planning Commission</p>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <span class="project-year">2022–2023</span>
+          <h3>Land Suitability — Distributed Solar Energy, Villupuram</h3>
+          <div class="project-org">SET-TN / Auroville Consulting</div>
         </div>
         <div class="project-card-body">
-          <p>Regional-scale geospatial framework mapping Blue-Green Networks across Tamil Nadu for flood regulation, carbon storage, and biodiversity.</p>
+          <p>Multi-criteria land suitability assessment to identify optimal sites for distributed solar energy deployment across Villupuram district. Integrated slope, land cover, grid proximity, and socio-economic exclusion layers.</p>
           <div class="project-tags">
-            <span class="tag">Sentinel-2</span><span class="tag">LULC</span><span class="tag">Multi-criteria</span><span class="tag">Ecosystem services</span>
+            <span class="tag">MCDA</span>
+            <span class="tag">Solar Siting</span>
+            <span class="tag">GIS Analysis</span>
           </div>
         </div>
         <div class="project-card-footer">
-          <span class="project-metric">15,000+ scenes · 40+ layers · 18 ecosystem criteria</span>
+          <a href="https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/" class="project-link" target="_blank" rel="noopener">View Report →</a>
+          <span class="project-metric">Published</span>
         </div>
       </div>
 
-      <!-- Project 2 -->
+      <!-- Project 5: Time of Use Tariff -->
       <div class="project-card reveal">
         <div class="project-card-header">
-          <div class="project-icon"><svg viewBox="0 0 24 24"><path d="M6 20.5C4.5 19.5 3 18 2.5 16 2 14 2 11.5 3 9c1-2.5 3-4.5 5.5-5.5C11 2.5 14 2.5 16 3.5c2 1 3.5 2.5 4.5 5"/><circle cx="12" cy="12" r="3"/><path d="M18 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/></svg></div>
-          <span class="project-year">2025–now</span>
-          <h3>Coconut Plantation Mapping — Tamil Nadu</h3>
-          <p class="project-org">Personal · Open Source</p>
-        </div>
-        <div class="project-card-body">
-          <p>Deep learning pipeline (U-Net) for coconut plantation mapping from Sentinel-2 imagery. Built a collaborative web tool for verifying training labels across all 38 districts.</p>
-          <div class="project-tags">
-            <span class="tag">U-Net</span><span class="tag">Sentinel-2</span><span class="tag">90K polygons</span><span class="tag">Web tool</span>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
-        </div>
-        <div class="project-card-footer">
-          <a href="https://github.com/Athithiyanmr/coconut_plantation_mapping" target="_blank" class="project-link">GitHub &rarr;</a>
-          &nbsp;&nbsp;
-          <a href="https://athithiyanmr.github.io/coconut_verification_tool/" target="_blank" class="project-link">Live tool &rarr;</a>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card reveal">
-        <div class="project-card-header">
-          <div class="project-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-          <span class="project-year">2025–now</span>
-          <h3>Chennai Urban Climate — U-Net Segmentation</h3>
-          <p class="project-org">Personal · Open Source</p>
-        </div>
-        <div class="project-card-body">
-          <p>Deep learning pipeline for built-up area extraction using U-Net semantic segmentation on Sentinel-2 imagery. Applied to Chennai for urban heat island and climate vulnerability analysis.</p>
-          <div class="project-tags">
-            <span class="tag">U-Net</span><span class="tag">Deep Learning</span><span class="tag">Segmentation</span><span class="tag">Urban heat</span>
-          </div>
-        </div>
-        <div class="project-card-footer">
-          <a href="https://github.com/Athithiyanmr/chennai_urban_climate" target="_blank" class="project-link">View on GitHub &rarr;</a>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="project-card reveal">
-        <div class="project-card-header">
-          <div class="project-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
-          <span class="project-year">2022–23</span>
-          <h3>Sustainable Energy Transformation — SET-TN</h3>
-          <p class="project-org">Auroville Consulting</p>
-        </div>
-        <div class="project-card-body">
-          <p>Land suitability assessment for distributed solar energy across Villupuram district. Policy advisory analytics supporting Tamil Nadu's transition to net-zero energy.</p>
-          <div class="project-tags">
-            <span class="tag">Solar suitability</span><span class="tag">Land-use</span><span class="tag">ToU tariff</span><span class="tag">Policy</span>
-          </div>
-        </div>
-        <div class="project-card-footer">
-          <a href="https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/" target="_blank" class="project-link">Published report &rarr;</a>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="project-card reveal">
-        <div class="project-card-header">
-          <div class="project-icon"><svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div>
           <span class="project-year">2023</span>
-          <h3>Land Suitability Assessment — Kallakurichi</h3>
-          <p class="project-org">TN State Planning Commission</p>
+          <h3>Time of Use Electricity Tariff Modelling — Tamil Nadu</h3>
+          <div class="project-org">SET-TN / Auroville Consulting</div>
         </div>
         <div class="project-card-body">
-          <p>Multi-use suitability mapping of unused lands for forestation, agriculture, water harvesting, housing, industry, and solar across Kallakurichi district.</p>
+          <p>Modelled Time of Use electricity tariff structures for Tamil Nadu to incentivise demand-side flexibility and accelerate renewable integration. Analysis covered load profiles, peak shifting potential, and consumer impact.</p>
           <div class="project-tags">
-            <span class="tag">Change detection</span><span class="tag">Ground truthing</span><span class="tag">Interactive maps</span>
+            <span class="tag">Energy Modelling</span>
+            <span class="tag">Tariff Design</span>
+            <span class="tag">Policy Analytics</span>
           </div>
         </div>
         <div class="project-card-footer">
-          <a href="https://github.com/Athithiyanmr/Kallakurichi" target="_blank" class="project-link">View on GitHub &rarr;</a>
+          <a href="https://www.aurovilleconsulting.com/modelling-time-of-use-electricity-tariffs-for-tamil-nadu/" class="project-link" target="_blank" rel="noopener">View Report →</a>
+          <span class="project-metric">Published</span>
         </div>
       </div>
 
-      <!-- Project 6 -->
+      <!-- Project 6: Kallakurichi Land Suitability -->
       <div class="project-card reveal">
         <div class="project-card-header">
-          <div class="project-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <span class="project-year">2025</span>
-          <h3>Lila CRS Converter</h3>
-          <p class="project-org">Personal · Open Source · Deployed</p>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <span class="project-year">2023</span>
+          <h3>Land Suitability Assessment — Kallakurichi District</h3>
+          <div class="project-org">Auroville Consulting × TN Planning Commission</div>
         </div>
         <div class="project-card-body">
-          <p>Production-ready geospatial web platform for CRS detection and reprojection. Built with FastAPI + Streamlit, containerised with Docker, deployed on VPS with HTTPS.</p>
+          <p>Comprehensive land suitability assessment identifying unused lands for forestation, agriculture, water harvesting, housing, industrial development, and solar energy. Included LULC change detection and ground truthing campaigns.</p>
           <div class="project-tags">
-            <span class="tag">FastAPI</span><span class="tag">Streamlit</span><span class="tag">Docker</span><span class="tag">CI/CD</span>
+            <span class="tag">LULC Change</span>
+            <span class="tag">Suitability Mapping</span>
+            <span class="tag">Ground Truthing</span>
           </div>
         </div>
         <div class="project-card-footer">
-          <a href="https://github.com/Athithiyanmr/Lila-crs-converter" target="_blank" class="project-link">GitHub &rarr;</a>
+          <span class="project-link">Internal Report</span>
+          <span class="project-metric">TN Planning Comm.</span>
         </div>
       </div>
 
-      <!-- Project 7 -->
+      <!-- Project 7: LULC Classification -->
       <div class="project-card reveal">
         <div class="project-card-header">
-          <div class="project-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
-          <span class="project-year">2025</span>
-          <h3>Sentinel-2 Built-Up Detection Pipeline</h3>
-          <p class="project-org">Personal · Open Source</p>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <span class="project-year">2022</span>
+          <h3>Multi-class LULC Classification — Sentinel-2</h3>
+          <div class="project-org">Remote Sensing / ML</div>
         </div>
         <div class="project-card-body">
-          <p>Automated ML pipeline for mapping built-up areas from Sentinel-2 imagery using spectral indices, Random Forest classification, and Microsoft Planetary Computer STAC API.</p>
+          <p>Random Forest and SVM-based multi-class land use/land cover classification across Tamil Nadu using Sentinel-2 multi-temporal composites. Achieved &gt;90% overall accuracy across 12 land cover classes including agriculture, water bodies, built-up, and scrubland.</p>
           <div class="project-tags">
-            <span class="tag">Random Forest</span><span class="tag">NDBI / BSI</span><span class="tag">Planetary Computer</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">SVM</span>
+            <span class="tag">LULC</span>
+            <span class="tag">Sentinel-2</span>
           </div>
         </div>
         <div class="project-card-footer">
-          <a href="https://github.com/Athithiyanmr/sentinel2_builtup_pipeline" target="_blank" class="project-link">View on GitHub &rarr;</a>
+          <span class="project-link">Research Project</span>
+          <span class="project-metric">&gt;90% Accuracy</span>
         </div>
       </div>
 
-      <!-- Project 8 -->
+      <!-- Project 8: Watershed Hydrology -->
       <div class="project-card reveal">
         <div class="project-card-header">
-          <div class="project-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-          <span class="project-year">2025</span>
-          <h3>Coconut Verification Tool</h3>
-          <p class="project-org">Personal · Open Source · Collaborative</p>
-        </div>
-        <div class="project-card-body">
-          <p>Interactive web tool enabling distributed teams to verify coconut plantation training labels across all 38 Tamil Nadu districts on satellite basemaps with shared cloud backend.</p>
-          <div class="project-tags">
-            <span class="tag">Leaflet.js</span><span class="tag">GeoJSON</span><span class="tag">GitHub Pages</span><span class="tag">Collaborative</span>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
           </div>
-        </div>
-        <div class="project-card-footer">
-          <a href="https://athithiyanmr.github.io/coconut_verification_tool/" target="_blank" class="project-link">Live tool &rarr;</a>
-          &nbsp;&nbsp;
-          <a href="https://github.com/Athithiyanmr/coconut_verification_tool" target="_blank" class="project-link">GitHub &rarr;</a>
-        </div>
-      </div>
-
-      <!-- Project 9 -->
-      <div class="project-card reveal">
-        <div class="project-card-header">
-          <div class="project-icon"><svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
           <span class="project-year">2024</span>
-          <h3>Solar + Storage Bill Calculator</h3>
-          <p class="project-org">Personal · Open Source</p>
+          <h3>DEM-derived Micro-watershed Analysis</h3>
+          <div class="project-org">Hydrological Modelling</div>
         </div>
         <div class="project-card-body">
-          <p>25-year economic analysis tool for evaluating Solar + Battery Storage investments. Models tariff escalation, degradation curves, and payback periods for residential and commercial systems.</p>
+          <p>Automated micro-watershed delineation from SRTM and Cartosat DEM data to identify ecological linkages and hydrological flow paths across Tamil Nadu's landscape. Foundation layer for the Blue-Green Infrastructure framework.</p>
           <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">Financial modelling</span><span class="tag">Solar energy</span>
+            <span class="tag">DEM Processing</span>
+            <span class="tag">Watershed</span>
+            <span class="tag">SRTM</span>
+            <span class="tag">Flow Analysis</span>
           </div>
         </div>
         <div class="project-card-footer">
-          <a href="https://github.com/Athithiyanmr/Bill_Calculator" target="_blank" class="project-link">View on GitHub &rarr;</a>
+          <span class="project-link">BGN Framework Component</span>
+          <span class="project-metric">38 Districts</span>
         </div>
+      </div>
+
+      <!-- Project 9: Change Detection -->
+      <div class="project-card reveal">
+        <div class="project-card-header">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+          </div>
+          <span class="project-year">2019–2023</span>
+          <h3>Fallow &amp; Unused Land Change Detection — 2019–2023</h3>
+          <div class="project-org">Multi-temporal Remote Sensing</div>
+        </div>
+        <div class="project-card-body">
+          <p>Multi-temporal change detection across Tamil Nadu to map fallow and unused land dynamics from 2019 to 2023. Integrated spectral indices and machine learning classifiers to assess forestation potential and identify priority intervention zones.</p>
+          <div class="project-tags">
+            <span class="tag">Change Detection</span>
+            <span class="tag">Time Series</span>
+            <span class="tag">Vegetation Indices</span>
+            <span class="tag">Forestation</span>
+          </div>
+        </div>
+        <div class="project-card-footer">
+          <span class="project-link">BGN Framework Component</span>
+          <span class="project-metric">4-year span</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-inner">
+    <div class="section-label">Publications &amp; Reports</div>
+    <div class="section-title reveal">Research outputs<br/>in the public domain</div>
+
+    <div class="publications-grid">
+
+      <!-- Pub 1 -->
+      <div class="pub-card reveal">
+        <div class="pub-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+        </div>
+        <div class="pub-title">Land-suitability assessment of Villupuram district — distributed solar energy potential</div>
+        <div class="pub-org">Auroville Consulting · SET-TN · 2023</div>
+        <a href="https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/" class="pub-link" target="_blank" rel="noopener">
+          Read Report <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+
+      <!-- Pub 2 -->
+      <div class="pub-card reveal">
+        <div class="pub-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="pub-title">Modelling Time of Use Electricity Tariffs for Tamil Nadu</div>
+        <div class="pub-org">Auroville Consulting · SET-TN · 2023</div>
+        <a href="https://www.aurovilleconsulting.com/modelling-time-of-use-electricity-tariffs-for-tamil-nadu/" class="pub-link" target="_blank" rel="noopener">
+          Read Report <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+
+      <!-- Pub 3: In Progress -->
+      <div class="pub-card reveal">
+        <div class="pub-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <span class="pub-status">In Progress</span>
+        <div class="pub-title">Blue-Green Infrastructure Potential Mapping and Development Framework — Tamil Nadu</div>
+        <div class="pub-org">Auroville Consulting × Tamil Nadu State Planning Commission · 2024–2025</div>
+        <span class="pub-link disabled">
+          Coming Soon <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </span>
       </div>
 
     </div>
@@ -952,55 +1613,109 @@ footer p {
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
-    <div class="section-label">Technical Stack</div>
-    <div class="section-title reveal">Tools of the trade</div>
+    <div class="section-label">Capabilities</div>
+    <div class="section-title reveal">Tools &amp; technologies<br/>in the stack</div>
     <div class="skills-grid">
+
       <div class="skill-group reveal">
-        <div class="skill-group-title">GIS & Remote Sensing</div>
+        <div class="skill-group-title">Remote Sensing &amp; GIS</div>
         <div class="skill-chips">
-          <span class="chip">QGIS</span><span class="chip">ArcGIS</span><span class="chip">Google Earth Engine</span><span class="chip">Sentinel-2</span><span class="chip">Landsat</span><span class="chip">DEM Analysis</span><span class="chip">NDVI · NDBI · NDWI</span>
+          <span class="chip">Sentinel-2</span>
+          <span class="chip">Landsat</span>
+          <span class="chip">MODIS</span>
+          <span class="chip">Cartosat DEM</span>
+          <span class="chip">SRTM</span>
+          <span class="chip">Google Earth Engine</span>
+          <span class="chip">QGIS</span>
+          <span class="chip">ArcGIS</span>
+          <span class="chip">GDAL</span>
+          <span class="chip">PostGIS</span>
+          <span class="chip">Rasterio</span>
+          <span class="chip">GeoPandas</span>
+          <span class="chip">Shapely</span>
+          <span class="chip">Fiona</span>
         </div>
       </div>
+
       <div class="skill-group reveal">
-        <div class="skill-group-title">Machine Learning & Deep Learning</div>
+        <div class="skill-group-title">Machine Learning &amp; AI</div>
         <div class="skill-chips">
-          <span class="chip">Random Forest</span><span class="chip">SVM</span><span class="chip">XGBoost</span><span class="chip">U-Net / CNN</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Scikit-Learn</span>
+          <span class="chip">U-Net Segmentation</span>
+          <span class="chip">Random Forest</span>
+          <span class="chip">SVM</span>
+          <span class="chip">XGBoost</span>
+          <span class="chip">CNN</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">TensorFlow / Keras</span>
+          <span class="chip">scikit-learn</span>
+          <span class="chip">SAM</span>
+          <span class="chip">Transfer Learning</span>
+          <span class="chip">Hyperparameter Tuning</span>
         </div>
       </div>
+
       <div class="skill-group reveal">
-        <div class="skill-group-title">Data & Geospatial Libraries</div>
+        <div class="skill-group-title">Data &amp; Programming</div>
         <div class="skill-chips">
-          <span class="chip">Python</span><span class="chip">GeoPandas</span><span class="chip">Rasterio</span><span class="chip">GDAL</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">PostgreSQL</span><span class="chip">PostGIS</span><span class="chip">Jupyter</span>
+          <span class="chip">Python</span>
+          <span class="chip">R</span>
+          <span class="chip">SQL</span>
+          <span class="chip">NumPy</span>
+          <span class="chip">Pandas</span>
+          <span class="chip">Xarray</span>
+          <span class="chip">Dask</span>
+          <span class="chip">Jupyter</span>
+          <span class="chip">Git</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Linux/CLI</span>
         </div>
       </div>
+
       <div class="skill-group reveal">
-        <div class="skill-group-title">Backend, DevOps & Deployment</div>
+        <div class="skill-group-title">Analysis &amp; Visualisation</div>
         <div class="skill-chips">
-          <span class="chip">FastAPI</span><span class="chip">Streamlit</span><span class="chip">REST APIs</span><span class="chip">Docker</span><span class="chip">docker-compose</span><span class="chip">GitHub Actions</span><span class="chip">Linux / Bash</span><span class="chip">Self-hosted VPS</span><span class="chip">HTTPS / Nginx</span>
+          <span class="chip">Multi-criteria Suitability</span>
+          <span class="chip">Change Detection</span>
+          <span class="chip">Time Series Analysis</span>
+          <span class="chip">Watershed Delineation</span>
+          <span class="chip">LULC Classification</span>
+          <span class="chip">Ecosystem Services</span>
+          <span class="chip">Kepler.gl</span>
+          <span class="chip">Leaflet.js</span>
+          <span class="chip">Matplotlib</span>
+          <span class="chip">Folium</span>
+          <span class="chip">Policy Reporting</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-inner" style="display:flex;flex-direction:column;align-items:center;">
+  <div class="section-inner">
     <div class="section-label">Get in Touch</div>
-    <div class="section-title" style="text-align:center;">Open to collaboration<br/>and new opportunities</div>
-    <p class="section-desc">Available for geospatial AI projects, climate analytics research, and sustainability-focused data science roles. Based in India, open to remote collaboration worldwide.</p>
+    <div class="section-title">Ready to map<br/>something meaningful?</div>
+    <p class="section-desc">
+      Whether you're working on climate adaptation, land-use planning, or spatial AI — I'd love to connect. Open to remote collaborations and research partnerships.
+    </p>
     <div class="contact-links">
-      <a href="mailto:athithiyan@aurovilleconsulting.com" class="contact-btn email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+      <a href="mailto:athithiyanmr@gmail.com" class="contact-btn email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
         Email Me
       </a>
-      <a href="https://www.linkedin.com/in/athithiyan-m-r-/" target="_blank" class="contact-btn linkedin">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      <a href="https://www.linkedin.com/in/athithiyan-m-r-/" class="contact-btn linkedin" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
       </a>
-      <a href="https://github.com/Athithiyanmr" target="_blank" class="contact-btn github">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      <a href="https://github.com/Athithiyanmr" class="contact-btn github" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
         GitHub
+      </a>
+      <a href="./Athithiyan_CV.pdf" class="contact-btn cv-dl" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
+        Download CV
       </a>
     </div>
   </div>
@@ -1008,52 +1723,143 @@ footer p {
 
 <!-- FOOTER -->
 <footer>
-  <p>&copy; 2026 Athithiyan M R &middot; Geospatial Data Scientist &middot; India</p>
-  <p>Built with care, no satellite imagery included.</p>
+  <p>© 2025 Athithiyan M R — Geospatial Data Scientist</p>
+  <p>Built with care · Tamil Nadu, India</p>
 </footer>
 
-<script>
-  // Theme toggle
-  (function () {
-    const t = document.querySelector('[data-theme-toggle]'),
-      r = document.documentElement;
-    let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
-    r.setAttribute('data-theme', d);
-    function updateIcon() {
-      if (!t) return;
-      t.innerHTML = d === 'dark'
-        ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
-        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-    }
-    updateIcon();
-    t && t.addEventListener('click', () => {
-      d = d === 'dark' ? 'light' : 'dark';
-      r.setAttribute('data-theme', d);
-      t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
-      updateIcon();
-    });
-  })();
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WPeU=" crossorigin=""></script>
 
-  // Scroll reveal
+<script>
+/* ── THEME TOGGLE ── */
+(function () {
+  const toggle = document.querySelector('[data-theme-toggle]');
+  const root = document.documentElement;
+  let theme = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+  root.setAttribute('data-theme', theme);
+
+  function updateIcon(t) {
+    if (!toggle) return;
+    toggle.setAttribute('aria-label', 'Switch to ' + (t === 'dark' ? 'light' : 'dark') + ' mode');
+    toggle.innerHTML = t === 'dark'
+      ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+      : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  }
+  updateIcon(theme);
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      theme = theme === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', theme);
+      updateIcon(theme);
+      // Update Leaflet map tiles on theme switch
+      updateMapTiles(theme);
+    });
+  }
+})();
+
+/* ── NAV SCROLL BEHAVIOUR ── */
+(function () {
+  const navbar = document.getElementById('navbar');
+  let lastY = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    navbar.classList.toggle('scrolled', y > 20);
+    lastY = y;
+  }, { passive: true });
+})();
+
+/* ── SCROLL REVEAL ── */
+(function () {
   const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => obs.observe(el));
+})();
 
-  // Nav scroll effect
-  const navbar = document.getElementById('navbar');
-  let lastScroll = 0;
-  window.addEventListener('scroll', () => {
-    const curr = window.scrollY;
-    navbar.classList.toggle('scrolled', curr > 50);
-    lastScroll = curr;
-  }, { passive: true });
+/* ── LEAFLET MAP ── */
+let map, darkTileLayer, lightTileLayer, currentTileLayer;
+
+function initMap() {
+  map = L.map('tn-map', {
+    center: [11.1, 78.6],
+    zoom: 7,
+    zoomControl: true,
+    attributionControl: true,
+    scrollWheelZoom: false
+  });
+
+  const darkTileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+  const lightTileUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+  const tileOpts = {
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: 'abcd',
+    maxZoom: 20
+  };
+
+  darkTileLayer = L.tileLayer(darkTileUrl, tileOpts);
+  lightTileLayer = L.tileLayer(lightTileUrl, tileOpts);
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  currentTileLayer = isDark ? darkTileLayer : lightTileLayer;
+  currentTileLayer.addTo(map);
+
+  // Custom green marker icon
+  function makeIcon(color) {
+    return L.divIcon({
+      className: '',
+      html: `<svg width="28" height="36" viewBox="0 0 28 36" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 0C6.27 0 0 6.27 0 14c0 9.45 12.57 21.25 13.08 21.73a1.3 1.3 0 0 0 1.84 0C15.43 35.25 28 23.45 28 14 28 6.27 21.73 0 14 0z" fill="${color}" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+        <circle cx="14" cy="14" r="5" fill="rgba(255,255,255,0.9)"/>
+      </svg>`,
+      iconSize: [28, 36],
+      iconAnchor: [14, 36],
+      popupAnchor: [0, -36]
+    });
+  }
+
+  const green = '#1a5c3a';
+  const accent = '#c87941';
+
+  const markers = [
+    { latlng: [13.0827, 80.2707], label: 'Chennai', project: 'Urban Heat Island & Climate Risk', color: green },
+    { latlng: [11.9395, 79.4930], label: 'Villupuram', project: 'SET-TN · Solar Land Suitability', color: accent },
+    { latlng: [11.7390, 78.9620], label: 'Kallakurichi', project: 'Land Suitability Assessment', color: green },
+    { latlng: [11.0168, 76.9558], label: 'Coimbatore', project: 'Coconut Plantation Mapping', color: green },
+    { latlng: [11.1, 78.6],     label: 'Tamil Nadu (statewide)', project: 'Blue-Green Infrastructure Mapping', color: accent }
+  ];
+
+  markers.forEach(m => {
+    const marker = L.marker(m.latlng, { icon: makeIcon(m.color) }).addTo(map);
+    marker.bindTooltip(
+      `<strong>${m.label}</strong><br/>${m.project}`,
+      { className: 'map-tooltip', permanent: false, direction: 'top', offset: [0, -38] }
+    );
+  });
+
+  // Enable scroll zoom only on click/touch
+  map.on('click', () => { map.scrollWheelZoom.enable(); });
+  map.on('blur', () => { map.scrollWheelZoom.disable(); });
+}
+
+function updateMapTiles(theme) {
+  if (!map) return;
+  if (currentTileLayer) {
+    map.removeLayer(currentTileLayer);
+  }
+  currentTileLayer = theme === 'dark' ? darkTileLayer : lightTileLayer;
+  currentTileLayer.addTo(map);
+}
+
+// Init map after page load
+document.addEventListener('DOMContentLoaded', initMap);
 </script>
+
 </body>
 </html>
