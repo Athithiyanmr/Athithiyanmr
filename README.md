@@ -1,13 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=2E9E6B&center=true&vCenter=true&width=650&lines=Athithiyan+M+R;Geospatial+Data+Scientist;Remote+Sensing+%7C+ML+%7C+Climate+GIS" alt="Typing SVG" />
-
-<br/>
-
-
-
-
-**Mapping land, water, and energy across Tamil Nadu — using satellite data and open-source tools.**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2E9E6B,100:1a6b4a&height=220&section=header&text=Athithiyan%20M%20R&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Geospatial%20Data%20Scientist%20%7C%20Remote%20Sensing%20%7C%20Climate%20GIS&descSize=18&descAlignY=55&descAlign=50" width="100%" />
 
 <br/>
 
@@ -15,111 +8,196 @@
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Athithiyanmr)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white)](https://athithiyanmr.github.io/Athithiyanmr/)
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:athithiyan@aurovilleconsulting.com)
-[![Open to Work](https://img.shields.io/badge/Open%20to%20Work-Remote-2E9E6B?style=for-the-badge&logoColor=white)](#)
+[![Open to Work](https://img.shields.io/badge/🟢_Open_to_Work-Remote-2E9E6B?style=for-the-badge)](#contact)
+
+<br/>
+
+<img src="https://komarev.com/ghpvc/?username=Athithiyanmr&style=flat-square&color=2E9E6B&label=Profile+Views" alt="Profile Views" />
 
 </div>
 
 ---
 
-## About
+## About Me
 
-Geospatial data scientist based in India with **3.5+ years** of hands-on experience in satellite remote sensing, land-use classification, and climate-focused spatial analytics. Trained as a chemical engineer — transitioned into geospatial science through a deep interest in how land, water, and energy systems interact at scale.
+```python
+class GeospatialScientist:
+    name     = "Athithiyan M R"
+    role     = "Geospatial Data Scientist"
+    based_in = "Tamil Nadu, India"
+    org      = "Auroville Consulting"
 
-Most of my work centers on **Tamil Nadu**: processing thousands of Sentinel-2 scenes, building multi-criteria suitability models, and producing maps that feed directly into state-level planning decisions. I work end-to-end — from raw satellite imagery to policy-ready outputs.
+    skills   = ["Satellite Remote Sensing", "Deep Learning (U-Net, CNN)",
+                "Land-Use Classification", "Climate Analytics", "GIS"]
+    
+    stack    = ["Python", "Google Earth Engine", "QGIS", "PyTorch",
+                "FastAPI", "Docker", "PostgreSQL/PostGIS"]
+    
+    passion  = "Turning satellite imagery into climate-actionable intelligence"
+```
 
-Currently seeking **fully remote roles** in geospatial AI, climate analytics, or earth observation at research organizations, think tanks, or climate-tech companies.
+Geospatial data scientist with **4+ years** of professional experience building end-to-end pipelines — from raw Sentinel-2 imagery to policy-ready maps that feed into state-level planning decisions. My work spans **15,000+ satellite scenes**, **40+ geospatial layers**, and deep learning models deployed for land-use classification, plantation mapping, and urban climate analysis across Tamil Nadu.
+
+Currently at **Auroville Consulting**, collaborating with the **Tamil Nadu State Planning Commission** on blue-green infrastructure planning and climate resilience.
+
+> **Seeking fully remote roles** in geospatial AI, climate analytics, or earth observation at research organizations, climate-tech companies, or think tanks.
+
+---
+
+## What I'm Working On
+
+- 🌿 **Blue-Green Infrastructure Framework** — State-wide ecosystem services prioritization for Tamil Nadu (with State Planning Commission)
+- 🌴 **Coconut Plantation Mapping** — U-Net deep learning pipeline on Sentinel-2 for Coimbatore, with a collaborative verification tool
+- 🏙️ **Chennai Urban Climate** — Built-up area extraction using deep learning for heat island and climate vulnerability analysis
+- 📡 **Exploring** Google & Tessera embeddings for improved satellite image segmentation
 
 ---
 
 ## Featured Projects
 
-### 🌿 Tamil Nadu Blue-Green Infrastructure Framework
-> *Auroville Consulting × Tamil Nadu State Planning Commission · 2024–ongoing*
+<table>
+<tr>
+<td width="50%">
 
-Regional-scale geospatial analysis to map and prioritize Blue-Green Networks (forests, wetlands, rivers, farmlands) for flood regulation, carbon storage, and biodiversity across Tamil Nadu.
+### 🌿 TN Blue-Green Infrastructure
+**Auroville Consulting × TN State Planning Commission**
 
-- Processed **15,000+ Sentinel-2 scenes** across the full state extent
-- Integrated **40+ geospatial layers** — hydrology, topography, climate vulnerability, biodiversity
-- Built an **18-criteria ecosystem services prioritization model**
-- Produced district-level intervention maps from nano to mega scale
-- Outputs embedded into Tamil Nadu's spatial planning framework
+Regional-scale geospatial analysis to map and prioritize Blue-Green Networks for flood regulation, carbon storage, and biodiversity.
 
----
+- 15,000+ Sentinel-2 scenes processed
+- 40+ integrated geospatial layers
+- 18-criteria ecosystem services model
+- District-level intervention maps (nano → mega scale)
+- Outputs embedded into TN's spatial planning framework
 
-### 🏙️ Chennai Urban Climate — Built-Up Area Extraction
-> *Personal Research · 2024–ongoing* &nbsp;·&nbsp; [View Repository →](https://github.com/Athithiyanmr/chennai_urban_climate)
+</td>
+<td width="50%">
 
-Deep learning pipeline (U-Net) for built-up area extraction from Sentinel-2 imagery, applied to Chennai for urban heat island and climate risk analysis.
+### 🌴 Coconut Plantation Mapping
+[`View Repository →`](https://github.com/Athithiyanmr/coconut_plantation_mapping)
 
-- Semantic segmentation on 10m Sentinel-2 bands using U-Net
-- Custom training label generation and validation workflow
-- Designed for urban heat island mapping and climate vulnerability assessment
+Deep learning pipeline (U-Net) for coconut plantation mapping from Sentinel-2 imagery using Descals et al. (2023) training labels.
 
----
+- 90,438 polygons across 38 TN districts
+- 245,569 hectares mapped
+- Semantic segmentation on 10m resolution bands
+- [Live Verification Tool →](https://athithiyanmr.github.io/coconut_verification_tool/)
 
-### 🌴 Coconut Plantation Mapping — Coimbatore
-> *Personal Research · 2025* &nbsp;·&nbsp; [View Repository →](https://github.com/Athithiyanmr/coconut_plantation_mapping)
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-Deep learning pipeline for coconut plantation mapping from Sentinel-2 imagery using U-Net semantic segmentation, based on Descals et al. (2023) training labels.
+### 🏙️ Chennai Urban Climate
+[`View Repository →`](https://github.com/Athithiyanmr/chennai_urban_climate)
 
----
+Deep learning pipeline (U-Net) for built-up area extraction from Sentinel-2 imagery — applied to Chennai for urban heat island analysis.
 
-### ☀️ Sustainable Energy Transformation – Tamil Nadu (SET-TN)
-> *Auroville Consulting · Aug 2022 – Oct 2023*
+- Semantic segmentation on 10m Sentinel-2
+- Custom training label generation
+- Urban heat island mapping
+- Climate vulnerability assessment
+
+</td>
+<td width="50%">
+
+### ☀️ Sustainable Energy — SET-TN
+**Auroville Consulting · Aug 2022 – Oct 2023**
 
 Research and spatial analytics supporting Tamil Nadu's net-zero energy transition.
 
-- Land suitability assessment for distributed solar across Villupuram district
-- Time-of-Use tariff modelling for clean energy incentives
+- Land suitability assessment for distributed solar (Villupuram)
+- Time-of-Use tariff modelling
 - Policy analytics for grid-connected solar in agriculture
 - [Published Report →](https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/)
 
----
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-### 🗺️ Land Suitability Assessment – Kallakurichi District
-> *Tamil Nadu State Planning Commission · Feb – Dec 2023* &nbsp;·&nbsp; [View Repository →](https://github.com/Athithiyanmr/Kallakurichi)
+### 🗺️ Kallakurichi Land Suitability
+[`View Repository →`](https://github.com/Athithiyanmr/Kallakurichi) · **TN State Planning Commission**
 
 Multi-use suitability mapping of unused land for forestation, agriculture, water harvesting, housing, industry, and solar.
 
-- LULC classification and change detection (2019–2023) using Sentinel-2 and Landsat
-- Ground truthing and field validation across the district
-- Delivered an interactive online map for state and local departments
-- Conducted awareness sessions with district-level government stakeholders
+- LULC classification & change detection (2019–2023)
+- Sentinel-2 + Landsat imagery
+- Ground truthing and field validation
+- Interactive online map for govt. departments
 
----
+</td>
+<td width="50%">
 
-### Open-Source Tools
+### 🔧 Open-Source Tools
 
-| Project | Description | Link |
-|---|---|---|
-| **Sentinel-2 Built-Up Pipeline** | End-to-end ML pipeline for built-up area identification from Sentinel-2 imagery | [Repository →](https://github.com/Athithiyanmr/sentinel2_builtup_pipeline) |
-| **Lila CRS Converter** | Full-stack geospatial web app (FastAPI + Streamlit), Dockerized with CI/CD | [Repository →](https://github.com/Athithiyanmr/Lila-crs-converter) |
-| **Bill Calculator** | 25-year economic analysis tool for Solar + Storage systems | [Repository →](https://github.com/Athithiyanmr/Bill_Calculator) |
+**[Sentinel-2 Built-Up Pipeline](https://github.com/Athithiyanmr/sentinel2_builtup_pipeline)**
+End-to-end ML pipeline for built-up area identification
+
+**[Lila CRS Converter](https://github.com/Athithiyanmr/Lila-crs-converter)**
+Full-stack geospatial web app (FastAPI + Streamlit), Dockerized with CI/CD
+
+**[Coconut Verification Tool](https://github.com/Athithiyanmr/coconut_verification_tool)**
+Collaborative web tool for verifying coconut training labels across 38 districts
+
+**[Bill Calculator](https://github.com/Athithiyanmr/Bill_Calculator)**
+25-year economic analysis tool for Solar + Storage systems
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## Tech Stack
 
-| Domain | Tools |
-|---|---|
-| **GIS & Remote Sensing** | QGIS · ArcGIS · Google Earth Engine · Sentinel-2 · Landsat |
-| **Machine Learning** | Python · Scikit-Learn · PyTorch · TensorFlow · Random Forest · U-Net · CNN |
-| **Geospatial Libraries** | GeoPandas · Rasterio · GDAL · Pandas · NumPy |
-| **Database** | PostgreSQL · PostGIS |
-| **Backend & Web** | FastAPI · Streamlit · REST APIs |
-| **DevOps & Infra** | Docker · GitHub Actions · Linux · Bash · Self-hosted VPS |
+<div align="center">
+
+| Domain | Technologies |
+|:---|:---|
+| **🛰️ GIS & Remote Sensing** | QGIS · ArcGIS · Google Earth Engine · Sentinel-2 · Landsat |
+| **🤖 Machine Learning** | PyTorch · TensorFlow · Scikit-Learn · U-Net · CNN · Random Forest · XGBoost |
+| **🐍 Geospatial Python** | GeoPandas · Rasterio · GDAL · NumPy · Pandas · Matplotlib |
+| **🗄️ Database** | PostgreSQL · PostGIS |
+| **🌐 Web & Backend** | FastAPI · Streamlit · REST APIs · JavaScript |
+| **⚙️ DevOps** | Docker · GitHub Actions · Linux · Bash · Self-hosted VPS |
+
+</div>
 
 ---
 
-## GitHub Stats
+## GitHub Analytics
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Athithiyanmr&show_icons=true&theme=vue-dark&hide_border=true&count_private=true" height="170" />
+<img src="https://github-readme-stats.vercel.app/api?username=Athithiyanmr&show_icons=true&theme=vue-dark&hide_border=true&count_private=true&bg_color=0d1117" height="170" />
 &nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Athithiyanmr&layout=compact&theme=vue-dark&hide_border=true" height="170" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Athithiyanmr&layout=compact&theme=vue-dark&hide_border=true&bg_color=0d1117" height="170" />
+
+<br/><br/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Athithiyanmr&theme=vue-dark&hide_border=true&background=0d1117&stroke=2E9E6B&ring=2E9E6B&fire=FF6B35&currStreakLabel=2E9E6B" height="170" />
 
 </div>
+
+---
+
+## Experience Timeline
+
+```
+2026        🌿 Blue-Green Infrastructure Framework — TN State Planning Commission
+  │         🌴 Coconut Plantation Mapping — U-Net on Sentinel-2
+  │         🏙️ Chennai Urban Climate — Deep Learning for Built-Up Extraction
+  │
+2025        🗺️ Kallakurichi Land Suitability Assessment — Multi-use mapping
+  │
+2024        ☀️ SET-TN — Sustainable Energy Transformation, Tamil Nadu
+  │             Land suitability for solar, tariff modelling, policy analytics
+  │
+2023        📊 Joined Auroville Consulting as Geospatial Data Analyst
+  │
+2022        🎓 Master in Data Science — GUVI (IIT Madras)
+```
 
 ---
 
@@ -129,14 +207,12 @@ Open to collaborations in **geospatial AI**, **climate analytics**, and **open-s
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Athithiyan%20M%20R-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/athithiyan-m-r-/)
-[![Email](https://img.shields.io/badge/Email-athithiyan-D14836?style=for-the-badge&logo=gmail)](mailto:athithiyan@aurovilleconsulting.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Athithiyan_M_R-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/athithiyan-m-r-/)
+[![Email](https://img.shields.io/badge/Email-athithiyan@aurovilleconsulting.com-D14836?style=for-the-badge&logo=gmail)](mailto:athithiyan@aurovilleconsulting.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Athithiyanmr-181717?style=for-the-badge&logo=github)](https://github.com/Athithiyanmr)
 
 </div>
 
 ---
 
-<div align="center">
-<sub>Building geospatial tools for climate-resilient land use · Based in India</sub>
-</div>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2E9E6B,100:1a6b4a&height=120&section=footer" width="100%" />
