@@ -200,7 +200,7 @@ Collaborative web tool for verifying coconut training labels across 38 districts
 2024        ☀️ SET-TN — Sustainable Energy Transformation, Tamil Nadu
   │             Land suitability for solar, tariff modelling, policy analytics
   │
-2023        📊 Joined Auroville Consulting as Geospatial Data Analyst
+2022        📊 Joined Auroville Consulting as Geospatial Data Analyst
   │
 2022        🎓 Master in Data Science — GUVI (IIT Madras)
 ```
