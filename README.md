@@ -170,9 +170,15 @@ Collaborative web tool for verifying coconut training labels across 38 districts
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Athithiyanmr&show_icons=true&theme=vue-dark&hide_border=true&count_private=true&bg_color=0d1117" height="170" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-eight-theta.vercel.app/api?username=Athithiyanmr&show_icons=true&theme=vue-dark&hide_border=true&count_private=true&bg_color=0d1117&icon_color=2E9E6B&title_color=2E9E6B" />
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=Athithiyanmr&show_icons=true&theme=default&hide_border=true&count_private=true" height="170" />
+</picture>
 &nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Athithiyanmr&layout=compact&theme=vue-dark&hide_border=true&bg_color=0d1117" height="170" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Athithiyanmr&layout=compact&theme=vue-dark&hide_border=true&bg_color=0d1117&title_color=2E9E6B" />
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Athithiyanmr&layout=compact&theme=default&hide_border=true" height="170" />
+</picture>
 
 <br/><br/>
 
