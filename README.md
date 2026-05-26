@@ -1,8 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2E9E6B,100:1a6b4a&height=220&section=header&text=Athithiyan%20M%20R&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Geospatial%20Data%20Scientist%20%7C%20Remote%20Sensing%20%7C%20Climate%20GIS&descSize=18&descAlignY=55&descAlign=50" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d4f3c,50:2E9E6B,100:1a6b4a&height=280&section=header&text=Athithiyan%20M%20R&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Geospatial%20Data%20Scientist%20%7C%20Remote%20Sensing%20%7C%20Climate%20GIS&descSize=18&descAlignY=58&descAlign=50" width="100%" />
 
 <br/>
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=2E9E6B&center=true&vCenter=true&width=750&lines=Turning+satellite+imagery+into+climate+intelligence+%F0%9F%9B%B0%EF%B8%8F;Deep+Learning+for+Earth+Observation+%F0%9F%8C%8D;U-Net+%7C+Sentinel-2+%7C+GeoAI+%7C+PostGIS;Open+to+Remote+Geospatial+AI+%26+Climate+Roles+%F0%9F%9F%A2" alt="Typing SVG" /></a>
+
+<br/><br/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/athithiyan-m-r-/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Athithiyanmr)
@@ -184,6 +188,18 @@ Collaborative web tool for verifying coconut training labels across 38 districts
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=Athithiyanmr&theme=vue-dark&hide_border=true&background=0d1117&stroke=2E9E6B&ring=2E9E6B&fire=FF6B35&currStreakLabel=2E9E6B" height="170" />
 
+<br/><br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Athithiyanmr/Athithiyanmr/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Athithiyanmr/Athithiyanmr/output/github-contribution-grid-snake.svg" />
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Athithiyanmr/Athithiyanmr/output/github-contribution-grid-snake.svg" />
+</picture>
+
+<br/><br/>
+
+<img src="https://github-isometric-contribution.vercel.app/api?username=Athithiyanmr&theme=green&flat=false&font=Inter" alt="3D Isometric GitHub Contributions" width="90%"/>
+
 </div>
 
 ---
@@ -221,4 +237,4 @@ Open to collaborations in **geospatial AI**, **climate analytics**, and **open-s
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2E9E6B,100:1a6b4a&height=120&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d4f3c,50:2E9E6B,100:1a6b4a&height=150&section=footer" width="100%" />
