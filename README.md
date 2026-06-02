@@ -376,13 +376,9 @@ output:          Interactive govt. department map
 |:---|:---|:---:|
 | **M.Sc. Data Science** | GUVI — IIT Madras | 2022 |
 | **Google Earth Engine Fundamentals** | Google Developers | 2023 |
-| **Deep Learning Specialization** | Coursera / deeplearning.ai | 2023 |
-| **Remote Sensing & GIS Applications** | ISRO IIRS e-Learning | 2022 |
-| **Python for Geospatial Analysis** | Udemy / Open Source | 2022 |
 
 </div>
 
-> ⚠️ *Update this table with your actual certifications — these are placeholders for the structure.*
 
 <br/>
 
