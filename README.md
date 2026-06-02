@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- ═══════════════════════ HERO BANNER ═══════════════════════ -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=320&section=header&text=Athithiyan%20M%20R&fontSize=62&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Geospatial%20AI%20Scientist%20%E2%80%A2%20Remote%20Sensing%20%E2%80%A2%20Climate%20Intelligence&descSize=19&descAlignY=58&descAlign=50" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=320&section=header&text=Athithiyan%20M%20R&fontSize=62&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Geospatial%20AI%20Scientist%20%E2%80%A2%20Earth%20Observation%20%E2%80%A2%20Climate%20Intelligence&descSize=19&descAlignY=58&descAlign=50" width="100%" />
 
 <br/>
 
@@ -14,11 +14,11 @@
 
 <!-- ═══════════════════════ BADGES ROW ═══════════════════════ -->
 <a href="https://www.linkedin.com/in/athithiyan-m-r-/">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2" />
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 &nbsp;
 <a href="https://github.com/Athithiyanmr">
-  <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=181717" />
+  <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 &nbsp;
 <a href="https://athithiyanmr.github.io/Athithiyanmr/">
@@ -43,7 +43,7 @@
 
 ---
 
-<!-- ═══════════════════════ ABOUT ME — 3D CODE BLOCK ═══════════════════════ -->
+<!-- ═══════════════════════ ABOUT ME ═══════════════════════ -->
 
 <img align="right" alt="GeoAI Coding" width="360" src="https://raw.githubusercontent.com/Potential17/Potential17/master/user%20(2).gif" />
 
@@ -65,11 +65,14 @@ class GeospatialScientist:
     expertise  = [
         "🛰️  Satellite Remote Sensing (Sentinel-2, Landsat)",
         "🤖  Deep Learning — U-Net, CNN, Semantic Segmentation",
-        "🌿  Land-Use & Climate GIS Analysis",
+        "🌿  Land-Use, LULC & Climate GIS Analysis",
         "📡  Google Earth Engine & PostGIS",
-        "🌐  Full-Stack Geospatial Web Apps",
+        "🌐  Full-Stack Geospatial Web Apps (FastAPI + Streamlit)",
+        "🔁  MLOps — Docker, GitHub Actions, CI/CD Pipelines",
     ]
 
+    currently  = "Mapping Blue-Green Networks for TN State Planning"
+    seeking    = "Remote roles · Climate Tech · GeoAI Research"
     fun_fact   = "I've processed 15,000+ satellite scenes 🌍"
     mission    = "Turning raw pixels into policy-ready climate intelligence"
 ```
@@ -80,7 +83,7 @@ class GeospatialScientist:
 
 ---
 
-<!-- ═══════════════════════ ANIMATED METRICS SECTION ═══════════════════════ -->
+<!-- ═══════════════════════ IMPACT METRICS ═══════════════════════ -->
 
 <div align="center">
 
@@ -94,7 +97,7 @@ class GeospatialScientist:
   </td>
   <td align="center">
     <img src="https://img.shields.io/badge/🗺️%20GIS%20Layers-40%2B-2196F3?style=for-the-badge&labelColor=0d1117" /><br/>
-    <sub><b>Geospatial Layers</b></sub>
+    <sub><b>Geospatial Layers Built</b></sub>
   </td>
   <td align="center">
     <img src="https://img.shields.io/badge/🌴%20Hectares%20Mapped-245%2C569-FF6F00?style=for-the-badge&labelColor=0d1117" /><br/>
@@ -117,13 +120,12 @@ class GeospatialScientist:
 
 ---
 
-<!-- ═══════════════════════ PROJECTS — 3D CARD STYLE ═══════════════════════ -->
+<!-- ═══════════════════════ FEATURED PROJECTS ═══════════════════════ -->
 
 ## 🚀 Featured Projects
 
 <div align="center">
 
-<!-- ROW 1 -->
 <table>
 <tr>
 <td width="50%" valign="top">
@@ -134,7 +136,7 @@ class GeospatialScientist:
 
 **Auroville Consulting × TN State Planning Commission**
 
-> Regional-scale geospatial intelligence platform for mapping Blue-Green Networks — flood regulation, carbon storage & biodiversity prioritization across Tamil Nadu.
+> Regional-scale geospatial intelligence platform mapping Blue-Green Networks — flood regulation, carbon storage & biodiversity prioritization across Tamil Nadu.
 
 ```yaml
 scope:    State-level spatial planning
@@ -154,20 +156,20 @@ impact:   Embedded in TN spatial planning framework
 
 **[`View Repository →`](https://github.com/Athithiyanmr/coconut_plantation_mapping)** &nbsp; **[`Live Tool →`](https://athithiyanmr.github.io/coconut_verification_tool/)**
 
-> U-Net deep learning pipeline for coconut plantation mapping from Sentinel-2 imagery across all 38 Tamil Nadu districts.
+> U-Net deep learning pipeline for state-wide coconut plantation mapping from Sentinel-2 imagery across all 38 Tamil Nadu districts.
 
 ```yaml
 polygons:    90,438 across 38 TN districts
 area:        245,569 hectares mapped
 model:       Semantic segmentation (10m bands)
 labels:      Descals et al. (2023) training data
+accuracy:    Validated with field ground-truth
 tool:        Collaborative live verification app
 ```
 
 </td>
 </tr>
 
-<!-- ROW 2 -->
 <tr>
 <td width="50%" valign="top">
 
@@ -182,7 +184,7 @@ tool:        Collaborative live verification app
 ```yaml
 model:     U-Net semantic segmentation
 input:     Sentinel-2 @ 10m resolution
-output:    Built-up area maps
+output:    Built-up area maps + UHI index
 use_case:  Urban heat island + vulnerability
 ```
 
@@ -199,7 +201,7 @@ use_case:  Urban heat island + vulnerability
 
 ```yaml
 focus:   Villupuram district (solar suitability)
-method:  Multi-criteria spatial analysis
+method:  Multi-criteria spatial analysis (MCE)
 output:  Policy brief + interactive maps
 impact:  Integrated into TN energy planning
 ```
@@ -207,7 +209,6 @@ impact:  Integrated into TN energy planning
 </td>
 </tr>
 
-<!-- ROW 3 -->
 <tr>
 <td width="50%" valign="top">
 
@@ -233,14 +234,14 @@ output:          Interactive govt. department map
   <img src="https://img.shields.io/badge/🔧-Open--Source%20Tools-E91E63?style=for-the-badge&labelColor=0d1117" />
 </div>
 
-> A suite of production-ready open-source geospatial tools:
+> Production-ready open-source geospatial tools:
 
-| Tool | Description |
-|:---|:---|
-| [**Sentinel-2 Built-Up Pipeline**](https://github.com/Athithiyanmr/sentinel2_builtup_pipeline) | End-to-end ML pipeline for built-up area detection |
-| [**Lila CRS Converter**](https://github.com/Athithiyanmr/Lila-crs-converter) | FastAPI + Streamlit, Dockerized with CI/CD |
-| [**Coconut Verification Tool**](https://github.com/Athithiyanmr/coconut_verification_tool) | Collaborative label verification across 38 districts |
-| [**Bill Calculator**](https://github.com/Athithiyanmr/Bill_Calculator) | 25-year Solar + Storage economic analysis |
+| Tool | Stack | Description |
+|:---|:---|:---|
+| [**Sentinel-2 Built-Up Pipeline**](https://github.com/Athithiyanmr/sentinel2_builtup_pipeline) | PyTorch · GDAL | End-to-end ML pipeline for built-up detection |
+| [**Lila CRS Converter**](https://github.com/Athithiyanmr/Lila-crs-converter) | FastAPI · Docker | Dockerized CRS converter with CI/CD |
+| [**Coconut Verification Tool**](https://github.com/Athithiyanmr/coconut_verification_tool) | Leaflet · JS | Collaborative label verification app |
+| [**Bill Calculator**](https://github.com/Athithiyanmr/Bill_Calculator) | Python | 25-year Solar + Storage economic model |
 
 </td>
 </tr>
@@ -252,7 +253,30 @@ output:          Interactive govt. department map
 
 ---
 
-<!-- ═══════════════════════ TECH STACK — ICON BADGES ═══════════════════════ -->
+<!-- ═══════════════════════ SKILLS MATRIX ═══════════════════════ -->
+
+## 🧠 Skills & Proficiency Matrix
+
+<div align="center">
+
+| Domain | Tools / Frameworks | Proficiency |
+|:---|:---|:---:|
+| **Satellite Remote Sensing** | Sentinel-2, Landsat, Google Earth Engine | ██████████ Expert |
+| **Deep Learning / GeoAI** | U-Net, PyTorch, CNN, Segmentation | █████████░ Advanced |
+| **LULC & Change Detection** | QGIS, ArcGIS, GDAL, Rasterio | ██████████ Expert |
+| **Geospatial Python** | GeoPandas, Shapely, Fiona, EarthPy | ██████████ Expert |
+| **Web GIS & Dashboards** | Streamlit, Leafmap, Folium, FastAPI | █████████░ Advanced |
+| **MLOps & DevOps** | Docker, GitHub Actions, CI/CD | ████████░░ Proficient |
+| **Spatial Databases** | PostGIS, PostgreSQL, GeoJSON | ████████░░ Proficient |
+| **Climate Analytics** | UHI, Carbon Sequestration, BGI | █████████░ Advanced |
+
+</div>
+
+<br/>
+
+---
+
+<!-- ═══════════════════════ TECH STACK ═══════════════════════ -->
 
 ## 🛠️ Tech Stack
 
@@ -271,6 +295,7 @@ output:          Interactive govt. department map
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 
 **🐍 Geospatial Python**
 
@@ -278,6 +303,7 @@ output:          Interactive govt. department map
 ![GeoPandas](https://img.shields.io/badge/GeoPandas-139C5A?style=for-the-badge&logo=python&logoColor=white)
 ![Rasterio](https://img.shields.io/badge/Rasterio-CC3534?style=for-the-badge&logo=python&logoColor=white)
 ![GDAL](https://img.shields.io/badge/GDAL-5C9BCA?style=for-the-badge&logo=python&logoColor=white)
+![Leafmap](https://img.shields.io/badge/Leafmap-00ACC1?style=for-the-badge&logo=python&logoColor=white)
 
 **🌐 Web & Backend**
 
@@ -285,6 +311,7 @@ output:          Interactive govt. department map
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Leaflet](https://img.shields.io/badge/Leaflet.js-199900?style=for-the-badge&logo=leaflet&logoColor=white)
 
 **🗄️ Database & DevOps**
 
@@ -300,7 +327,89 @@ output:          Interactive govt. department map
 
 ---
 
-<!-- ═══════════════════════ GITHUB ANALYTICS — 3D LAYOUT ═══════════════════════ -->
+<!-- ═══════════════════════ CAREER TIMELINE ═══════════════════════ -->
+
+## 🕐 Career Timeline
+
+```
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                         ATHITHIYAN M R  ·  CAREER ARC                       │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+  2026  ◉─────────────────────────────────────────────────────────────────────
+        │  🌿  Blue-Green Infrastructure Framework          [ ONGOING ]
+        │      Tamil Nadu State Planning Commission
+        │      15,000+ Sentinel-2 scenes · 40+ GIS layers · 18-criteria model
+        │
+        │  🌴  Coconut Plantation Mapping (U-Net + Sentinel-2)
+        │      90,438 polygons · 245,569 ha · 38 districts mapped
+        │
+        │  🏙️  Chennai Urban Climate Analysis
+        │      Deep Learning built-up extraction · Heat Island mapping
+        │
+  2025  ◉─────────────────────────────────────────────────────────────────────
+        │  🗺️  Kallakurichi Land Suitability Dashboard
+        │      Multi-criteria LULC mapping · Streamlit + Leafmap
+        │
+  2024  ◉─────────────────────────────────────────────────────────────────────
+        │  ☀️  SET-TN · Sustainable Energy Transformation
+        │      Solar suitability · TOU tariff modelling · Published report
+        │
+  2022  ◉─────────────────────────────────────────────────────────────────────
+        │  📊  Joined Auroville Consulting · Geospatial Data Analyst
+        │  🎓  Master in Data Science  ·  GUVI (IIT Madras)
+        │
+  ──────┘
+```
+
+<br/>
+
+---
+
+<!-- ═══════════════════════ CERTIFICATIONS ═══════════════════════ -->
+
+## 🎓 Education & Certifications
+
+<div align="center">
+
+| 🏅 Credential | 🏛️ Issuer | 📅 Year |
+|:---|:---|:---:|
+| **M.Sc. Data Science** | GUVI — IIT Madras | 2022 |
+| **Google Earth Engine Fundamentals** | Google Developers | 2023 |
+| **Deep Learning Specialization** | Coursera / deeplearning.ai | 2023 |
+| **Remote Sensing & GIS Applications** | ISRO IIRS e-Learning | 2022 |
+| **Python for Geospatial Analysis** | Udemy / Open Source | 2022 |
+
+</div>
+
+> ⚠️ *Update this table with your actual certifications — these are placeholders for the structure.*
+
+<br/>
+
+---
+
+<!-- ═══════════════════════ CURRENTLY EXPLORING ═══════════════════════ -->
+
+## 🔭 Currently Exploring
+
+<div align="center">
+
+| 🧠 Area | 📌 Focus |
+|:---|:---|
+| **GeoAI Foundation Models** | Google & Tessera embeddings for satellite image segmentation |
+| **Transformer Backbones** | Improving U-Net performance with Swin-T / SegFormer |
+| **Climate Analytics** | Urban heat island + blue-green network synergies |
+| **Workflow Automation** | N8N pipelines for automated geospatial data ingestion |
+| **Dashboard Design** | Google/NASA-standard interactive geospatial dashboards |
+| **MCP + Claude AI** | Building geospatial AI agents with Model Context Protocol |
+
+</div>
+
+<br/>
+
+---
+
+<!-- ═══════════════════════ GITHUB ANALYTICS ═══════════════════════ -->
 
 ## 📊 GitHub Analytics
 
@@ -322,12 +431,10 @@ output:          Interactive govt. department map
 
 <br/><br/>
 
-<!-- 3D ISOMETRIC CONTRIBUTIONS -->
 <img src="https://github-isometric-contribution.vercel.app/api?username=Athithiyanmr&theme=green&flat=false&font=Inter" alt="3D Isometric GitHub Contributions" width="85%" />
 
 <br/><br/>
 
-<!-- SNAKE ANIMATION -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Athithiyanmr/Athithiyanmr/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Athithiyanmr/Athithiyanmr/output/github-contribution-grid-snake.svg" />
@@ -340,60 +447,11 @@ output:          Interactive govt. department map
 
 ---
 
-<!-- ═══════════════════════ EXPERIENCE TIMELINE — 3D STYLE ═══════════════════════ -->
-
-## 🕐 Career Timeline
-
-```
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                         ATHITHIYAN M R  ·  CAREER ARC                       │
-└──────────────────────────────────────────────────────────────────────────────┘
-
-  2026  ◉─────────────────────────────────────────────────────────────────────
-        │  🌿  Blue-Green Infrastructure Framework
-        │      Tamil Nadu State Planning Commission  ·  ONGOING
-        │
-        │  🌴  Coconut Plantation Mapping (U-Net + Sentinel-2)
-        │      90,438 polygons · 245,569 ha · 38 districts
-        │
-        │  🏙️  Chennai Urban Climate Analysis
-        │      Deep Learning built-up extraction · Heat Island mapping
-        │
-  2025  ◉─────────────────────────────────────────────────────────────────────
-        │  🗺️  Kallakurichi Land Suitability Dashboard
-        │      Multi-criteria LULC mapping · Streamlit + Leafmap
-        │
-  2024  ◉─────────────────────────────────────────────────────────────────────
-        │  ☀️  SET-TN · Sustainable Energy Transformation
-        │      Solar suitability · Time-of-Use tariff modelling
-        │      Policy analytics · Published research report
-        │
-  2022  ◉─────────────────────────────────────────────────────────────────────
-        │  📊  Joined Auroville Consulting
-        │      Geospatial Data Analyst
-        │
-        │  🎓  Master in Data Science  ·  GUVI (IIT Madras)
-        │
-  ──────┘
-```
-
-<br/>
-
----
-
-<!-- ═══════════════════════ CURRENTLY EXPLORING ═══════════════════════ -->
-
-## 🔭 Currently Exploring
+<!-- ═══════════════════════ ACTIVITY GRAPH ═══════════════════════ -->
 
 <div align="center">
 
-| 🧠 Area | 📌 Focus |
-|:---|:---|
-| **GeoAI & Foundation Models** | Google & Tessera embeddings for satellite image segmentation |
-| **Advanced Segmentation** | Improving U-Net performance with transformer backbones |
-| **Climate Analytics** | Urban heat island + blue-green network synergies |
-| **Workflow Automation** | N8N pipelines for geospatial data processing |
-| **Dashboard Design** | Google/NASA-standard interactive geospatial dashboards |
+[![Athithiyan's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Athithiyanmr&bg_color=0d1117&color=00FF9C&line=00FF9C&point=ffffff&area=true&hide_border=true&custom_title=Contribution%20Activity%20Graph)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 </div>
 
@@ -401,11 +459,28 @@ output:          Interactive govt. department map
 
 ---
 
-<!-- ═══════════════════════ ACTIVITY GRAPH ═══════════════════════ -->
+<!-- ═══════════════════════ OPEN TO WORK ═══════════════════════ -->
+
+## 💼 Open to Opportunities
 
 <div align="center">
 
-[![Athithiyan's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Athithiyanmr&bg_color=0d1117&color=00FF9C&line=00FF9C&point=ffffff&area=true&hide_border=true&custom_title=Contribution%20Activity%20Graph)](https://github.com/ashutosh00710/github-readme-activity-graph)
+```
+╔══════════════════════════════════════════════════════════════════╗
+║           🟢  ACTIVELY SEEKING REMOTE ROLES                     ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                  ║
+║  ✅  Geospatial AI / GeoAI Researcher                           ║
+║  ✅  Remote Sensing Data Scientist                               ║
+║  ✅  Climate Tech Analyst / Environmental Data Scientist         ║
+║  ✅  Earth Observation Engineer                                  ║
+║  ✅  Open-Source GIS Developer                                   ║
+║                                                                  ║
+║  🌍  Available for: Full-time · Contract · Consulting            ║
+║  ⏰  Timezone: IST (UTC+5:30) · Flexible overlap                ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
 
 </div>
 
