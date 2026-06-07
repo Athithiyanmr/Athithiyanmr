@@ -84,40 +84,20 @@ class GeospatialScientist:
 
 ---
 
-<!-- ═══════════════════════ IMPACT METRICS ═══════════════════════ -->
+<!-- ═══════════════════════ WORK AT A GLANCE ═══════════════════════ -->
 
 <div align="center">
 
-### 🌐 Impact at a Glance
+### 📌 Work at a Glance
 
-<table>
-<tr>
-  <td align="center">
-    <img src="https://img.shields.io/badge/🛰️%20Satellite%20Scenes-15%2C000%2B-00C853?style=for-the-badge&labelColor=0d1117" /><br/>
-    <sub><b>Scenes Processed</b></sub>
-  </td>
-  <td align="center">
-    <img src="https://img.shields.io/badge/🗺️%20GIS%20Layers-40%2B-2196F3?style=for-the-badge&labelColor=0d1117" /><br/>
-    <sub><b>Geospatial Layers Built</b></sub>
-  </td>
-  <td align="center">
-    <img src="https://img.shields.io/badge/🌴%20Hectares%20Mapped-245%2C569-FF6F00?style=for-the-badge&labelColor=0d1117" /><br/>
-    <sub><b>Coconut Plantation Area</b></sub>
-  </td>
-  <td align="center">
-    <img src="https://img.shields.io/badge/📍%20Polygons-90%2C438-9C27B0?style=for-the-badge&labelColor=0d1117" /><br/>
-    <sub><b>Mapped Polygons</b></sub>
-  </td>
-  <td align="center">
-    <img src="https://img.shields.io/badge/🏛️%20Govt%20Projects-4%2B-E91E63?style=for-the-badge&labelColor=0d1117" /><br/>
-    <sub><b>State-Level Projects</b></sub>
-  </td>
-  <td align="center">
-    <img src="https://img.shields.io/badge/📅%20Experience-4%2B%20Years-607D8B?style=for-the-badge&labelColor=0d1117" /><br/>
-    <sub><b>Professional Experience</b></sub>
-  </td>
-</tr>
-</table>
+![](https://img.shields.io/badge/🛰️_Sentinel--2_Scenes_Processed-15%2C000%2B-00C853?style=flat-square&labelColor=0d1117)
+![](https://img.shields.io/badge/🗺️_GIS_Layers_Integrated-40%2B-2196F3?style=flat-square&labelColor=0d1117)
+![](https://img.shields.io/badge/🌴_Hectares_Mapped-245%2C569-FF6F00?style=flat-square&labelColor=0d1117)
+
+![](https://img.shields.io/badge/📍_Plantation_Polygons-90%2C438-9C27B0?style=flat-square&labelColor=0d1117)
+![](https://img.shields.io/badge/🏛️_State--Level_Projects-4%2B-E91E63?style=flat-square&labelColor=0d1117)
+![](https://img.shields.io/badge/📅_Professional_Experience-4%2B_Years-607D8B?style=flat-square&labelColor=0d1117)
+![](https://img.shields.io/badge/🌍_Districts_Covered-38_TN_Districts-00ACC1?style=flat-square&labelColor=0d1117)
 
 </div>
 
@@ -372,26 +352,6 @@ use_cases:       6 land-use categories modelled
         │
   ──────┘
 ```
-
-<br/>
-
----
-
-<!-- ═══════════════════════ CERTIFICATIONS ═══════════════════════ -->
-
-## 🎓 Education & Certifications
-
-<div align="center">
-
-| 🏅 Credential | 🏛️ Issuer | 📅 Year |
-|:---|:---|:---:|
-| **M.Sc. Data Science** | GUVI — IIT Madras | 2022 |
-| **Google Earth Engine Fundamentals** | Google Developers | 2023 |
-| **Deep Learning Specialization** | Coursera / deeplearning.ai | 2023 |
-| **Remote Sensing & GIS Applications** | ISRO IIRS e-Learning | 2022 |
-| **Python for Geospatial Analysis** | Udemy / Open Source | 2022 |
-
-</div>
 
 <br/>
 
