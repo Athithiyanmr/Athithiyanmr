@@ -1,4 +1,4 @@
-/* ── 3D GLOBE (Three.js) — Geospatial portfolio hero ── */
+/* ── 3D GLOBE — NASA Blue Marble satellite view + smooth rotation ── */
 (function () {
   const canvas = document.getElementById('globe-canvas');
   if (!canvas || typeof THREE === 'undefined') return;
@@ -9,7 +9,7 @@
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-  camera.position.z = 2.6;
+  camera.position.z = 2.55;
 
   const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
   renderer.setSize(width, height);
@@ -20,71 +20,92 @@
   scene.add(earthGroup);
 
   const geometry = new THREE.SphereGeometry(1, 64, 64);
+
+  // Fallback solid material while texture loads
   const material = new THREE.MeshPhongMaterial({
-    color: 0x1a6bb5,
-    emissive: 0x0a2040,
-    shininess: 18,
-    specular: 0x444444
+    color: 0x1a4a7a,
+    emissive: 0x051020,
+    shininess: 12,
+    specular: 0x222222
   });
   const earth = new THREE.Mesh(geometry, material);
   earthGroup.add(earth);
 
-  // Atmosphere
-  const atmoGeo = new THREE.SphereGeometry(1.08, 64, 64);
+  // Load NASA Blue Marble (satellite) texture
+  const loader = new THREE.TextureLoader();
+  loader.crossOrigin = 'anonymous';
+  const textureUrls = [
+    'https://cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg',
+    'https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg',
+    'https://cdn.jsdelivr.net/npm/three-globe@2.31.1/example/img/earth-day.jpg'
+  ];
+
+  function tryLoad(i) {
+    if (i >= textureUrls.length) return;
+    loader.load(
+      textureUrls[i],
+      function (tex) {
+        tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+        material.map = tex;
+        material.color.set(0xffffff);
+        material.needsUpdate = true;
+      },
+      undefined,
+      function () { tryLoad(i + 1); }
+    );
+  }
+  tryLoad(0);
+
+  // Atmosphere glow
+  const atmoGeo = new THREE.SphereGeometry(1.045, 64, 64);
   const atmoMat = new THREE.MeshBasicMaterial({
     color: 0x4fc3f7,
     transparent: true,
-    opacity: 0.14,
+    opacity: 0.18,
     side: THREE.BackSide
   });
   earthGroup.add(new THREE.Mesh(atmoGeo, atmoMat));
 
-  // Subtle wireframe grid (geospatial feel)
-  const wireGeo = new THREE.SphereGeometry(1.003, 36, 24);
-  const wireMat = new THREE.MeshBasicMaterial({
-    color: 0xffffff,
-    wireframe: true,
+  // Soft outer rim
+  const rimGeo = new THREE.SphereGeometry(1.09, 48, 48);
+  const rimMat = new THREE.MeshBasicMaterial({
+    color: 0x88ccee,
     transparent: true,
-    opacity: 0.07
+    opacity: 0.06,
+    side: THREE.BackSide
   });
-  earthGroup.add(new THREE.Mesh(wireGeo, wireMat));
+  earthGroup.add(new THREE.Mesh(rimGeo, rimMat));
 
-  // Lights
-  scene.add(new THREE.AmbientLight(0xffffff, 0.48));
-  const dirLight = new THREE.DirectionalLight(0xffffff, 0.95);
-  dirLight.position.set(5, 3, 5);
-  scene.add(dirLight);
-  const rim = new THREE.DirectionalLight(0x39c6d6, 0.4);
-  rim.position.set(-3, -1, -4);
-  scene.add(rim);
+  // Lights — daylight style for satellite look
+  scene.add(new THREE.AmbientLight(0xffffff, 0.55));
+  const sun = new THREE.DirectionalLight(0xffffff, 1.05);
+  sun.position.set(4, 2, 3);
+  scene.add(sun);
+  const fill = new THREE.DirectionalLight(0x88aacc, 0.25);
+  fill.position.set(-3, -1, -2);
+  scene.add(fill);
 
-  // Satellite
+  // Small orbiting satellite
   const satGroup = new THREE.Group();
   const body = new THREE.Mesh(
-    new THREE.BoxGeometry(0.06, 0.04, 0.04),
-    new THREE.MeshStandardMaterial({ color: 0xe8e8e8, metalness: 0.6, roughness: 0.35 })
+    new THREE.BoxGeometry(0.05, 0.035, 0.035),
+    new THREE.MeshStandardMaterial({ color: 0xe8e8e8, metalness: 0.7, roughness: 0.3 })
   );
   satGroup.add(body);
-  const panelMat = new THREE.MeshStandardMaterial({ color: 0x1B6CA8 });
-  const panelL = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.02, 0.01), panelMat);
-  panelL.position.x = -0.1;
-  satGroup.add(panelL);
-  const panelR = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.02, 0.01), panelMat);
-  panelR.position.x = 0.1;
-  satGroup.add(panelR);
-  satGroup.position.set(1.45, 0, 0);
+  const panelMat = new THREE.MeshStandardMaterial({ color: 0x1a5a9a });
+  const pL = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.018, 0.008), panelMat);
+  pL.position.x = -0.085;
+  satGroup.add(pL);
+  const pR = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.018, 0.008), panelMat);
+  pR.position.x = 0.085;
+  satGroup.add(pR);
   scene.add(satGroup);
-
-  // Accent light
-  const accent = new THREE.PointLight(0xFFB000, 0.55, 2.2);
-  accent.position.set(0.7, 0.5, 0.85);
-  scene.add(accent);
 
   // Interaction
   let isDragging = false;
   let prevX = 0, prevY = 0;
-  let targetRotY = 0.45, targetRotX = 0.12;
-  let rotY = 0.45, rotX = 0.12;
+  let targetRotY = 0.35, targetRotX = 0.18;
+  let rotY = 0.35, rotX = 0.18;
   let autoRotate = true;
 
   canvas.addEventListener('pointerdown', function (e) {
@@ -92,21 +113,26 @@
     autoRotate = false;
     prevX = e.clientX;
     prevY = e.clientY;
+    canvas.setPointerCapture(e.pointerId);
   });
-  window.addEventListener('pointerup', function () { isDragging = false; });
-  window.addEventListener('pointermove', function (e) {
+  canvas.addEventListener('pointerup', function (e) {
+    isDragging = false;
+    try { canvas.releasePointerCapture(e.pointerId); } catch (_) {}
+  });
+  canvas.addEventListener('pointermove', function (e) {
     if (!isDragging) return;
     targetRotY += (e.clientX - prevX) * 0.005;
-    targetRotX += (e.clientY - prevY) * 0.005;
-    targetRotX = Math.max(-0.75, Math.min(0.75, targetRotX));
+    targetRotX += (e.clientY - prevY) * 0.004;
+    targetRotX = Math.max(-0.9, Math.min(0.9, targetRotX));
     prevX = e.clientX;
     prevY = e.clientY;
   });
+  canvas.addEventListener('pointerleave', function () { isDragging = false; });
 
   let idleTimer;
   canvas.addEventListener('pointerup', function () {
     clearTimeout(idleTimer);
-    idleTimer = setTimeout(function () { autoRotate = true; }, 3500);
+    idleTimer = setTimeout(function () { autoRotate = true; }, 2800);
   });
 
   function onResize() {
@@ -119,23 +145,28 @@
   window.addEventListener('resize', onResize);
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let satAngle = 0;
+  let satAngle = 0.8;
 
   function animate() {
     requestAnimationFrame(animate);
+
     if (!reduceMotion) {
-      if (autoRotate) targetRotY += 0.0022;
-      rotY += (targetRotY - rotY) * 0.08;
-      rotX += (targetRotX - rotX) * 0.08;
+      // Continuous gentle rotation
+      if (autoRotate) targetRotY += 0.0035;
+      rotY += (targetRotY - rotY) * 0.06;
+      rotX += (targetRotX - rotX) * 0.06;
       earthGroup.rotation.y = rotY;
       earthGroup.rotation.x = rotX;
 
-      satAngle += 0.009;
-      satGroup.position.x = Math.cos(satAngle) * 1.45;
-      satGroup.position.z = Math.sin(satAngle) * 1.45;
-      satGroup.position.y = Math.sin(satAngle * 0.7) * 0.22;
+      // Satellite orbit
+      satAngle += 0.012;
+      const r = 1.42;
+      satGroup.position.x = Math.cos(satAngle) * r;
+      satGroup.position.z = Math.sin(satAngle) * r;
+      satGroup.position.y = Math.sin(satAngle * 0.6) * 0.28;
       satGroup.lookAt(0, 0, 0);
     }
+
     renderer.render(scene, camera);
   }
   animate();
