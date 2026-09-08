@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Athithiyan M R — Geospatial AI Scientist</title>
-<meta name="description" content="Geospatial AI Scientist · Remote Sensing · Climate Intelligence"/>
-<meta property="og:title" content="Athithiyan M R — Geospatial AI Scientist"/>
-<meta property="og:description" content="Turning satellite imagery into climate intelligence."/>
+<title>Athithiyan M R — Earth Observation & Geospatial AI</title>
+<meta name="description" content="Earth Observation · Geospatial AI · Remote Sensing. Turning satellite data into climate intelligence."/>
+<meta property="og:title" content="Athithiyan M R — Earth Observation & Geospatial AI"/>
+<meta property="og:description" content="Earth Observation scientist building spatial AI for climate and land-use decisions."/>
 <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=general-sans@400,500,600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
 :root{
-  /* Emerald · Slate theme */
   --bg:#0a0f0d;
   --surface:#111916;
   --surface-2:#17211c;
@@ -27,7 +26,6 @@
   --font-b:'General Sans',system-ui,sans-serif;
   --font-m:'JetBrains Mono',monospace;
   --r:18px;
-  --shadow:0 20px 50px rgba(0,0,0,.45);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -35,7 +33,6 @@ body{
   min-height:100dvh;font-family:var(--font-b);background:var(--bg);color:var(--text);
   line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
 }
-/* soft ambient glow */
 body::before{
   content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   background:
@@ -45,7 +42,6 @@ body::before{
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}
 
-/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
@@ -54,7 +50,7 @@ nav{
   backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
 }
-.logo{font-family:var(--font-d);font-weight:700;font-size:.95rem;color:var(--primary);letter-spacing:.01em}
+.logo{font-family:var(--font-d);font-weight:700;font-size:.95rem;color:var(--primary)}
 .nav-links{display:flex;gap:1.75rem;list-style:none}
 .nav-links a{
   font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
@@ -62,7 +58,6 @@ nav{
 }
 .nav-links a:hover{color:var(--primary)}
 
-/* HERO */
 #hero{
   position:relative;z-index:1;
   min-height:90vh;
@@ -87,7 +82,7 @@ h1{
 }
 h1 span{color:var(--primary);display:block}
 .hero-role{font-family:var(--font-m);font-size:.75rem;color:var(--muted);letter-spacing:.05em;margin-bottom:1.15rem}
-.hero-desc{font-size:1.05rem;color:var(--muted);max-width:400px;margin-bottom:1.85rem;line-height:1.7}
+.hero-desc{font-size:1.05rem;color:var(--muted);max-width:420px;margin-bottom:1.85rem;line-height:1.7}
 .hero-desc strong{color:var(--text);font-weight:600}
 .actions{display:flex;flex-wrap:wrap;gap:.7rem}
 .btn{
@@ -103,7 +98,6 @@ h1 span{color:var(--primary);display:block}
 .btn-accent{background:var(--accent);color:#0a0f0d}
 .btn-accent:hover{box-shadow:0 10px 26px rgba(251,191,36,.3)}
 
-/* GLOBE */
 .globe-wrap{position:relative;width:100%;max-width:370px;aspect-ratio:1;margin:0 auto;perspective:1100px}
 .globe-frame{
   width:100%;height:100%;border-radius:50%;
@@ -119,7 +113,6 @@ h1 span{color:var(--primary);display:block}
 }
 .globe-label.tl{top:12%;left:5%}.globe-label.br{bottom:10%;right:6%}
 
-/* STATS */
 .stats-wrap{position:relative;z-index:2;max-width:1100px;margin:.25rem auto 0;padding:0 1.25rem}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .stat{
@@ -142,7 +135,6 @@ h1 span{color:var(--primary);display:block}
 }
 .stat-label{font-size:.68rem;color:var(--muted);margin-top:.35rem;line-height:1.4}
 
-/* SECTIONS */
 section{position:relative;z-index:1;padding:4rem 1.5rem;max-width:940px;margin:0 auto}
 .section-label{
   font-family:var(--font-m);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;
@@ -153,7 +145,6 @@ section{position:relative;z-index:1;padding:4rem 1.5rem;max-width:940px;margin:0
   letter-spacing:-.025em;margin-bottom:1.6rem;
 }
 
-/* PROJECT CARDS */
 .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:1.15rem}
 .card{
   background:var(--surface);
@@ -196,11 +187,9 @@ section{position:relative;z-index:1;padding:4rem 1.5rem;max-width:940px;margin:0
 .card a{
   font-size:.78rem;font-weight:600;color:var(--primary);
   display:inline-block;margin-top:.55rem;
-  transition:opacity .2s;
 }
-.card a:hover{opacity:.8;text-decoration:underline}
+.card a:hover{opacity:.85;text-decoration:underline}
 
-/* SKILLS */
 .skills{display:flex;flex-wrap:wrap;gap:.45rem}
 .chip{
   font-family:var(--font-m);font-size:.72rem;
@@ -210,14 +199,13 @@ section{position:relative;z-index:1;padding:4rem 1.5rem;max-width:940px;margin:0
 }
 .chip:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
 
-/* CONTACT */
 #contact{
   text-align:center;
   background:linear-gradient(180deg, transparent, #0d1612 45%, #101c16);
   max-width:none;padding:4.5rem 1.5rem 5.5rem;
 }
 #contact .section-title{margin-bottom:.5rem}
-#contact p{color:var(--muted);max-width:360px;margin:0 auto 1.6rem;font-size:.95rem}
+#contact p{color:var(--muted);max-width:380px;margin:0 auto 1.6rem;font-size:.95rem}
 .contact-row{display:flex;justify-content:center;flex-wrap:wrap;gap:.65rem}
 
 footer{
@@ -255,10 +243,10 @@ footer{
 
 <section id="hero">
   <div>
-    <div class="hero-tag">Open to remote · GeoAI · Climate Tech</div>
+    <div class="hero-tag">Earth Observation · GeoAI · Open to remote</div>
     <h1>Athithiyan<span>M R</span></h1>
-    <p class="hero-role">Geospatial AI Scientist · Remote Sensing · Climate Intelligence</p>
-    <p class="hero-desc">Turning <strong>satellite imagery</strong> into policy-ready climate decisions for Tamil Nadu.</p>
+    <p class="hero-role">Earth Observation · Geospatial AI · Climate Intelligence</p>
+    <p class="hero-desc">Building <strong>Earth Observation</strong> pipelines that turn satellite data into land-use and climate decisions across Tamil Nadu.</p>
     <div class="actions">
       <a href="#work" class="btn btn-primary">View Work</a>
       <a href="./Athithiyan_CV.pdf" class="btn btn-accent" download>CV</a>
@@ -269,7 +257,7 @@ footer{
     <div class="globe-frame">
       <canvas id="globe-canvas"></canvas>
       <div class="globe-label tl">SENTINEL-2 · 10 m</div>
-      <div class="globe-label br">TAMIL NADU</div>
+      <div class="globe-label br">EARTH OBSERVATION</div>
     </div>
   </div>
 </section>
@@ -279,43 +267,43 @@ footer{
     <div class="stat">
       <div class="stat-icon">🛰️</div>
       <span class="stat-num">15,000+</span>
-      <div class="stat-label">Sentinel-2 scenes<br/>processed</div>
+      <div class="stat-label">EO scenes<br/>processed</div>
     </div>
     <div class="stat">
       <div class="stat-icon">🌴</div>
       <span class="stat-num">245,569</span>
-      <div class="stat-label">Hectares mapped<br/>(plantations)</div>
+      <div class="stat-label">Hectares mapped<br/>from satellite</div>
     </div>
     <div class="stat">
       <div class="stat-icon">📍</div>
       <span class="stat-num">90,438</span>
-      <div class="stat-label">Plantation polygons<br/>across 38 districts</div>
+      <div class="stat-label">Plantation polygons<br/>· 38 districts</div>
     </div>
     <div class="stat">
       <div class="stat-icon">🏛️</div>
       <span class="stat-num">4+</span>
-      <div class="stat-label">State-level projects<br/>· 4+ years</div>
+      <div class="stat-label">State-level EO<br/>projects · 4+ yrs</div>
     </div>
   </div>
 </div>
 
 <section id="work">
-  <div class="section-label">Selected work</div>
+  <div class="section-label">Earth Observation work</div>
   <h2 class="section-title">Featured projects</h2>
   <div class="projects">
     <article class="card reveal">
       <div class="card-visual v-green"><span>🌿 Blue-Green Infrastructure</span></div>
       <div class="card-body">
         <div class="meta">TN State Planning Commission · Ongoing</div>
-        <p>15,000+ scenes · 40+ layers · 18-criteria ecosystem model for flood, carbon & biodiversity.</p>
-        <div class="tags"><span class="tag">Sentinel-2</span><span class="tag">PostGIS</span><span class="tag">Policy</span></div>
+        <p>Statewide EO intelligence: 15,000+ Sentinel-2 scenes, 40+ layers, ecosystem services for flood, carbon & biodiversity.</p>
+        <div class="tags"><span class="tag">Sentinel-2</span><span class="tag">PostGIS</span><span class="tag">EO</span></div>
       </div>
     </article>
     <article class="card reveal">
       <div class="card-visual v-orange"><span>🌴 Coconut Plantation Mapping</span></div>
       <div class="card-body">
-        <div class="meta">U-Net · 38 districts · 245,569 ha</div>
-        <p>90,438 polygons from Sentinel-2 with collaborative verification tool.</p>
+        <div class="meta">U-Net · Sentinel-2 · 38 districts</div>
+        <p>90,438 polygons / 245,569 ha mapped from EO imagery with collaborative verification.</p>
         <div class="tags"><span class="tag">U-Net</span><span class="tag">PyTorch</span><span class="tag">Sentinel-2</span></div>
         <a href="https://github.com/Athithiyanmr/coconut_plantation_mapping">Repository →</a>
       </div>
@@ -324,8 +312,8 @@ footer{
       <div class="card-visual v-blue"><span>🏙️ Chennai Urban Climate</span></div>
       <div class="card-body">
         <div class="meta">Built-up extraction · UHI</div>
-        <p>Multi-spectral U-Net at 10 m for heat-island & vulnerability analysis.</p>
-        <div class="tags"><span class="tag">U-Net</span><span class="tag">UHI</span><span class="tag">Climate</span></div>
+        <p>EO-driven U-Net at 10 m for urban heat island and climate vulnerability mapping.</p>
+        <div class="tags"><span class="tag">U-Net</span><span class="tag">UHI</span><span class="tag">EO</span></div>
         <a href="https://github.com/Athithiyanmr/chennai_urban_climate">Repository →</a>
       </div>
     </article>
@@ -333,8 +321,8 @@ footer{
       <div class="card-visual v-amber"><span>☀️ Solar Land Suitability</span></div>
       <div class="card-body">
         <div class="meta">SET-TN · Published report</div>
-        <p>Multi-criteria analysis for distributed solar — integrated into state energy planning.</p>
-        <div class="tags"><span class="tag">MCE</span><span class="tag">Solar</span><span class="tag">Policy</span></div>
+        <p>Multi-criteria EO analysis for distributed solar — used in state energy planning.</p>
+        <div class="tags"><span class="tag">MCE</span><span class="tag">Solar</span><span class="tag">EO</span></div>
         <a href="https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/">Report →</a>
       </div>
     </article>
@@ -343,16 +331,16 @@ footer{
 
 <section id="skills">
   <div class="section-label">Stack</div>
-  <h2 class="section-title">Tools</h2>
+  <h2 class="section-title">Earth Observation tools</h2>
   <div class="skills reveal">
     <span class="chip">Sentinel-2</span>
-    <span class="chip">U-Net / PyTorch</span>
+    <span class="chip">Landsat</span>
     <span class="chip">Google Earth Engine</span>
+    <span class="chip">U-Net / PyTorch</span>
     <span class="chip">QGIS / GDAL</span>
     <span class="chip">GeoPandas</span>
     <span class="chip">PostGIS</span>
     <span class="chip">FastAPI</span>
-    <span class="chip">Next.js</span>
     <span class="chip">Docker</span>
     <span class="chip">Leaflet</span>
     <span class="chip">MCP / Claude</span>
@@ -363,7 +351,7 @@ footer{
 <section id="contact">
   <div class="section-label">Contact</div>
   <h2 class="section-title">Let’s work together</h2>
-  <p>Open to remote roles in Geospatial AI, Remote Sensing & Climate Tech.</p>
+  <p>Open to remote roles in Earth Observation, Geospatial AI & Climate Tech.</p>
   <div class="contact-row">
     <a href="mailto:athithiyan@aurovilleconsulting.com" class="btn btn-primary">Email</a>
     <a href="https://www.linkedin.com/in/athithiyan-m-r-/" class="btn btn-ghost">LinkedIn</a>
@@ -372,7 +360,7 @@ footer{
   </div>
 </section>
 
-<footer>© 2026 Athithiyan M R · Geospatial AI Scientist</footer>
+<footer>© 2026 Athithiyan M R · Earth Observation & Geospatial AI</footer>
 
 <script>
 const obs = new IntersectionObserver(es => es.forEach(e => {
