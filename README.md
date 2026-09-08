@@ -58,23 +58,23 @@ class GeospatialScientist:
     """
     name       = "Athithiyan M R"
     role       = "Geospatial AI Scientist"
-    location   = "Tamil Nadu, India 🇮🇳"
+    location   = "Chennai / Tamil Nadu, India 🇮🇳"
     org        = "Auroville Consulting"
     experience = "4+ years"
 
     expertise  = [
         "🛰️  Satellite Remote Sensing (Sentinel-2, Landsat, MODIS)",
         "🤖  Deep Learning — U-Net, CNN, SegFormer, Semantic Segmentation",
-        "🌿  Land-Use, LULC & Climate GIS Analysis",
+        "🌿  LULC, Climate GIS & Blue-Green Infrastructure",
         "📡  Google Earth Engine & PostGIS",
-        "🌐  Full-Stack Geospatial Web Apps (FastAPI + Streamlit + Leaflet)",
-        "🔁  MLOps — Docker, GitHub Actions, CI/CD Pipelines",
+        "🌐  Full-Stack Geospatial Web Apps (FastAPI + Streamlit + Leaflet / Next.js)",
+        "🔁  MLOps — Docker, GitHub Actions, CI/CD",
         "🧩  MCP + Claude AI — Geospatial AI Agent Development",
     ]
 
-    currently  = "Mapping Blue-Green Networks for TN State Planning Commission"
+    currently  = "Blue-Green Network mapping for TN State Planning Commission"
     seeking    = "Remote roles · Climate Tech · GeoAI Research · Conservation Tech"
-    fun_fact   = "I've processed 15,000+ satellite scenes 🌍"
+    fun_fact   = "Processed 15,000+ satellite scenes 🌍"
     mission    = "Turning raw pixels into policy-ready climate intelligence"
 ```
 
@@ -147,8 +147,7 @@ impact:   Embedded in TN spatial planning framework
 polygons:    90,438 across 38 TN districts
 area:        245,569 hectares mapped
 model:       Semantic segmentation (10m bands)
-labels:      Descals et al. (2023) training data
-accuracy:    Validated with field ground-truth
+labels:      Descals et al. (2023) + field validation
 tool:        Collaborative live verification app
 ```
 
@@ -169,9 +168,9 @@ tool:        Collaborative live verification app
 ```yaml
 model:      U-Net semantic segmentation
 input:      Sentinel-2 @ 10m resolution
-output:     Built-up area maps + UHI index
+output:     Built-up maps + UHI-ready layers
+validation: IoU ≥ 0.60
 use_case:   Urban heat island + vulnerability
-districts:  Chennai Metropolitan Area
 ```
 
 </td>
@@ -183,7 +182,7 @@ districts:  Chennai Metropolitan Area
 
 **[`Published Report →`](https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/)**
 
-> Spatial analytics for Tamil Nadu's net-zero energy transition: land suitability for distributed solar, Time-of-Use tariff modelling, and policy analytics.
+> Spatial analytics for Tamil Nadu’s net-zero energy transition: land suitability for distributed solar, Time-of-Use tariff modelling, and policy analytics.
 
 ```yaml
 focus:   Villupuram district (solar suitability)
@@ -210,7 +209,7 @@ impact:  Integrated into TN energy planning
 classification:  LULC change detection (2019–2023)
 data:            Sentinel-2 + Landsat imagery
 validation:      Ground truth + field verification
-output:          Interactive govt. department map
+output:          Interactive government map
 use_cases:       6 land-use categories modelled
 ```
 
@@ -226,9 +225,9 @@ use_cases:       6 land-use categories modelled
 | Tool | Stack | Description |
 |:---|:---|:---|
 | [**Sentinel-2 Built-Up Pipeline**](https://github.com/Athithiyanmr/sentinel2_builtup_pipeline) | PyTorch · GDAL | End-to-end ML pipeline for built-up detection |
-| [**Lila CRS Converter**](https://github.com/Athithiyanmr/Lila-crs-converter) | FastAPI · Docker | Dockerized CRS converter with CI/CD |
+| [**Lila CRS Converter**](https://github.com/Athithiyanmr/Lila-crs-converter) | FastAPI · Docker | Dockerized CRS converter with CI/CD + live demo |
 | [**Coconut Verification Tool**](https://github.com/Athithiyanmr/coconut_verification_tool) | Leaflet · JS | Collaborative label verification app |
-| [**Bill Calculator**](https://github.com/Athithiyanmr/Bill_Calculator) | Python | 25-year Solar + Storage economic model |
+| [**FCD Tamil Nadu Platform**](https://github.com/Athithiyanmr/fcd-tamilnadu-platform) | FastAPI · Next.js · PostGIS | Full-stack Forest Canopy Density WebGIS |
 
 </td>
 </tr>
@@ -252,7 +251,7 @@ use_cases:       6 land-use categories modelled
 | **Deep Learning / GeoAI** | U-Net, PyTorch, SegFormer, CNN, Segmentation | █████████░ Advanced |
 | **LULC & Change Detection** | QGIS, ArcGIS Pro, GDAL, Rasterio | ██████████ Expert |
 | **Geospatial Python** | GeoPandas, Shapely, Fiona, Leafmap, EarthPy | ██████████ Expert |
-| **Web GIS & Dashboards** | Streamlit, Leafmap, Folium, Leaflet.js, FastAPI | █████████░ Advanced |
+| **Web GIS & Dashboards** | Streamlit, Leafmap, Folium, Leaflet.js, FastAPI, Next.js | █████████░ Advanced |
 | **MLOps & DevOps** | Docker, GitHub Actions, CI/CD, Linux | ████████░░ Proficient |
 | **Spatial Databases** | PostGIS, PostgreSQL, GeoJSON, GeoParquet | ████████░░ Proficient |
 | **Climate Analytics** | UHI, Carbon Sequestration, BGI, Ecosystem Services | █████████░ Advanced |
@@ -297,8 +296,8 @@ use_cases:       6 land-use categories modelled
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Leaflet](https://img.shields.io/badge/Leaflet.js-199900?style=for-the-badge&logo=leaflet&logoColor=white)
 
 **🗄️ Database & DevOps**
@@ -365,11 +364,11 @@ use_cases:       6 land-use categories modelled
 
 | 🧠 Area | 📌 Focus |
 |:---|:---|
-| **GeoAI Foundation Models** | Google & Tessera embeddings for satellite image segmentation |
+| **GeoAI Foundation Models** | TESSERA & Google AlphaEarth embeddings for satellite segmentation |
 | **Transformer Backbones** | Improving U-Net performance with Swin-T / SegFormer |
 | **Climate Analytics** | Urban heat island + blue-green network synergies |
 | **Workflow Automation** | N8N + MCP pipelines for automated geospatial data ingestion |
-| **Dashboard Design** | Google/NASA-standard interactive geospatial dashboards |
+| **Dashboard Design** | Production-grade interactive geospatial dashboards |
 | **MCP + Claude AI** | Building geospatial AI agents with Model Context Protocol |
 | **3D Visualization** | Deck.gl + Cesium for immersive geospatial storytelling |
 
@@ -413,18 +412,6 @@ use_cases:       6 land-use categories modelled
 
 ---
 
-<!-- ═══════════════════════ ACTIVITY GRAPH ═══════════════════════ -->
-
-<div align="center">
-
-[![Athithiyan's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Athithiyanmr&bg_color=0d1117&color=00FF9C&line=00FF9C&point=ffffff&area=true&hide_border=true&custom_title=Contribution%20Activity%20Graph)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
-
-<br/>
-
----
-
 <!-- ═══════════════════════ OPEN TO WORK ═══════════════════════ -->
 
 ## 💼 Open to Opportunities
@@ -445,22 +432,10 @@ use_cases:       6 land-use categories modelled
 ║                                                                  ║
 ║  🌍  Available for: Full-time · Contract · Consulting            ║
 ║  ⏰  Timezone: IST (UTC+5:30) · Flexible overlap                ║
-║  🤝  Open to: NGOs · Think Tanks · Climate Tech · Research      ║
+║  🤝  Open to: Climate Tech · NGOs · Think Tanks · Research       ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
-
-</div>
-
-<br/>
-
----
-
-<!-- ═══════════════════════ QUOTE ═══════════════════════ -->
-
-<div align="center">
-
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" alt="Random Dev Quote" />
 
 </div>
 
@@ -472,7 +447,7 @@ use_cases:       6 land-use categories modelled
 
 ## 📬 Let's Connect
 
-> Open to collaborations in **Geospatial AI**, **Climate Analytics**, **Remote Sensing**, and **Open-Source Environmental Tools**.
+> Open to collaborations in **Geospatial AI**, **Climate Analytics**, **Remote Sensing**, and **Open-Source Environmental Tools**.  
 > Actively seeking **fully remote roles** with climate-tech organizations, NGOs, think tanks, and research institutes.
 
 <div align="center">
