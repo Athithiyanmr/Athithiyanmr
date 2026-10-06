@@ -3,371 +3,214 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Athithiyan M R — Earth Observation & Geospatial AI</title>
-<meta name="description" content="Earth Observation · Geospatial AI · Remote Sensing. Turning satellite data into climate intelligence."/>
-<meta property="og:title" content="Athithiyan M R — Earth Observation & Geospatial AI"/>
-<meta property="og:description" content="Earth Observation scientist building spatial AI for climate and land-use decisions."/>
-<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=general-sans@400,500,600&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<title>Athithiyan M R — Senior Geospatial Analyst</title>
+<meta name="description" content="Senior geospatial analyst at Auroville Consulting. Earth observation, GeoAI, and spatial planning for Tamil Nadu."/>
+<meta property="og:title" content="Athithiyan M R — Senior Geospatial Analyst"/>
+<meta property="og:description" content="Earth-observation pipelines that turn satellite imagery into land-use and climate decisions."/>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
 :root{
-  --bg:#0a0f0d;
-  --surface:#111916;
-  --surface-2:#17211c;
-  --border:rgba(255,255,255,.06);
-  --text:#eef6f1;
-  --muted:#8aa896;
-  --faint:#5a7364;
-  --primary:#34d399;
-  --primary-dim:rgba(52,211,153,.12);
-  --accent:#fbbf24;
-  --font-d:'Cabinet Grotesk',system-ui,sans-serif;
-  --font-b:'General Sans',system-ui,sans-serif;
-  --font-m:'JetBrains Mono',monospace;
-  --r:18px;
+  --bg:#0c1110;--card:#141c19;--muted:#1a2420;--text:#e7eee8;--dim:#8b9a90;--faint:#5f6f66;
+  --accent:#b7cfc0;--border:rgba(231,238,232,.12);
+  --display:"Newsreader",Georgia,serif;--sans:"Outfit",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  min-height:100dvh;font-family:var(--font-b);background:var(--bg);color:var(--text);
-  line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
-}
-body::before{
-  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(52,211,153,.09), transparent),
-    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(52,211,153,.05), transparent);
-}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}
-
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:1rem 2rem;
-  background:rgba(10,15,13,.8);
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
-}
-.logo{font-family:var(--font-d);font-weight:700;font-size:.95rem;color:var(--primary)}
-.nav-links{display:flex;gap:1.75rem;list-style:none}
-.nav-links a{
-  font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted);transition:color .2s;
-}
-.nav-links a:hover{color:var(--primary)}
-
-#hero{
-  position:relative;z-index:1;
-  min-height:90vh;
-  display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:2.5rem;
-  max-width:1100px;margin:0 auto;padding:7.5rem 2rem 2rem;
-}
-.hero-tag{
-  display:inline-flex;align-items:center;gap:.5rem;
-  font-family:var(--font-m);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--primary);background:var(--primary-dim);
-  padding:.35rem .9rem;border-radius:999px;margin-bottom:1.25rem;
-  border:1px solid rgba(52,211,153,.22);
-}
-.hero-tag::before{
-  content:'';width:6px;height:6px;background:var(--primary);border-radius:50%;
-  box-shadow:0 0 10px var(--primary);animation:pulse 2.2s infinite;
-}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.4)}}
-h1{
-  font-family:var(--font-d);font-size:clamp(2.7rem,5.2vw,4.2rem);font-weight:800;
-  line-height:1.03;letter-spacing:-.04em;margin-bottom:.5rem;
-}
-h1 span{color:var(--primary);display:block}
-.hero-role{font-family:var(--font-m);font-size:.75rem;color:var(--muted);letter-spacing:.05em;margin-bottom:1.15rem}
-.hero-desc{font-size:1.05rem;color:var(--muted);max-width:420px;margin-bottom:1.85rem;line-height:1.7}
-.hero-desc strong{color:var(--text);font-weight:600}
-.actions{display:flex;flex-wrap:wrap;gap:.7rem}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:.72rem 1.4rem;border-radius:12px;font-size:.875rem;font-weight:600;
-  transition:transform .2s ease,box-shadow .2s ease,background .2s,border-color .2s;
-}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--primary);color:#0a0f0d}
-.btn-primary:hover{box-shadow:0 12px 32px rgba(52,211,153,.35)}
-.btn-ghost{border:1px solid var(--border);color:var(--text)}
-.btn-ghost:hover{border-color:var(--primary);color:var(--primary)}
-.btn-accent{background:var(--accent);color:#0a0f0d}
-.btn-accent:hover{box-shadow:0 10px 26px rgba(251,191,36,.3)}
-
-.globe-wrap{position:relative;width:100%;max-width:370px;aspect-ratio:1;margin:0 auto;perspective:1100px}
-.globe-frame{
-  width:100%;height:100%;border-radius:50%;
-  background:radial-gradient(circle at 30% 25%, rgba(52,211,153,.16), transparent 52%);
-  box-shadow:0 0 90px rgba(52,211,153,.12), 0 28px 55px rgba(0,0,0,.5), inset 0 0 60px rgba(0,0,0,.4);
-  overflow:hidden;border:1px solid rgba(52,211,153,.14);
-}
-#globe-canvas{width:100%!important;height:100%!important;display:block;border-radius:50%;cursor:grab}
-#globe-canvas:active{cursor:grabbing}
-.globe-label{
-  position:absolute;font-family:var(--font-m);font-size:9px;letter-spacing:.09em;
-  color:var(--primary);opacity:.8;pointer-events:none;text-shadow:0 0 14px rgba(52,211,153,.5);
-}
-.globe-label.tl{top:12%;left:5%}.globe-label.br{bottom:10%;right:6%}
-
-.stats-wrap{position:relative;z-index:2;max-width:1100px;margin:.25rem auto 0;padding:0 1.25rem}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.stat{
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--r);
-  padding:1.35rem 1rem 1.2rem;
-  text-align:center;
-  transition:transform .25s ease,border-color .25s,box-shadow .25s;
-}
-.stat:hover{
-  transform:translateY(-5px);
-  border-color:rgba(52,211,153,.28);
-  box-shadow:0 18px 40px rgba(0,0,0,.4);
-}
-.stat-icon{font-size:1.4rem;margin-bottom:.5rem;line-height:1}
-.stat-num{
-  font-family:var(--font-d);font-size:1.6rem;font-weight:800;
-  color:var(--primary);display:block;letter-spacing:-.025em;line-height:1.15;
-}
-.stat-label{font-size:.68rem;color:var(--muted);margin-top:.35rem;line-height:1.4}
-
-section{position:relative;z-index:1;padding:4rem 1.5rem;max-width:940px;margin:0 auto}
-.section-label{
-  font-family:var(--font-m);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;
-  color:var(--primary);margin-bottom:.4rem;
-}
-.section-title{
-  font-family:var(--font-d);font-size:clamp(1.5rem,2.8vw,2rem);font-weight:800;
-  letter-spacing:-.025em;margin-bottom:1.6rem;
-}
-
-.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:1.15rem}
-.card{
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--r);
-  overflow:hidden;
-  transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s;
-}
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 28px 55px rgba(0,0,0,.48);
-}
-.card-visual{
-  height:108px;
-  display:flex;align-items:flex-end;
-  padding:1rem 1.2rem;
-  position:relative;
-}
-.card-visual::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to top, rgba(10,15,13,.82), transparent 65%);
-}
-.card-visual span{
-  position:relative;z-index:1;
-  font-family:var(--font-d);font-size:.95rem;font-weight:700;
-}
-.v-green{background:linear-gradient(145deg,#064e3b 0%,#10b981 100%)}
-.v-orange{background:linear-gradient(145deg,#7c2d12 0%,#f97316 100%)}
-.v-blue{background:linear-gradient(145deg,#0c4a6e 0%,#0ea5e9 100%)}
-.v-amber{background:linear-gradient(145deg,#78350f 0%,#f59e0b 100%)}
-.card-body{padding:1.15rem 1.2rem 1.3rem}
-.card .meta{font-family:var(--font-m);font-size:.64rem;color:var(--faint);margin-bottom:.4rem}
-.card p{font-size:.84rem;color:var(--muted);line-height:1.55;margin-bottom:.7rem}
-.tags{display:flex;flex-wrap:wrap;gap:.3rem}
-.tag{
-  font-size:.61rem;font-weight:500;
-  background:var(--primary-dim);color:var(--primary);
-  padding:.18rem .5rem;border-radius:999px;
-}
-.card a{
-  font-size:.78rem;font-weight:600;color:var(--primary);
-  display:inline-block;margin-top:.55rem;
-}
-.card a:hover{opacity:.85;text-decoration:underline}
-
-.skills{display:flex;flex-wrap:wrap;gap:.45rem}
-.chip{
-  font-family:var(--font-m);font-size:.72rem;
-  background:var(--surface-2);border:1px solid var(--border);
-  color:var(--muted);padding:.38rem .75rem;border-radius:9px;
-  transition:border-color .2s,color .2s,transform .2s;
-}
-.chip:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
-
-#contact{
-  text-align:center;
-  background:linear-gradient(180deg, transparent, #0d1612 45%, #101c16);
-  max-width:none;padding:4.5rem 1.5rem 5.5rem;
-}
-#contact .section-title{margin-bottom:.5rem}
-#contact p{color:var(--muted);max-width:380px;margin:0 auto 1.6rem;font-size:.95rem}
-.contact-row{display:flex;justify-content:center;flex-wrap:wrap;gap:.65rem}
-
-footer{
-  position:relative;z-index:1;
-  text-align:center;padding:1.3rem;
-  font-family:var(--font-m);font-size:.65rem;color:var(--faint);
-  border-top:1px solid var(--border);
-}
-
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
+  padding:0 1.5rem;height:64px;background:rgba(12,17,16,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.logo{font-family:var(--display);font-size:1.15rem}
+.nav-links{display:flex;gap:1.75rem;list-style:none;align-items:center}
+.nav-links a{font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.nav-links a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.7rem 1.2rem;border-radius:10px;font-size:.875rem;font-weight:500}
+.btn-solid{background:var(--text);color:var(--bg)}
+.btn-accent{background:var(--accent);color:var(--bg)}
+.btn-ghost{border:1px solid var(--border)}
+.actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.75rem}
+#hero{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;max-width:1100px;margin:0 auto;padding:4.5rem 1.5rem 3rem}
+.kicker{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(183,207,192,.25);background:rgba(183,207,192,.1);padding:.35rem .85rem;border-radius:999px;margin-bottom:1rem}
+h1{font-family:var(--display);font-size:clamp(2.6rem,5vw,4.2rem);font-weight:500;letter-spacing:-.03em;line-height:1.05}
+.role{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:.85rem}
+.lead{font-size:1.1rem;color:var(--dim);max-width:28rem;margin-top:1rem}
+.globe-wrap{position:relative;width:100%;max-width:370px;aspect-ratio:1;margin:0 auto}
+.globe-frame{width:100%;height:100%;border-radius:50%;overflow:hidden;border:1px solid rgba(183,207,192,.2);box-shadow:0 28px 60px rgba(0,0,0,.45)}
+#globe-canvas{width:100%!important;height:100%!important;display:block;cursor:grab}
+.globe-label{position:absolute;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);opacity:.85;pointer-events:none}
+.globe-label.tl{top:12%;left:4%}.globe-label.br{bottom:10%;right:5%}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border);max-width:1100px;margin:0 auto}
+.stat{padding:1.6rem 1.25rem;border-right:1px solid var(--border)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--display);font-size:1.85rem;font-weight:500;color:var(--accent);letter-spacing:-.02em}
+.stat span{display:block;font-size:.82rem;margin-top:.35rem}
+.stat small{display:block;font-family:var(--mono);font-size:.65rem;color:var(--faint);margin-top:.3rem}
+section{max-width:1100px;margin:0 auto;padding:4.2rem 1.5rem}
+.section-kicker{font-family:var(--mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+h2{font-family:var(--display);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:500;letter-spacing:-.02em}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-top:1.6rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.3rem 1.35rem;display:flex;flex-direction:column;gap:.55rem}
+.card .meta{font-family:var(--mono);font-size:.68rem;color:var(--dim)}
+.card h3{font-family:var(--display);font-size:1.25rem;font-weight:500;letter-spacing:-.02em}
+.card p{font-size:.9rem;color:var(--dim)}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.tag{font-size:.65rem;background:var(--muted);color:var(--dim);padding:.2rem .5rem;border-radius:999px}
+.card a{color:var(--accent);font-size:.85rem;font-weight:500;margin-top:.3rem}
+.practice{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.6rem}
+.practice h3{font-family:var(--display);font-size:1.15rem;margin:.4rem 0}
+.practice p{color:var(--dim);font-size:.9rem}
+.timeline{margin-top:1.5rem;border-top:1px solid var(--border)}
+.tl{display:grid;grid-template-columns:9rem 1fr;gap:1.5rem;padding:1.15rem 0;border-bottom:1px solid var(--border)}
+.tl .y{font-family:var(--mono);font-size:.72rem;color:var(--accent)}
+.tl .o{font-size:.85rem;color:var(--dim)}
+.tl .d{font-size:.9rem;color:var(--dim);margin-top:.35rem}
+#contact{text-align:left}
+.contact-row{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.4rem}
+footer{border-top:1px solid var(--border);text-align:center;padding:1.3rem;font-family:var(--mono);font-size:.65rem;color:var(--faint)}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:2.5rem;margin-top:1.5rem}
+.about p+p{margin-top:.9rem;color:var(--dim)}
 @media(max-width:900px){
   .nav-links{display:none}
-  #hero{grid-template-columns:1fr;padding-top:6.2rem;text-align:center;min-height:auto}
-  .hero-desc{margin-inline:auto}
+  #hero{grid-template-columns:1fr;padding-top:2.5rem;text-align:center}
+  .lead{margin-inline:auto}
   .actions{justify-content:center}
-  .globe-wrap{max-width:250px;margin-top:.75rem}
-  .stats{grid-template-columns:repeat(2,1fr);gap:.75rem}
-  .projects{grid-template-columns:1fr}
-  section{padding:3rem 1.2rem}
+  .globe-wrap{max-width:250px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(odd){border-right:1px solid var(--border)}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--border)}
+  .grid,.practice,.about{grid-template-columns:1fr}
+  .tl{grid-template-columns:1fr;gap:.35rem}
 }
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="#hero" class="logo">Athithiyan M R</a>
+  <a class="logo" href="#hero">Athithiyan M R</a>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
-    <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a class="btn btn-ghost" href="./Athithiyan_CV.pdf" download>CV</a></li>
   </ul>
 </nav>
 
 <section id="hero">
   <div>
-    <div class="hero-tag">Earth Observation · GeoAI · Open to remote</div>
-    <h1>Athithiyan<span>M R</span></h1>
-    <p class="hero-role">Earth Observation · Geospatial AI · Climate Intelligence</p>
-    <p class="hero-desc">Building <strong>Earth Observation</strong> pipelines that turn satellite data into land-use and climate decisions across Tamil Nadu.</p>
+    <div class="kicker">Open to remote GeoAI · Earth observation · climate roles</div>
+    <p class="role">Senior Geospatial Analyst · Auroville Consulting</p>
+    <h1>Athithiyan M R</h1>
+    <p class="lead">Earth-observation pipelines that turn satellite imagery into land-use and climate decisions.</p>
     <div class="actions">
-      <a href="#work" class="btn btn-primary">View Work</a>
-      <a href="./Athithiyan_CV.pdf" class="btn btn-accent" download>CV</a>
-      <a href="#contact" class="btn btn-ghost">Contact</a>
+      <a class="btn btn-solid" href="#work">View work</a>
+      <a class="btn btn-accent" href="./Athithiyan_CV.pdf" download>Curriculum vitae</a>
+      <a class="btn btn-ghost" href="#contact">Contact</a>
     </div>
   </div>
   <div class="globe-wrap">
-    <div class="globe-frame">
-      <canvas id="globe-canvas"></canvas>
-      <div class="globe-label tl">SENTINEL-2 · 10 m</div>
-      <div class="globe-label br">EARTH OBSERVATION</div>
-    </div>
+    <div class="globe-frame"><canvas id="globe-canvas"></canvas></div>
+    <div class="globe-label tl">Sentinel-2 · 10 m</div>
+    <div class="globe-label br">11.1°N 78.7°E</div>
   </div>
 </section>
 
-<div class="stats-wrap">
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-icon">🛰️</div>
-      <span class="stat-num">15,000+</span>
-      <div class="stat-label">EO scenes<br/>processed</div>
-    </div>
-    <div class="stat">
-      <div class="stat-icon">🌴</div>
-      <span class="stat-num">245,569</span>
-      <div class="stat-label">Hectares mapped<br/>from satellite</div>
-    </div>
-    <div class="stat">
-      <div class="stat-icon">📍</div>
-      <span class="stat-num">90,438</span>
-      <div class="stat-label">Plantation polygons<br/>· 38 districts</div>
-    </div>
-    <div class="stat">
-      <div class="stat-icon">🏛️</div>
-      <span class="stat-num">4+</span>
-      <div class="stat-label">State-level EO<br/>projects · 4+ yrs</div>
-    </div>
-  </div>
+<div class="stats">
+  <div class="stat"><b>15,000+</b><span>Sentinel-2 scenes processed</span><small>Statewide EO archive</small></div>
+  <div class="stat"><b>245,569</b><span>Hectares mapped</span><small>Coconut canopy, 38 districts</small></div>
+  <div class="stat"><b>90,438</b><span>Plantation polygons</span><small>Field-validated labels</small></div>
+  <div class="stat"><b>4+</b><span>State-level programmes</span><small>Planning & energy</small></div>
 </div>
 
 <section id="work">
-  <div class="section-label">Earth Observation work</div>
-  <h2 class="section-title">Featured projects</h2>
-  <div class="projects">
-    <article class="card reveal">
-      <div class="card-visual v-green"><span>🌿 Blue-Green Infrastructure</span></div>
-      <div class="card-body">
-        <div class="meta">TN State Planning Commission · Ongoing</div>
-        <p>Statewide EO intelligence: 15,000+ Sentinel-2 scenes, 40+ layers, ecosystem services for flood, carbon & biodiversity.</p>
-        <div class="tags"><span class="tag">Sentinel-2</span><span class="tag">PostGIS</span><span class="tag">EO</span></div>
-      </div>
+  <p class="section-kicker">Selected work</p>
+  <h2>State-scale Earth observation</h2>
+  <div class="grid">
+    <article class="card">
+      <p class="meta">Auroville Consulting × TN State Planning Commission · 2024–present</p>
+      <h3>Tamil Nadu Blue-Green Infrastructure Framework</h3>
+      <p>Regional mapping of Blue-Green Networks from 15,000+ Sentinel-2 scenes and 40+ layers. Eighteen ecosystem-service criteria; district intervention zones from nano to mega scale.</p>
+      <div class="tags"><span class="tag">Sentinel-2</span><span class="tag">PostGIS</span><span class="tag">MCE</span></div>
     </article>
-    <article class="card reveal">
-      <div class="card-visual v-orange"><span>🌴 Coconut Plantation Mapping</span></div>
-      <div class="card-body">
-        <div class="meta">U-Net · Sentinel-2 · 38 districts</div>
-        <p>90,438 polygons / 245,569 ha mapped from EO imagery with collaborative verification.</p>
-        <div class="tags"><span class="tag">U-Net</span><span class="tag">PyTorch</span><span class="tag">Sentinel-2</span></div>
-        <a href="https://github.com/Athithiyanmr/coconut_plantation_mapping">Repository →</a>
-      </div>
+    <article class="card">
+      <p class="meta">U-Net · Sentinel-2 · 38 districts</p>
+      <h3>Statewide Coconut Plantation Mapping</h3>
+      <p>90,438 polygons covering 245,569 ha, with a live collaborative verification tool.</p>
+      <div class="tags"><span class="tag">U-Net</span><span class="tag">PyTorch</span><span class="tag">Leaflet</span></div>
+      <a href="https://github.com/Athithiyanmr/coconut_plantation_mapping">Repository →</a>
     </article>
-    <article class="card reveal">
-      <div class="card-visual v-blue"><span>🏙️ Chennai Urban Climate</span></div>
-      <div class="card-body">
-        <div class="meta">Built-up extraction · UHI</div>
-        <p>EO-driven U-Net at 10 m for urban heat island and climate vulnerability mapping.</p>
-        <div class="tags"><span class="tag">U-Net</span><span class="tag">UHI</span><span class="tag">EO</span></div>
-        <a href="https://github.com/Athithiyanmr/chennai_urban_climate">Repository →</a>
-      </div>
+    <article class="card">
+      <p class="meta">Urban heat island · climate vulnerability</p>
+      <h3>Chennai Urban Climate & Built-up Extraction</h3>
+      <p>U-Net built-up extraction at 10 m for urban heat island and climate-risk layers.</p>
+      <div class="tags"><span class="tag">U-Net</span><span class="tag">UHI</span><span class="tag">Sentinel-2</span></div>
+      <a href="https://github.com/Athithiyanmr/chennai_urban_climate">Repository →</a>
     </article>
-    <article class="card reveal">
-      <div class="card-visual v-amber"><span>☀️ Solar Land Suitability</span></div>
-      <div class="card-body">
-        <div class="meta">SET-TN · Published report</div>
-        <p>Multi-criteria EO analysis for distributed solar — used in state energy planning.</p>
-        <div class="tags"><span class="tag">MCE</span><span class="tag">Solar</span><span class="tag">EO</span></div>
-        <a href="https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/">Report →</a>
-      </div>
+    <article class="card">
+      <p class="meta">SET-TN · Published report</p>
+      <h3>Land Suitability for Distributed Solar</h3>
+      <p>Villupuram unused/fallow land assessed for ground-mounted solar; companion Time-of-Use tariff modelling for Tamil Nadu’s power sector.</p>
+      <div class="tags"><span class="tag">MCE</span><span class="tag">Solar</span><span class="tag">Policy</span></div>
+      <a href="https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/">Report →</a>
+    </article>
+    <article class="card">
+      <p class="meta">TN State Planning Commission · 2023</p>
+      <h3>Kallakurichi Multi-Use Land Suitability</h3>
+      <p>Unused-land inventory and suitability for forestation, agriculture, water harvesting, housing, industry, and solar — with ground truth.</p>
+      <div class="tags"><span class="tag">LULC</span><span class="tag">Change detection</span></div>
+      <a href="https://github.com/Athithiyanmr/Kallakurichi">Repository →</a>
+    </article>
+    <article class="card">
+      <p class="meta">Open platforms</p>
+      <h3>WebGIS & pipelines</h3>
+      <p>Forest Canopy Density (PostGIS / FastAPI / Next.js), Lila CRS converter, Sentinel-2 built-up pipeline, Andhra Pradesh land-cover viewer, Tamil Nadu coastal analysis.</p>
+      <div class="tags"><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">PostGIS</span></div>
+      <a href="https://github.com/Athithiyanmr">GitHub →</a>
     </article>
   </div>
 </section>
 
-<section id="skills">
-  <div class="section-label">Stack</div>
-  <h2 class="section-title">Earth Observation tools</h2>
-  <div class="skills reveal">
-    <span class="chip">Sentinel-2</span>
-    <span class="chip">Landsat</span>
-    <span class="chip">Google Earth Engine</span>
-    <span class="chip">U-Net / PyTorch</span>
-    <span class="chip">QGIS / GDAL</span>
-    <span class="chip">GeoPandas</span>
-    <span class="chip">PostGIS</span>
-    <span class="chip">FastAPI</span>
-    <span class="chip">Docker</span>
-    <span class="chip">Leaflet</span>
-    <span class="chip">MCP / Claude</span>
-    <span class="chip">Climate GIS</span>
+<section>
+  <p class="section-kicker">Practice</p>
+  <h2>From raw pixels to policy-ready layers</h2>
+  <div class="practice">
+    <div><p class="meta">01</p><h3>Observation to archive</h3><p>Ingest, clean, and mosaic optical stacks at district and state scale — 10 m Sentinel-2 as the default working resolution.</p></div>
+    <div><p class="meta">02</p><h3>Models with a paper trail</h3><p>U-Net and multi-criteria models that can be rerun, field-validated, and explained to a planning board.</p></div>
+    <div><p class="meta">03</p><h3>Maps that get used</h3><p>Interactive WebGIS, published briefs, and district layers that sit inside government spatial-planning workflows.</p></div>
+  </div>
+</section>
+
+<section id="about">
+  <p class="section-kicker">About</p>
+  <h2>Career</h2>
+  <div class="about">
+    <div>
+      <p>Geospatial analyst at Auroville Consulting, working with the Tamil Nadu State Planning Commission on regional Blue-Green Infrastructure. Four years across remote sensing, GeoAI, and spatial planning.</p>
+      <p>Trained as a chemical engineer, then in petroleum refining at Anna University, before moving into geospatial science. Based in Chennai. Languages: English and Tamil.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl"><div class="y">2024–present</div><div><strong>Research / Data Analyst</strong><div class="o">Auroville Consulting × TN State Planning Commission</div><p class="d">Blue-Green Infrastructure Potential Mapping and Development Framework.</p></div></div>
+      <div class="tl"><div class="y">2023</div><div><strong>Research / Data Analyst</strong><div class="o">Kallakurichi land suitability</div><p class="d">Unused-land inventory, LULC change, ground truth, government-facing map.</p></div></div>
+      <div class="tl"><div class="y">2022–2023</div><div><strong>Data Analyst</strong><div class="o">SET-TN · Auroville Consulting</div><p class="d">Solar suitability (published) and Time-of-Use tariff modelling.</p></div></div>
+      <div class="tl"><div class="y">2022</div><div><strong>Geospatial Data Analyst</strong><div class="o">Auroville Consulting · GUVI / IITM Research Park</div><p class="d">Joined the practice; Master Data Science programme.</p></div></div>
+      <div class="tl"><div class="y">2015–2021</div><div><strong>Engineering</strong><div class="o">B.E. Chemical · M.E. Petroleum Refining, Anna University</div></div></div>
+    </div>
   </div>
 </section>
 
 <section id="contact">
-  <div class="section-label">Contact</div>
-  <h2 class="section-title">Let’s work together</h2>
-  <p>Open to remote roles in Earth Observation, Geospatial AI & Climate Tech.</p>
+  <p class="section-kicker">Contact</p>
+  <h2>Let’s talk land, climate, and satellites</h2>
+  <p class="lead" style="max-width:36rem">Open to remote roles in GeoAI, Earth observation, climate tech, and conservation technology. IST (UTC+5:30) with flexible overlap.</p>
   <div class="contact-row">
-    <a href="mailto:athithiyan@aurovilleconsulting.com" class="btn btn-primary">Email</a>
-    <a href="https://www.linkedin.com/in/athithiyan-m-r-/" class="btn btn-ghost">LinkedIn</a>
-    <a href="https://github.com/Athithiyanmr" class="btn btn-ghost">GitHub</a>
-    <a href="./Athithiyan_CV.pdf" class="btn btn-accent" download>CV</a>
+    <a class="btn btn-solid" href="mailto:athithiyan@aurovilleconsulting.com">Email</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/athithiyan-m-r-/">LinkedIn</a>
+    <a class="btn btn-ghost" href="https://github.com/Athithiyanmr">GitHub</a>
+    <a class="btn btn-accent" href="./Athithiyan_CV.pdf" download>CV</a>
   </div>
 </section>
-
-<footer>© 2026 Athithiyan M R · Earth Observation & Geospatial AI</footer>
-
-<script>
-const obs = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) e.target.classList.add('visible');
-}), { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script>
+<footer>© 2026 Athithiyan M R · Chennai, Tamil Nadu</footer>
 <script src="./globe.js"></script>
 </body>
 </html>
