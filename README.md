@@ -1,467 +1,86 @@
 <div align="center">
 
-<!-- ═══════════════════════ HERO BANNER ═══════════════════════ -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=320&section=header&text=Athithiyan%20M%20R&fontSize=62&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Geospatial%20AI%20Scientist%20%E2%80%A2%20Earth%20Observation%20%E2%80%A2%20Climate%20Intelligence&descSize=19&descAlignY=58&descAlign=50" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0c1110,100:1a2420&height=220&section=header&text=Athithiyan%20M%20R&fontSize=52&fontColor=e7eee8&fontAlignY=40&desc=Senior%20Geospatial%20Analyst%20%C2%B7%20Earth%20Observation%20%C2%B7%20GeoAI&descSize=18&descAlignY=62" width="100%" />
 
-<br/>
+**Auroville Consulting** · Chennai, Tamil Nadu · Open to remote GeoAI & climate roles
 
-<!-- ═══════════════════════ TYPING ANIMATION ═══════════════════════ -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=3000&pause=800&color=00FF9C&center=true&vCenter=true&multiline=false&width=900&lines=%F0%9F%9B%B0%EF%B8%8F+Turning+Satellite+Imagery+into+Climate+Intelligence;%F0%9F%8C%8D+Deep+Learning+for+Earth+Observation+%7C+U-Net+%7C+GeoAI;%F0%9F%8C%BF+Blue-Green+Infrastructure+%7C+TN+State+Planning+Commission;%F0%9F%94%AC+Sentinel-2+%7C+QGIS+%7C+PostGIS+%7C+PyTorch+%7C+FastAPI;%F0%9F%9F%A2+Open+to+Remote+Geospatial+AI+%26+Climate+Roles" alt="Typing SVG" />
-</a>
-
-<br/><br/>
-
-<!-- ═══════════════════════ BADGES ROW ═══════════════════════ -->
-<a href="https://www.linkedin.com/in/athithiyan-m-r-/">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-&nbsp;
-<a href="https://github.com/Athithiyanmr">
-  <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-&nbsp;
-<a href="https://athithiyanmr.github.io/Athithiyanmr/">
-  <img src="https://img.shields.io/badge/Portfolio-Visit_Now-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white" />
-</a>
-&nbsp;
-<a href="mailto:athithiyan@aurovilleconsulting.com">
-  <img src="https://img.shields.io/badge/Email-Contact_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-</a>
-&nbsp;
-<img src="https://img.shields.io/badge/%F0%9F%9F%A2_Status-Open_to_Remote_Work-00C853?style=for-the-badge" />
-
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=Athithiyanmr&style=flat-square&color=00FF9C&label=Profile+Views" />
-&nbsp;&nbsp;
-<img src="https://img.shields.io/github/followers/Athithiyanmr?label=Followers&style=flat-square&color=00FF9C" />
+[Portfolio](https://athithiyanmr.github.io/Athithiyanmr/) · [LinkedIn](https://www.linkedin.com/in/athithiyan-m-r-/) · [Email](mailto:athithiyan@aurovilleconsulting.com) · [CV](./Athithiyan_CV.pdf)
 
 </div>
-
-<br/>
 
 ---
 
-<!-- ═══════════════════════ ABOUT ME ═══════════════════════ -->
+### Profile
 
-<img align="right" alt="GeoAI Coding" width="360" src="https://raw.githubusercontent.com/Potential17/Potential17/master/user%20(2).gif" />
+Geospatial analyst at **Auroville Consulting**, working with the **Tamil Nadu State Planning Commission** on regional Blue-Green Infrastructure. Four years turning Sentinel-2 and related imagery into land-use, energy, and climate decisions.
 
-### `$ whoami`
+Trained as a chemical engineer (B.E.) and in petroleum refining (M.E., Anna University), then data science at GUVI / IIT Madras Research Park. The through-line is systems: energy, land, water, and the satellite record that makes them measurable.
 
-```python
-class GeospatialScientist:
-    """
-    ╔══════════════════════════════════════════════╗
-    ║         Athithiyan M R  —  Profile           ║
-    ╚══════════════════════════════════════════════╝
-    """
-    name       = "Athithiyan M R"
-    role       = "Geospatial AI Scientist"
-    location   = "Chennai / Tamil Nadu, India 🇮🇳"
-    org        = "Auroville Consulting"
-    experience = "4+ years"
-
-    expertise  = [
-        "🛰️  Satellite Remote Sensing (Sentinel-2, Landsat, MODIS)",
-        "🤖  Deep Learning — U-Net, CNN, SegFormer, Semantic Segmentation",
-        "🌿  LULC, Climate GIS & Blue-Green Infrastructure",
-        "📡  Google Earth Engine & PostGIS",
-        "🌐  Full-Stack Geospatial Web Apps (FastAPI + Streamlit + Leaflet / Next.js)",
-        "🔁  MLOps — Docker, GitHub Actions, CI/CD",
-        "🧩  MCP + Claude AI — Geospatial AI Agent Development",
-    ]
-
-    currently  = "Blue-Green Network mapping for TN State Planning Commission"
-    seeking    = "Remote roles · Climate Tech · GeoAI Research · Conservation Tech"
-    fun_fact   = "Processed 15,000+ satellite scenes 🌍"
-    mission    = "Turning raw pixels into policy-ready climate intelligence"
-```
-
-<br clear="right"/>
-
-<br/>
+**Currently:** Blue-Green Network mapping for Tamil Nadu — 15,000+ Sentinel-2 scenes, 40+ layers, 18-criteria ecosystem services.  
+**Seeking:** Remote roles in GeoAI, Earth observation, climate tech, conservation technology.
 
 ---
 
-<!-- ═══════════════════════ WORK AT A GLANCE ═══════════════════════ -->
+### At a glance
 
-<div align="center">
-
-### 📌 Work at a Glance
-
-![](https://img.shields.io/badge/🛰️_Sentinel--2_Scenes_Processed-15%2C000%2B-00C853?style=flat-square&labelColor=0d1117)
-![](https://img.shields.io/badge/🗺️_GIS_Layers_Integrated-40%2B-2196F3?style=flat-square&labelColor=0d1117)
-![](https://img.shields.io/badge/🌴_Hectares_Mapped-245%2C569-FF6F00?style=flat-square&labelColor=0d1117)
-
-![](https://img.shields.io/badge/📍_Plantation_Polygons-90%2C438-9C27B0?style=flat-square&labelColor=0d1117)
-![](https://img.shields.io/badge/🏛️_State--Level_Projects-4%2B-E91E63?style=flat-square&labelColor=0d1117)
-![](https://img.shields.io/badge/📅_Professional_Experience-4%2B_Years-607D8B?style=flat-square&labelColor=0d1117)
-![](https://img.shields.io/badge/🌍_Districts_Covered-38_TN_Districts-00ACC1?style=flat-square&labelColor=0d1117)
-
-</div>
-
-<br/>
+| | |
+|---|---|
+| Sentinel-2 scenes processed | **15,000+** |
+| Hectares mapped (coconut canopy) | **245,569** |
+| Plantation polygons · 38 districts | **90,438** |
+| State-level programmes | **4+** |
 
 ---
 
-<!-- ═══════════════════════ FEATURED PROJECTS ═══════════════════════ -->
+### Featured work
 
-## 🚀 Featured Projects
+**Tamil Nadu Blue-Green Infrastructure** — Auroville Consulting × TN State Planning Commission (ongoing)  
+Statewide EO intelligence for flood regulation, carbon storage, and biodiversity. Geospatial database, restoration suitability, district intervention maps.
 
-<div align="center">
+**[Coconut plantation mapping](https://github.com/Athithiyanmr/coconut_plantation_mapping)** · [verification tool](https://athithiyanmr.github.io/coconut_verification_tool/)  
+U-Net on Sentinel-2 across 38 districts. 90,438 polygons / 245,569 ha.
 
-<table>
-<tr>
-<td width="50%" valign="top">
+**[Chennai urban climate](https://github.com/Athithiyanmr/chennai_urban_climate)**  
+U-Net built-up extraction at 10 m for urban heat island and climate vulnerability.
 
-<div align="center">
-  <img src="https://img.shields.io/badge/🌿-Blue--Green%20Infrastructure-00C853?style=for-the-badge&labelColor=0d1117" />
-</div>
+**[Solar land suitability, Villupuram](https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/)** — SET-TN  
+Multi-criteria assessment of unused land for distributed solar; [Time-of-Use tariff paper](https://www.aurovilleconsulting.com/modelling-time-of-use-electricity-tariffs-for-tamil-nadu/).
 
-**Auroville Consulting × TN State Planning Commission**
+**[Kallakurichi land suitability](https://github.com/Athithiyanmr/Kallakurichi)**  
+Unused-land inventory for forestation, agriculture, water harvesting, housing, industry, and solar.
 
-> Regional-scale geospatial intelligence platform mapping Blue-Green Networks — flood regulation, carbon storage & biodiversity prioritization across Tamil Nadu.
+### Open tools
 
-```yaml
-scope:    State-level spatial planning
-data:     15,000+ Sentinel-2 scenes
-layers:   40+ integrated geospatial layers
-model:    18-criteria ecosystem services
-output:   District intervention maps (nano → mega)
-impact:   Embedded in TN spatial planning framework
-```
-
-</td>
-<td width="50%" valign="top">
-
-<div align="center">
-  <img src="https://img.shields.io/badge/🌴-Coconut%20Plantation%20Mapping-FF6F00?style=for-the-badge&labelColor=0d1117" />
-</div>
-
-**[`View Repository →`](https://github.com/Athithiyanmr/coconut_plantation_mapping)** &nbsp; **[`Live Tool →`](https://athithiyanmr.github.io/coconut_verification_tool/)**
-
-> U-Net deep learning pipeline for state-wide coconut plantation mapping from Sentinel-2 imagery across all 38 Tamil Nadu districts.
-
-```yaml
-polygons:    90,438 across 38 TN districts
-area:        245,569 hectares mapped
-model:       Semantic segmentation (10m bands)
-labels:      Descals et al. (2023) + field validation
-tool:        Collaborative live verification app
-```
-
-</td>
-</tr>
-
-<tr>
-<td width="50%" valign="top">
-
-<div align="center">
-  <img src="https://img.shields.io/badge/🏙️-Chennai%20Urban%20Climate-2196F3?style=for-the-badge&labelColor=0d1117" />
-</div>
-
-**[`View Repository →`](https://github.com/Athithiyanmr/chennai_urban_climate)**
-
-> Deep learning pipeline (U-Net) for built-up area extraction from Sentinel-2 — applied to Chennai for Urban Heat Island and climate vulnerability analysis.
-
-```yaml
-model:      U-Net semantic segmentation
-input:      Sentinel-2 @ 10m resolution
-output:     Built-up maps + UHI-ready layers
-validation: IoU ≥ 0.60
-use_case:   Urban heat island + vulnerability
-```
-
-</td>
-<td width="50%" valign="top">
-
-<div align="center">
-  <img src="https://img.shields.io/badge/☀️-SET--TN%20Solar%20Energy-FF5722?style=for-the-badge&labelColor=0d1117" />
-</div>
-
-**[`Published Report →`](https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/)**
-
-> Spatial analytics for Tamil Nadu’s net-zero energy transition: land suitability for distributed solar, Time-of-Use tariff modelling, and policy analytics.
-
-```yaml
-focus:   Villupuram district (solar suitability)
-method:  Multi-criteria spatial analysis (MCE)
-output:  Policy brief + interactive maps
-impact:  Integrated into TN energy planning
-```
-
-</td>
-</tr>
-
-<tr>
-<td width="50%" valign="top">
-
-<div align="center">
-  <img src="https://img.shields.io/badge/🗺️-Kallakurichi%20Land%20Suitability-9C27B0?style=for-the-badge&labelColor=0d1117" />
-</div>
-
-**[`View Repository →`](https://github.com/Athithiyanmr/Kallakurichi)** — TN State Planning Commission
-
-> Multi-use suitability mapping for unused land across Kallakurichi district — forestation, agriculture, water harvesting, housing, industry, and solar.
-
-```yaml
-classification:  LULC change detection (2019–2023)
-data:            Sentinel-2 + Landsat imagery
-validation:      Ground truth + field verification
-output:          Interactive government map
-use_cases:       6 land-use categories modelled
-```
-
-</td>
-<td width="50%" valign="top">
-
-<div align="center">
-  <img src="https://img.shields.io/badge/🔧-Open--Source%20Tools-E91E63?style=for-the-badge&labelColor=0d1117" />
-</div>
-
-> Production-ready open-source geospatial tools:
-
-| Tool | Stack | Description |
-|:---|:---|:---|
-| [**Sentinel-2 Built-Up Pipeline**](https://github.com/Athithiyanmr/sentinel2_builtup_pipeline) | PyTorch · GDAL | End-to-end ML pipeline for built-up detection |
-| [**Lila CRS Converter**](https://github.com/Athithiyanmr/Lila-crs-converter) | FastAPI · Docker | Dockerized CRS converter with CI/CD + live demo |
-| [**Coconut Verification Tool**](https://github.com/Athithiyanmr/coconut_verification_tool) | Leaflet · JS | Collaborative label verification app |
-| [**FCD Tamil Nadu Platform**](https://github.com/Athithiyanmr/fcd-tamilnadu-platform) | FastAPI · Next.js · PostGIS | Full-stack Forest Canopy Density WebGIS |
-
-</td>
-</tr>
-</table>
-
-</div>
-
-<br/>
+| Repo | Stack |
+|---|---|
+| [Forest Canopy Density WebGIS](https://github.com/Athithiyanmr/fcd-tamilnadu-platform) | FastAPI · Next.js · PostGIS · TiTiler |
+| [Lila CRS converter](https://github.com/Athithiyanmr/Lila-crs-converter) | FastAPI · Docker · CI |
+| [Sentinel-2 built-up pipeline](https://github.com/Athithiyanmr/sentinel2_builtup_pipeline) | PyTorch · GDAL |
+| [Andhra Pradesh geospatial platform](https://github.com/Athithiyanmr/ap-geospatial-platform) | Leaflet · FastAPI · WorldCover |
+| [TN coastal analysis](https://github.com/Athithiyanmr/TN_coastel) | Jupyter · Sentinel-2 |
 
 ---
 
-<!-- ═══════════════════════ SKILLS MATRIX ═══════════════════════ -->
+### Stack
 
-## 🧠 Skills & Proficiency Matrix
-
-<div align="center">
-
-| Domain | Tools / Frameworks | Proficiency |
-|:---|:---|:---:|
-| **Satellite Remote Sensing** | Sentinel-2, Landsat, MODIS, Google Earth Engine | ██████████ Expert |
-| **Deep Learning / GeoAI** | U-Net, PyTorch, SegFormer, CNN, Segmentation | █████████░ Advanced |
-| **LULC & Change Detection** | QGIS, ArcGIS Pro, GDAL, Rasterio | ██████████ Expert |
-| **Geospatial Python** | GeoPandas, Shapely, Fiona, Leafmap, EarthPy | ██████████ Expert |
-| **Web GIS & Dashboards** | Streamlit, Leafmap, Folium, Leaflet.js, FastAPI, Next.js | █████████░ Advanced |
-| **MLOps & DevOps** | Docker, GitHub Actions, CI/CD, Linux | ████████░░ Proficient |
-| **Spatial Databases** | PostGIS, PostgreSQL, GeoJSON, GeoParquet | ████████░░ Proficient |
-| **Climate Analytics** | UHI, Carbon Sequestration, BGI, Ecosystem Services | █████████░ Advanced |
-| **AI Agent Development** | MCP, Claude AI, LangChain, Tool-use LLMs | ███████░░░ Growing |
-
-</div>
-
-<br/>
+Sentinel-2 · Landsat · Google Earth Engine · QGIS · GDAL · GeoPandas · PostGIS · U-Net / PyTorch · FastAPI · Leaflet · Next.js · Docker · GitHub Actions
 
 ---
 
-<!-- ═══════════════════════ TECH STACK ═══════════════════════ -->
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-**🛰️ GIS & Remote Sensing**
-
-![QGIS](https://img.shields.io/badge/QGIS-589632?style=for-the-badge&logo=qgis&logoColor=white)
-![Google Earth Engine](https://img.shields.io/badge/Google_Earth_Engine-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![Sentinel-2](https://img.shields.io/badge/Sentinel--2-003087?style=for-the-badge&logo=copernicus&logoColor=white)
-![ArcGIS](https://img.shields.io/badge/ArcGIS-2C7AC3?style=for-the-badge&logo=esri&logoColor=white)
-
-**🤖 Machine Learning & AI**
-
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-
-**🐍 Geospatial Python**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![GeoPandas](https://img.shields.io/badge/GeoPandas-139C5A?style=for-the-badge&logo=python&logoColor=white)
-![Rasterio](https://img.shields.io/badge/Rasterio-CC3534?style=for-the-badge&logo=python&logoColor=white)
-![GDAL](https://img.shields.io/badge/GDAL-5C9BCA?style=for-the-badge&logo=python&logoColor=white)
-![Leafmap](https://img.shields.io/badge/Leafmap-00ACC1?style=for-the-badge&logo=python&logoColor=white)
-
-**🌐 Web & Backend**
-
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Leaflet](https://img.shields.io/badge/Leaflet.js-199900?style=for-the-badge&logo=leaflet&logoColor=white)
-
-**🗄️ Database & DevOps**
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![PostGIS](https://img.shields.io/badge/PostGIS-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
-</div>
-
-<br/>
-
----
-
-<!-- ═══════════════════════ CAREER TIMELINE ═══════════════════════ -->
-
-## 🕐 Career Timeline
+### Career
 
 ```
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                         ATHITHIYAN M R  ·  CAREER ARC                       │
-└──────────────────────────────────────────────────────────────────────────────┘
-
-  2026  ◉─────────────────────────────────────────────────────────────────────
-        │  🌿  Blue-Green Infrastructure Framework          [ ONGOING ]
-        │      Tamil Nadu State Planning Commission
-        │      15,000+ Sentinel-2 scenes · 40+ GIS layers · 18-criteria model
-        │
-        │  🌴  Coconut Plantation Mapping (U-Net + Sentinel-2)
-        │      90,438 polygons · 245,569 ha · 38 districts mapped
-        │
-        │  🏙️  Chennai Urban Climate Analysis
-        │      Deep Learning built-up extraction · Heat Island mapping
-        │
-        │  🤖  MCP + Claude AI Geospatial Agent Development
-        │      Building AI-powered GIS automation pipelines
-        │
-  2025  ◉─────────────────────────────────────────────────────────────────────
-        │  🗺️  Kallakurichi Land Suitability Dashboard
-        │      Multi-criteria LULC mapping · Streamlit + Leafmap
-        │
-  2024  ◉─────────────────────────────────────────────────────────────────────
-        │  ☀️  SET-TN · Sustainable Energy Transformation
-        │      Solar suitability · TOU tariff modelling · Published report
-        │
-  2022  ◉─────────────────────────────────────────────────────────────────────
-        │  📊  Joined Auroville Consulting · Geospatial Data Analyst
-        │  🎓  Master in Data Science  ·  GUVI (IIT Madras)
-        │
-  ──────┘
+2024–     Research / Data Analyst · Auroville Consulting × TNSPC
+          Blue-Green Infrastructure framework (statewide)
+2023      Kallakurichi multi-use land suitability
+2022–23   SET-TN · solar suitability + TOU tariff analytics
+2022      Joined Auroville Consulting · GUVI Data Science (IITM Research Park)
+2019–21   M.E. Petroleum Refining & Petrochemicals · Anna University
+2015–19   B.E. Chemical Engineering
 ```
 
-<br/>
-
 ---
 
-<!-- ═══════════════════════ CURRENTLY EXPLORING ═══════════════════════ -->
+Open to **full-time, contract, and consulting**. Timezone IST (UTC+5:30), flexible overlap.
 
-## 🔭 Currently Exploring
-
-<div align="center">
-
-| 🧠 Area | 📌 Focus |
-|:---|:---|
-| **GeoAI Foundation Models** | TESSERA & Google AlphaEarth embeddings for satellite segmentation |
-| **Transformer Backbones** | Improving U-Net performance with Swin-T / SegFormer |
-| **Climate Analytics** | Urban heat island + blue-green network synergies |
-| **Workflow Automation** | N8N + MCP pipelines for automated geospatial data ingestion |
-| **Dashboard Design** | Production-grade interactive geospatial dashboards |
-| **MCP + Claude AI** | Building geospatial AI agents with Model Context Protocol |
-| **3D Visualization** | Deck.gl + Cesium for immersive geospatial storytelling |
-
-</div>
-
-<br/>
-
----
-
-<!-- ═══════════════════════ GITHUB ANALYTICS ═══════════════════════ -->
-
-## 📊 GitHub Analytics
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-eight-theta.vercel.app/api?username=Athithiyanmr&show_icons=true&theme=chartreuse-dark&hide_border=true&count_private=true&bg_color=0d1117&icon_color=00FF9C&title_color=00FF9C&text_color=c9d1d9&ring_color=00FF9C" />
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=Athithiyanmr&show_icons=true&theme=default&hide_border=true&count_private=true" height="180" />
-</picture>
-&nbsp;&nbsp;
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Athithiyanmr&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00FF9C&text_color=c9d1d9&langs_count=8" />
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Athithiyanmr&layout=compact&theme=default&hide_border=true&langs_count=8" height="180" />
-</picture>
-
-<br/><br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Athithiyanmr&theme=chartreuse-dark&hide_border=true&background=0d1117&stroke=00FF9C&ring=00FF9C&fire=FF6B35&currStreakLabel=00FF9C&sideLabels=00FF9C&dates=888888" height="180" />
-
-<br/><br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Athithiyanmr/Athithiyanmr/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Athithiyanmr/Athithiyanmr/output/github-contribution-grid-snake.svg" />
-  <img alt="GitHub contribution grid snake animation" src="https://raw.githubusercontent.com/Athithiyanmr/Athithiyanmr/output/github-contribution-grid-snake.svg" />
-</picture>
-
-</div>
-
-<br/>
-
----
-
-<!-- ═══════════════════════ OPEN TO WORK ═══════════════════════ -->
-
-## 💼 Open to Opportunities
-
-<div align="center">
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║           🟢  ACTIVELY SEEKING REMOTE ROLES                     ║
-╠══════════════════════════════════════════════════════════════════╣
-║                                                                  ║
-║  ✅  Geospatial AI / GeoAI Researcher                           ║
-║  ✅  Remote Sensing Data Scientist                               ║
-║  ✅  Climate Tech Analyst / Environmental Data Scientist         ║
-║  ✅  Earth Observation Engineer                                  ║
-║  ✅  Conservation Technology Specialist                          ║
-║  ✅  Open-Source GIS Developer                                   ║
-║                                                                  ║
-║  🌍  Available for: Full-time · Contract · Consulting            ║
-║  ⏰  Timezone: IST (UTC+5:30) · Flexible overlap                ║
-║  🤝  Open to: Climate Tech · NGOs · Think Tanks · Research       ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-</div>
-
-<br/>
-
----
-
-<!-- ═══════════════════════ CONTACT ═══════════════════════ -->
-
-## 📬 Let's Connect
-
-> Open to collaborations in **Geospatial AI**, **Climate Analytics**, **Remote Sensing**, and **Open-Source Environmental Tools**.  
-> Actively seeking **fully remote roles** with climate-tech organizations, NGOs, think tanks, and research institutes.
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Athithiyan_M_R-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/athithiyan-m-r-/)
-&nbsp;
-[![Email](https://img.shields.io/badge/Email-athithiyan@aurovilleconsulting.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:athithiyan@aurovilleconsulting.com)
-&nbsp;
-[![GitHub](https://img.shields.io/badge/GitHub-Athithiyanmr-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Athithiyanmr)
-&nbsp;
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live_Site-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white)](https://athithiyanmr.github.io/Athithiyanmr/)
-
-<br/><br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=150&section=footer&text=Let%27s%20Map%20the%20Future%20Together%20%F0%9F%8C%8D&fontSize=22&fontColor=ffffff&animation=twinkling&fontAlignY=65" width="100%" />
-
-</div>
+[athithiyan@aurovilleconsulting.com](mailto:athithiyan@aurovilleconsulting.com)
