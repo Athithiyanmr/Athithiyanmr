@@ -14,7 +14,7 @@
 
 Geospatial analyst at **Auroville Consulting**, working with the **Tamil Nadu State Planning Commission** on regional Blue-Green Infrastructure. Four years turning Sentinel-2 and related imagery into land-use, energy, and climate decisions.
 
-Trained as a chemical engineer (B.E.) and in petroleum refining (M.E., Anna University), then data science at GUVI / IIT Madras Research Park. The through-line is systems: energy, land, water, and the satellite record that makes them measurable.
+Trained as a chemical engineer (B.Tech) and in petroleum refining (M.Tech, Anna University), then data science at GUVI / IIT Madras Research Park. The through-line is systems: energy, land, water, and the satellite record that makes them measurable.
 
 **Currently:** Blue-Green Network mapping for Tamil Nadu — 15,000+ Sentinel-2 scenes, 40+ layers, 18-criteria ecosystem services.  
 **Seeking:** Remote roles in GeoAI, Earth observation, climate tech, conservation technology.
@@ -76,8 +76,8 @@ Sentinel-2 · Landsat · Google Earth Engine · QGIS · GDAL · GeoPandas · Pos
 2023      Kallakurichi multi-use land suitability
 2022–23   SET-TN · solar suitability + TOU tariff analytics
 2022      Joined Auroville Consulting · GUVI Data Science (IITM Research Park)
-2019–21   M.E. Petroleum Refining & Petrochemicals · Anna University
-2015–19   B.E. Chemical Engineering
+2019–21   M.Tech Petroleum Refining and Petrochemicals · Anna University
+2015–19   B.Tech Chemical Engineering
 ```
 
 ---
