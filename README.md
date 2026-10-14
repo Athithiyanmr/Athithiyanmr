@@ -41,7 +41,7 @@ Statewide EO intelligence for flood regulation, carbon storage, and biodiversity
 U-Net on Sentinel-2 across 38 districts. 90,438 polygons / 245,569 ha.
 
 **[Chennai urban climate](https://github.com/Athithiyanmr/chennai_urban_climate)**  
-U-Net built-up extraction at 10 m for urban heat island and climate vulnerability.
+Multi-spectral UNet-Transformer for built-up extraction at 10 m (11-channel Sentinel-2 stack) — feeds urban heat island and climate vulnerability analysis.
 
 **[Solar land suitability, Villupuram](https://www.aurovilleconsulting.com/land-suitability-assessment-for-distributed-solar-energy-villupuram-district/)** — SET-TN  
 Multi-criteria assessment of unused land for distributed solar; [Time-of-Use tariff paper](https://www.aurovilleconsulting.com/modelling-time-of-use-electricity-tariffs-for-tamil-nadu/).
@@ -55,7 +55,8 @@ Unused-land inventory for forestation, agriculture, water harvesting, housing, i
 |---|---|
 | [Forest Canopy Density WebGIS](https://github.com/Athithiyanmr/fcd-tamilnadu-platform) | FastAPI · Next.js · PostGIS · TiTiler |
 | [Lila CRS converter](https://github.com/Athithiyanmr/Lila-crs-converter) | FastAPI · Docker · CI |
-| [Sentinel-2 built-up pipeline](https://github.com/Athithiyanmr/sentinel2_builtup_pipeline) | PyTorch · GDAL |
+| [Chennai urban climate](https://github.com/Athithiyanmr/chennai_urban_climate) | PyTorch · UNet-Transformer · GDAL |
+| [Sentinel-2 built-up pipeline](https://github.com/Athithiyanmr/sentinel2_builtup_pipeline) | Random Forest · spectral indices · GDAL |
 | [Andhra Pradesh geospatial platform](https://github.com/Athithiyanmr/ap-geospatial-platform) | Leaflet · FastAPI · WorldCover |
 | [TN coastal analysis](https://github.com/Athithiyanmr/TN_coastel) | Jupyter · Sentinel-2 |
 
